@@ -41,7 +41,7 @@ class Nav extends Component {
                       </Link>
                     </li>
                     <li>
-                        <NavState />
+                        <NavState state={ this.props.state } />
                     </li>
                 </ul>
             </div>
@@ -54,15 +54,18 @@ class Nav extends Component {
 class NavState extends Component {
   render(){
 
-    const open = true;
+    //const open = true;
     var classes = "label doorstatelabel "
     var stateText = "Loading"
 
-    if (open){
+    if (this.props.state === undefined){
+        classes += "label-warning"
+        stateText = "defect"
+    } else if (this.props.state.open){
         classes += "label-success"
         stateText = "open"
     } else {
-        classes += "label-error"
+        classes += "label-danger"
         stateText = "closed"
     }
 

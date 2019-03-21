@@ -76,6 +76,15 @@ class HomeEvents extends Component {
 
 class HomeEvent extends Component {
 
+    constructor(props){
+        super(props)
+
+        this.iconStyle = ({
+            color: "#777777",
+            marginRight: "8px"
+        })
+    }
+
     render(){
 
         var event = this.props.event
@@ -116,14 +125,28 @@ class HomeEvent extends Component {
                             <span className="event_icons">
                                 {event.link?
                                     (
-                                        <a href={event.link} target="_blank" className="glyphicon-link glyphicon" ></a>
+                                        <a 
+                                            href={event.link} 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span style={this.iconStyle} className="glyphicon-link glyphicon"></span>
+                                        </a>
                                     ):""
                                 }
+
                                 {event.download?
                                     (
-                                        <a href={event.download} target="_blank" className="glyphicon-file glyphicon"></a>
+                                        <a 
+                                            href={event.download} 
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span style={this.iconStyle} className="glyphicon-file glyphicon"></span>
+                                        </a>
                                     ):""
                                 }
+
                                 <span className="glyphicon-calendar glyphicon"></span>
                             </span>
                             </span>

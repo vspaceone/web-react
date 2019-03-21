@@ -57,7 +57,12 @@ class App extends Component {
         return (
         <Router>
             <div>
-            <Route path="/" component={Nav} />
+            <Route 
+                path="/"                 
+                render={routeProps => (
+                    <Nav {...routeProps} state={this.state.spaceapi.state}/>
+                )} 
+            />
 
             <Route 
                 path="/" exact 

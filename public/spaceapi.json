@@ -15,7 +15,7 @@
     },
     "issue_report_channels": null,
     "state": {
-        "open": false,
+        "open": true,
         "lastchange": 1552066170
     },
     "sensors": {
