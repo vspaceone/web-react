@@ -1,9 +1,11 @@
-FROM node:11-alpine
+FROM mhart/alpine-node:11 AS builder
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build
 
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
-WORKDIR /home/node/app
-COPY * ./
-USER node
-
-RUN pwd
-RUN npm install && npm run build
+FROM mhart/alpine-node
+RUN npm install -g serve
+WORKDIR /app
+COPY --from=builder /app/build .
+CMD ["serve", "-p", "80", "-s", "."]

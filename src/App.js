@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import CookieConsent, { Cookies } from "react-cookie-consent";
+import { Link } from "react-router-dom";
 
 import Nav from './common/Nav.js'
 import Footer from './common/Footer.js'
@@ -102,7 +104,22 @@ class App extends Component {
             />
 
             <Route path="/" component={Footer} />
-            </div>
+
+            <CookieConsent
+                location="bottom"
+                buttonText="Einverstanden"
+                declineButtonText="Nicht Einverstanden"
+                enableDeclineButton
+                cookieName="cookieConsent"
+                style={{ background: "#2B373B" }}
+                buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                declineButtonStyle={{ fontSize: "13px" }}
+            >
+                Wir benutzen Cookies um diese Seite schöner zu machen.
+                Siehe <Link to="/datenschutz">Datenschutzerklärung</Link>.
+            </CookieConsent>
+
+            </div>            
         </Router>
         );
     }
