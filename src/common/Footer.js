@@ -5,7 +5,7 @@ class Footer extends Component {
     render(){
         return(
             <footer className="container-fluid bg-4 text-center">
-                <p><Link to="/impressum" >Impressum</Link> | <Link to="/datenschutzerklaerung" >Datenschutzerklärung</Link> | <Link to="/downloads" >Downloads</Link> | <Link to="/mitgliedwerden" >Werde Mitglied!</Link> </p>
+                <p><Link to="/impressum" >Impressum</Link> | <Link to="/datenschutz" >Datenschutzerklärung</Link> | <Link to="/downloads" >Downloads</Link> | <Link to="/mitgliedwerden" >Werde Mitglied!</Link> </p>
             </footer>
         );
     }

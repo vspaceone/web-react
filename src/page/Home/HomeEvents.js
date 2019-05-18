@@ -8,7 +8,7 @@ class HomeEvents extends Component {
         super(props)
 
         this.state = {
-            events: []
+            events: {}
         }        
     }
 
@@ -28,11 +28,15 @@ class HomeEvents extends Component {
         clearInterval(this.interval);
     }
 
-    render() {
+    render() {        
 
-        var events = this.state.events.map(val => (           
-            <HomeEvent key={val.key} event={val} />
-        ));
+        var events = ( <div></div> )
+        
+        if (this.state.events.events){
+            events = this.state.events.events.map((val,index) => (           
+                <HomeEvent key={index} event={val} />
+            ));
+        }
 
         return (
             <div className="container-fluid bg-2 text-center no-side-padding"  id="Events">
@@ -151,7 +155,7 @@ class HomeEvent extends Component {
                             </span>
                             </span>
                             <span className="event_desc">
-                                <p>{event.desc}</p>
+                                <p dangerouslySetInnerHTML={{__html:event.desc}}></p>
                             </span>
                         </div>
                     </div>

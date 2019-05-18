@@ -14,14 +14,15 @@ class HomeJumbo extends Component {
                 style={{
                     position: 'relative',
                     padding: 0,
-                    backgroundColor: '#08A059'
+                    backgroundColor: '#08A059',
+                    height: "670px"
                 }}
             >
-                <Particles params={particleConfig} />
+                <Particles height="670px" params={particleConfig} />
                 <div 
                     id="particles-overlay"
                     style={{
-                        height: '100%',
+                        height: '670px',
                         marginTop: '30px',
                         zIndex: 10,
                         position: 'absolute',

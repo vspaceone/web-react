@@ -46,19 +46,31 @@ function HomeInfoBox1() {
 
 function HomeInfoBox2() {
     return (
-        <div className="container-fluid bg-2 text-left" id="Mitmachen">
+        <div className="container-fluid bg-2 text-center no-side-padding" id="Mitmachen">
             <h2 className="margin">Mitmachen</h2>
-            <p>
-                Bei uns kann jeder und jede mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik interessieren.
-                Wenn euch gefällt was wir tun und ihr uns unterstützen wollt findet ihr Beitrittsformular <a href="?page=mitgliedwerden">hier</a>.
-            </p>
-            <br/>
-            <p className="text-center">
-                Trag dich einfach in unsere <a href="https://lists.vspace.one/postorius/lists/public.lists.vspace.one/">Mailingliste</a> ein und bleib up-to-date.
-                <br/><br/>
-                Oder tritt unserer Telegram Gruppe bei: <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Join</a>
-            </p>
-            <p>Wir treffen uns jeden Dienstag ab 19:00 Uhr im 'Space'. Schau doch einfach mal vorbei oder schreib uns auf der Mailingliste!</p>
+
+            <div style={{marginRight: '10px', marginLeft: '10px'}}>
+                <div className="row">
+                    <div className="col-sm-6">
+                        <h3>Vorbeischauen</h3>
+                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch Dienstags ab 19:00 bei uns in der Wilhelm-Binderstraße 19 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
+                    </div>
+                    <div className="col-sm-6">
+                        <h3>Mitglied werden</h3>
+                        <p>Bei uns kann Jeder und Jede mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik begeistern sind willkommen. Wenn euch gefällt was wir tun und ihr uns unterstützen wollt findet ihr unser Beitrittsformular <a href="https://vspace.one/?page=mitgliedwerden">hier</a>.</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-6">
+                        <h3>Telegram</h3>
+                        <p>Für die inoffizielle Kommunikation verwenden wir eine <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegramgruppe</a>. Telegram ist eine Nachrichtenapp, ähnlich WhatsApp. Wenn du dich interessierst und wissen willst, was bei uns los ist, trete ihr bei oder schreibe uns eine Email an info[at]vspace.one.</p>
+                    </div>
+                    <div className="col-sm-6">
+                        <h3>Mailingliste</h3>
+                        <p>Die 'offizielle' Kommunikation, wie Einladungen zu Veranstaltungen, läuft über unsere <a href="https://lists.vspace.one/postorius/lists/public.lists.vspace.one/">Mailingliste</a>. Trag dich ein und bleib up-to-date. Das ist die Wahl, falls du nur auf dem Laufenden bleiben willst. (ca. 1 Mail pro Monat)</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
@@ -93,10 +105,10 @@ function HomeInfoBox3() {
                     <img src="pic/vspaceone_ausstattung_4.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Make things awesome Logo"/>
                 </div>
                 <div className="col-sm-4">
-                    <img src="pic/vspaceone_ausstattung_5.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Arbeitsplatz"/>
+                    <img src="pic/vspaceone_arbeitsplatz3.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Arbeitsplatz"/>
                 </div>
                 <div className="col-sm-4">
-                    <img src="pic/vspaceone_ausstattung_6.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Lager und Projektboxen"/>
+                    <img src="pic/vspaceone_elektronik.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Lager und Projektboxen"/>
                 </div>
                 </div>
             </div>
