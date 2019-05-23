@@ -95,7 +95,7 @@ class FAQ extends Component {
                         Durch die SpaceAPI gibt es zudem auch fertige Apps, um sich den Raumstatus anzeigen zu lassen. Wer die Daten lieber selbst verarbeiten möchte,
                         findet sie hier: <a href="https://vspace.one/spaceapi.json">https://vspace.one/spaceapi.json</a>
                     </p>
-                </div>
+                </div> 
 
                 <div class="container-fluid bg-3 text-left">
                     <h2 class="margin">Wie Kontaktiere ich euch/eure Community?</h2><br/>
