@@ -10,6 +10,7 @@ import Home from './page/Home.js'
 import Impressum from './page/Impressum.js'
 import Datenschutz from './page/Datenschutz.js'
 import Downloads from './page/Downloads.js';
+import FAQ from './page/FAQ.js'
 import MitgliedWerden from './page/MitgliedWerden.js';
 
 import './App.css';
@@ -93,6 +94,13 @@ class App extends Component {
                 path="/downloads" exact 
                 render={routeProps => (
                     <Downloads {...routeProps} spaceapi={this.state.spaceapi}/>
+                )}  
+            />
+
+            <Route 
+                path="/faq" exact 
+                render={routeProps => (
+                    <FAQ {...routeProps} spaceapi={this.state.spaceapi}/>
                 )}  
             />
 
