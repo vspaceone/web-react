@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import CookieConsent, { Cookies } from "react-cookie-consent";
-import { Link } from "react-router-dom";
 
 import Nav from './common/Nav.js'
 import Footer from './common/Footer.js'
@@ -12,6 +11,7 @@ import Datenschutz from './page/Datenschutz.js'
 import Downloads from './page/Downloads.js';
 import FAQ from './page/FAQ.js'
 import MitgliedWerden from './page/MitgliedWerden.js';
+import Page404 from './page/404.js';
 
 import './App.css';
 
@@ -69,47 +69,53 @@ class App extends Component {
                 )} 
             />
 
-            <Route 
-                path="/" exact 
-                render={routeProps => (
-                    <Home {...routeProps} spaceapi={this.state.spaceapi}/>
-                )}  
-            />
+            <Switch>
+                <Route 
+                    path="/" exact 
+                    render={routeProps => (
+                        <Home {...routeProps} spaceapi={this.state.spaceapi}/>
+                    )}  
+                />
 
-            <Route 
-                path="/impressum" exact 
-                render={routeProps => (
-                    <Impressum {...routeProps} spaceapi={this.state.spaceapi}/>
-                )}  
-            />
+                <Route 
+                    path="/impressum" exact 
+                    render={routeProps => (
+                        <Impressum {...routeProps} spaceapi={this.state.spaceapi}/>
+                    )}  
+                />
 
-            <Route 
-                path="/datenschutz" exact 
-                render={routeProps => (
-                    <Datenschutz {...routeProps} spaceapi={this.state.spaceapi}/>
-                )}  
-            />
+                <Route 
+                    path="/datenschutz" exact 
+                    render={routeProps => (
+                        <Datenschutz {...routeProps} spaceapi={this.state.spaceapi}/>
+                    )}  
+                />
 
-            <Route 
-                path="/downloads" exact 
-                render={routeProps => (
-                    <Downloads {...routeProps} spaceapi={this.state.spaceapi}/>
-                )}  
-            />
+                <Route 
+                    path="/downloads" exact 
+                    render={routeProps => (
+                        <Downloads {...routeProps} spaceapi={this.state.spaceapi}/>
+                    )}  
+                />
 
-            <Route 
-                path="/faq" exact 
-                render={routeProps => (
-                    <FAQ {...routeProps} spaceapi={this.state.spaceapi}/>
-                )}  
-            />
+                <Route 
+                    path="/faq" exact 
+                    render={routeProps => (
+                        <FAQ {...routeProps} spaceapi={this.state.spaceapi}/>
+                    )}  
+                />
 
-            <Route 
-                path="/mitgliedwerden" exact 
-                render={routeProps => (
-                    <MitgliedWerden {...routeProps} spaceapi={this.state.spaceapi}/>
-                )}  
-            />
+                <Route 
+                    path="/mitgliedwerden" exact 
+                    render={routeProps => (
+                        <MitgliedWerden {...routeProps} spaceapi={this.state.spaceapi}/>
+                    )}  
+                />
+
+                <Route
+                    component={Page404}/>
+            </Switch>
+            
 
             <Route path="/" component={Footer} />
 

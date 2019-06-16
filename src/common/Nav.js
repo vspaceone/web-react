@@ -31,14 +31,14 @@ class Nav extends Component {
                     
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
                     <li>
-                      <Link className="faw-link" to="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">
+                      <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">
                         <i className="fab fa-telegram"></i>
-                      </Link>
+                      </a>
                     </li>                
                     <li>
-                      <Link className="faw-link" to="https://join.slack.com/t/vspaceone/shared_invite/enQtNDgzOTU2ODI4MTE4LTc1NTI5YjZjYjA0ZDU5N2UxOThiZTljYmY1ZGY1ZmRlMDM0MmYyMGNlZDA1NDk2YTAxODMxYWEzOWM5NWU5OGE">
+                      <a className="faw-link" href="https://join.slack.com/t/vspaceone/shared_invite/enQtNDgzOTU2ODI4MTE4LTc1NTI5YjZjYjA0ZDU5N2UxOThiZTljYmY1ZGY1ZmRlMDM0MmYyMGNlZDA1NDk2YTAxODMxYWEzOWM5NWU5OGE">
                         <i className="fab fa-slack"></i>
-                      </Link>
+                      </a>
                     </li>
                     <li>
                         <NavState state={ this.props.state } />

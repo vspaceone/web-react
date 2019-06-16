@@ -93,6 +93,35 @@ class HomeEvent extends Component {
 
         var event = this.props.event
 
+        var date = (<div></div>)
+
+        if (event.start && event.end){
+            date = (
+                <span className="event_time">
+                    <Moment 
+                        locale="de"
+                        date={new Date(event.start)}
+                        format=" HH:mm"
+                    /> bis
+                    <Moment 
+                        locale="de"
+                        date={new Date(event.end)}
+                        format=" HH:mm"
+                    /> Uhr
+                </span>
+            )
+        } else if (!event.end){
+            date = ( 
+                <span className="event_time">
+                    ab <Moment 
+                        locale="de"
+                        date={new Date(event.start)}
+                        format=" HH:mm"
+                    /> Uhr
+                </span> 
+            )
+        }
+
         return (
             <div className="event">
                 <div className="row">
@@ -117,42 +146,36 @@ class HomeEvent extends Component {
                     <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6 no-side-padding" >
                         <div className="event_details">
                             <span className="event_titleline">
-                            <span className="event_title">{event.title}</span>
-                            <span className="event_time">
-                                ab 
-                                <Moment 
-                                    locale="de"
-                                    date={new Date(event.start)}
-                                    format=" HH:mm"
-                                />
-                            </span>
-                            <span className="event_icons">
-                                {event.link?
-                                    (
-                                        <a 
-                                            href={event.link} 
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <span style={this.iconStyle} className="glyphicon-link glyphicon"></span>
-                                        </a>
-                                    ):""
-                                }
+                                <span className="event_title">{event.title}</span>
+                                <br></br>
+                                {date}
+                                <span className="event_icons">
+                                    {event.link?
+                                        (
+                                            <a 
+                                                href={event.link} 
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <span style={this.iconStyle} className="glyphicon-link glyphicon"></span>
+                                            </a>
+                                        ):""
+                                    }
 
-                                {event.download?
-                                    (
-                                        <a 
-                                            href={event.download} 
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <span style={this.iconStyle} className="glyphicon-file glyphicon"></span>
-                                        </a>
-                                    ):""
-                                }
+                                    {event.download?
+                                        (
+                                            <a 
+                                                href={event.download} 
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <span style={this.iconStyle} className="glyphicon-file glyphicon"></span>
+                                            </a>
+                                        ):""
+                                    }
 
-                                <span className="glyphicon-calendar glyphicon"></span>
-                            </span>
+                                    <span className="glyphicon-calendar glyphicon"></span>
+                                </span>
                             </span>
                             <span className="event_desc">
                                 <p dangerouslySetInnerHTML={{__html:event.desc}}></p>
