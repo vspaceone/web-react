@@ -59,7 +59,7 @@ class App extends Component {
                     route: window.location.hash.substr(1)
                 })                
             })
-        }, 1000);
+        }, 30000);
     }
 
     componentWillUnmount() {
