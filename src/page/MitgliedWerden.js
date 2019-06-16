@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import ReactPiwik from 'react-piwik';
 
 import { Link } from "react-router-dom";
 
 class MitgliedWerden extends Component {
+
+    componentDidMount(){
+        ReactPiwik.push(['trackPageView'])
+    }
 
     render() {
         return (

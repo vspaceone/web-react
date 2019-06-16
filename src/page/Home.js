@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactPiwik from 'react-piwik';
 
 import {Marker, Popup, Map, TileLayer} from 'react-leaflet';
 
@@ -6,6 +7,10 @@ import HomeJumbo from './Home/HomeJumbo.js'
 import HomeEvents from './Home/HomeEvents.js';
 
 class Home extends Component {
+
+    componentDidMount(){
+        ReactPiwik.push(['trackPageView'])
+    }
 
     render() {
         return (

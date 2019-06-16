@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import ReactPiwik from 'react-piwik';
 
 import Particles from 'react-particles-js';
 
 class FAQ extends Component {
+
+    componentDidMount(){
+        ReactPiwik.push(['trackPageView'])
+    }
 
     render() {
         return (

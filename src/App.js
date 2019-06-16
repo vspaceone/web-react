@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import CookieConsent, { Cookies } from "react-cookie-consent";
+import ReactPiwik from 'react-piwik';
+import history from './history.js'
 
 import Nav from './common/Nav.js'
 import Footer from './common/Footer.js'
@@ -14,6 +16,13 @@ import MitgliedWerden from './page/MitgliedWerden.js';
 import Page404 from './page/404.js';
 
 import './App.css';
+
+const piwik = new ReactPiwik({
+    url: 'https://matomo.vspace.one',
+    siteId: 1,
+    trackErrors: true,
+    enableLinkTracking: true,
+});
 
 class App extends Component {
 
@@ -60,12 +69,14 @@ class App extends Component {
 
     render() {
         return (
-        <Router>
+        <Router history={piwik.connectToHistory(history)}>
             <div>
             <Route 
                 path="/"                 
                 render={routeProps => (
-                    <Nav {...routeProps} state={this.state.spaceapi.state}/>
+                    <div>
+                        <Nav {...routeProps} state={this.state.spaceapi.state}/>
+                    </div>
                 )} 
             />
 

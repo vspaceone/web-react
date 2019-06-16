@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import ReactPiwik from 'react-piwik';
 
 class Downloads extends Component {
+
+    componentDidMount(){
+        ReactPiwik.push(['trackPageView'])
+    }
 
     render() {
         return (

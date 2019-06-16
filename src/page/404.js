@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import ReactPiwik from 'react-piwik';
 
 class Page404 extends Component {
+
+    componentDidMount(){
+        ReactPiwik.push(['trackPageView'])
+    }
 
     render() {
         return (
