@@ -219,7 +219,11 @@ p {
 }
 
 footer > p > a {
-    color: #ffffff
+    color: #ffffff;
+}
+
+footer {
+    margin: 0 !important;
 }
 
 /* Sticky footer */
