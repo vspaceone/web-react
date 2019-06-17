@@ -14,18 +14,23 @@ class HomeEvents extends Component {
 
     componentDidMount() {
         // Repeat status fetch every second
+        this.fetchEvents();
         this.interval = setInterval(() => {
-            fetch('/events.json')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({events: json})
-            })
-        }, 1000);
+            this.fetchEvents();
+        }, 30000);
     }
 
     componentWillUnmount() {
         // Remove interval for fetching state after unmount
         clearInterval(this.interval);
+    }
+
+    fetchEvents = function(){
+        fetch('/events.json')
+            .then(response => response.json())
+            .then(json => {
+                this.setState({events: json})
+            });
     }
 
     render() {        
