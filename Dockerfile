@@ -1,7 +1,8 @@
 FROM mhart/alpine-node:11 AS builder
 WORKDIR /app
 COPY . .
-RUN echo $SOURCE_COMMIT > ./public/version
+RUN echo $SOURCE_COMMIT > ./public/version.txt
+RUN cat ./public/version.txt
 RUN npm install
 RUN npm run build
 

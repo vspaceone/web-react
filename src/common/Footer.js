@@ -18,7 +18,7 @@ class Footer extends Component {
     }
 
     componentDidMount() {
-        fetch('/version')
+        fetch('/version.txt')
             .then(response => response.text())
             .then(text => {
                 this.setState({
