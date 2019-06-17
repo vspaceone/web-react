@@ -221,3 +221,15 @@ p {
 footer > p > a {
     color: #ffffff
 }
+
+/* Sticky footer */
+
+.site {
+    display: flex !important;
+    min-height: 100vh !important;
+    flex-direction: column !important;
+}
+  
+.site-content {
+    flex: 1 !important;
+}

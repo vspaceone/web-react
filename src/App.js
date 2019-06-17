@@ -70,79 +70,81 @@ class App extends Component {
     render() {
         return (
         <Router history={piwik.connectToHistory(history)}>
-            <div>
-            <Route 
-                path="/"                 
-                render={routeProps => (
-                    <div>
-                        <Nav {...routeProps} state={this.state.spaceapi.state}/>
-                    </div>
-                )} 
-            />
-
-            <Switch>
+            <div class="site">
                 <Route 
-                    path="/" exact 
+                    path="/"                 
                     render={routeProps => (
-                        <Home {...routeProps} spaceapi={this.state.spaceapi}/>
-                    )}  
+                        <div>
+                            <Nav {...routeProps} state={this.state.spaceapi.state}/>
+                        </div>
+                    )} 
                 />
 
-                <Route 
-                    path="/impressum" exact 
-                    render={routeProps => (
-                        <Impressum {...routeProps} spaceapi={this.state.spaceapi}/>
-                    )}  
-                />
+                <div class="site-content">
+                    <Switch>
+                        <Route 
+                            path="/" exact 
+                            render={routeProps => (
+                                <Home {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
 
-                <Route 
-                    path="/datenschutz" exact 
-                    render={routeProps => (
-                        <Datenschutz {...routeProps} spaceapi={this.state.spaceapi}/>
-                    )}  
-                />
+                        <Route 
+                            path="/impressum" exact 
+                            render={routeProps => (
+                                <Impressum {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
 
-                <Route 
-                    path="/downloads" exact 
-                    render={routeProps => (
-                        <Downloads {...routeProps} spaceapi={this.state.spaceapi}/>
-                    )}  
-                />
+                        <Route 
+                            path="/datenschutz" exact 
+                            render={routeProps => (
+                                <Datenschutz {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
 
-                <Route 
-                    path="/faq" exact 
-                    render={routeProps => (
-                        <FAQ {...routeProps} spaceapi={this.state.spaceapi}/>
-                    )}  
-                />
+                        <Route 
+                            path="/downloads" exact 
+                            render={routeProps => (
+                                <Downloads {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
 
-                <Route 
-                    path="/mitgliedwerden" exact 
-                    render={routeProps => (
-                        <MitgliedWerden {...routeProps} spaceapi={this.state.spaceapi}/>
-                    )}  
-                />
+                        <Route 
+                            path="/faq" exact 
+                            render={routeProps => (
+                                <FAQ {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
 
-                <Route
-                    component={Page404}/>
-            </Switch>
-            
+                        <Route 
+                            path="/mitgliedwerden" exact 
+                            render={routeProps => (
+                                <MitgliedWerden {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
 
-            <Route path="/" component={Footer} />
+                        <Route
+                            component={Page404}/>
+                    </Switch>
+                </div>
+                
 
-            <CookieConsent
-                location="bottom"
-                buttonText="Einverstanden"
-                declineButtonText="Nicht Einverstanden"
-                enableDeclineButton
-                cookieName="cookieConsent"
-                style={{ background: "#2B373B" }}
-                buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-                declineButtonStyle={{ fontSize: "13px" }}
-            >
-                Wir benutzen Cookies um diese Seite schöner zu machen.
-                Siehe <Link to="/datenschutz">Datenschutzerklärung</Link>.
-            </CookieConsent>
+                <Route path="/" component={Footer} />
+
+                <CookieConsent
+                    location="bottom"
+                    buttonText="Einverstanden"
+                    declineButtonText="Nicht Einverstanden"
+                    enableDeclineButton
+                    cookieName="cookieConsent"
+                    style={{ background: "#2B373B" }}
+                    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                    declineButtonStyle={{ fontSize: "13px" }}
+                >
+                    Wir benutzen Cookies um diese Seite schöner zu machen.
+                    Siehe <Link to="/datenschutz">Datenschutzerklärung</Link>.
+                </CookieConsent>
 
             </div>            
         </Router>
