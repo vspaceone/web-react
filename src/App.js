@@ -49,9 +49,20 @@ class App extends Component {
             })
         })
 
+        this.fetchSpaceapi();
         // Repeat status fetch every second
         this.interval = setInterval(() => {
-            fetch('/spaceapi.json')
+            this.fetchSpaceapi();
+        }, 30000);
+    }
+
+    componentWillUnmount() {
+        // Remove interval for fetching state after unmount
+        clearInterval(this.interval);
+    }
+
+    fetchSpaceapi = function() {
+        fetch('/spaceapi.json')
             .then(response => response.json())
             .then(json => {
                 this.setState({
@@ -59,12 +70,6 @@ class App extends Component {
                     route: window.location.hash.substr(1)
                 })                
             })
-        }, 30000);
-    }
-
-    componentWillUnmount() {
-        // Remove interval for fetching state after unmount
-        clearInterval(this.interval);
     }
 
     render() {
