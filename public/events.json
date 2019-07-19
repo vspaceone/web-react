@@ -2,18 +2,6 @@
   "apiversion": "0.2",
   "events":[
      {
-        "title":"Plenum",
-        "start":"2019-07-09T19:00:00+02:00",
-        "end":"2019-07-09T21:00:00+02:00",
-        "loc1":"vspace.one",
-        "loc2":"Wilhelm-Binderstraße 19",
-        "loc3":"78048 Villingen-Schwenningen",
-        "price":0.0,
-        "desc":"Wir treffen uns zum Plenum. Hier werden diverse Dinge aus dem Hackerspace-Alltag besprochen und kleinere Abstimmungen durchgeführt. Aber dennoch ist auch hier jeder herzlich willkommen vorbeizuschauen.",
-        "link":"https://wiki.vspace.one/doku.php?id=treffen:plenum_2019_06_04",
-        "download":""
-     },
-     {
         "title":"Blinkenrocket Lötworkshop",
         "start":"2019-08-07T14:00:00+02:00",
         "end":"2019-08-07T17:00:00+02:00",
@@ -36,6 +24,18 @@
         "desc":"<b>Anmeldung über die Webseite des Kinderferienprogramms! Ohne Anmeldung keine Teilnahme!</b><br>Jede/r Teilnehmende wird einen beleuchteten Fidget-Spinner Bausatz aufbauen. Dabei werden den Teilnehmern die grundlegenden Bauteile des Spielzeugs nähergebracht. In einigen kleinen Übungen werden die Teilnehmenden an die Grundlagen des Lötens von Schaltungen herangeführt. Zum Schluss kann jede/r Teilnehmende einen coolen neuen Spinner mit nachhause nehmen.",
         "link":"https://wiki.vspace.one/doku.php?id=treffen:20190808_loetworkshop",
         "download":""
-     }
+     },
+		 {
+				"title":"Sommerfest / Sommertalks '19",
+				"start":"2019-08-31T15:00:00+02:00",
+				"end":"2019-08-31T23:00:00+02:00",
+				"loc1":"vspace.one",
+				"loc2":"Wilhelm-Binderstraße 19",
+				"loc3":"78048 Villingen-Schwenningen",
+				"price":0.0,
+				"desc":"<b>",
+				"link":"https://wiki.vspace.one/doku.php?id=treffen:sommertalks",
+				"download":"https://vspace.one/download/20190627_Sommertalks_CfP.pdf"
+		 }
   ]
 }
