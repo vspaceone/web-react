@@ -1,65 +1,29 @@
 {
   "apiversion": "0.2",
   "events":[
-     {
-        "title":"Blinkenrocket Lötworkshop",
-        "start":"2019-08-07T14:00:00+02:00",
-        "end":"2019-08-07T17:00:00+02:00",
-        "loc1":"vspace.one",
-        "loc2":"Wilhelm-Binderstraße 19",
-        "loc3":"78048 Villingen-Schwenningen",
-        "price":0.0,
-        "desc":"<b>Leider ausgebucht!</b><br>Jede/r Teilnehmende lötet unter Anleitung eine kleine Raketenförmig-Platine. Die/Der Teilnehmende kann sich dabei nach und nach an kleinere Bauteile wagen. Die Beleuchtung der Rakete kann anschließend über einen Internetbrowser und ein Lautsprecherkabel selbst programmiert werden. Neben beliebigen Animationen kann der Name der/des Teilnehmenden als Laufschrift auf den 8 mal 8 LEDs der Rakete angezeigt werden. Der Fantasie sind keine Grenzen gesetzt. Das Projekt Blinkenrocket (http://blinkenrocket.de/) hat die Bausätze im Wert von je 26.-€ dafür gespendet.",
-        "link":"https://wiki.vspace.one/doku.php?id=treffen:20190807_loetworkshop",
-        "download":""
-     },
-     {
-        "title":"Fidget Spinner Lötworkshop",
-        "start":"2019-08-08T13:00:00+02:00",
-        "end":"2019-08-08T16:00:00+02:00",
-        "loc1":"vspace.one",
-        "loc2":"Wilhelm-Binderstraße 19",
-        "loc3":"78048 Villingen-Schwenningen",
-        "price":0.0,
-        "desc":"<b>Leider ausgebucht!</b><br>Jede/r Teilnehmende wird einen beleuchteten Fidget-Spinner Bausatz aufbauen. Dabei werden den Teilnehmern die grundlegenden Bauteile des Spielzeugs nähergebracht. In einigen kleinen Übungen werden die Teilnehmenden an die Grundlagen des Lötens von Schaltungen herangeführt. Zum Schluss kann jede/r Teilnehmende einen coolen neuen Spinner mit nachhause nehmen.",
-        "link":"https://wiki.vspace.one/doku.php?id=treffen:20190808_loetworkshop",
-        "download":""
-     },
-     {
-        "title":"Plenum",
-        "start":"2019-08-13T19:00:00+02:00",
-        "end":"2019-08-13T21:00:00+02:00",
-        "loc1":"vspace.one",
-        "loc2":"Wilhelm-Binderstraße 19",
-        "loc3":"78048 Villingen-Schwenningen",
-        "price":0.0,
-        "desc":"Ca. alle 4 Wochen findet das Plenum im vspace.one statt. Hier werden Entscheidungen getroffen und Problem sowie Projekte diskutiert. Jeder ist herzlich eingeladen teilzunehmen.",
-        "link":"https://wiki.vspace.one/doku.php?id=treffen:20190813_plenum",
-        "download":""
-     },
-		 {
-				"title":"Sommerfest / Sommertalks '19",
-				"start":"2019-08-31T15:00:00+02:00",
-				"end":"2019-08-31T23:00:00+02:00",
-				"loc1":"vspace.one",
-				"loc2":"Wilhelm-Binderstraße 19",
-				"loc3":"78048 Villingen-Schwenningen",
-				"price":0.0,
-				"desc":"Am 31.August wird bei uns das Sommerfest stattfinden. Dieses Jahr wollen wir auch ein Programm mit Talks anbieten. Wenn du deine Projekt, deine Abschlussarbeit oder deine Forschungsfrage vorstellen möchtest schreib uns eine kurze Email an max@vspace.one mit deinem Namen, Thema und Kurzbeschreibung. Los geht es um 15 Uhr.",
-				"link":"https://wiki.vspace.one/doku.php?id=treffen:sommertalks",
-				"download":"https://vspace.one/download/20190627_Sommertalks_CfP.pdf"
-		 },
-     {
-        "title":"Außerordentliche Mitgliederversammlung",
-        "start":"2019-09-03T19:00:00+02:00",
-        "end":"2019-09-03T22:00:00+02:00",
-        "loc1":"vspace.one",
-        "loc2":"Wilhelm-Binderstraße 19",
-        "loc3":"78048 Villingen-Schwenningen",
-        "price":0.0,
-        "desc":"Wir führen eine Außerordentliche Mitgliederversammlung durch. Jeder ist herzlich eingeladen! Stimmberechtigt sind Mitglieder des vspace.one e.V.. Die Tagesordnung wird demnächst veröffentlicht.",
-        "link":"https://wiki.vspace.one/doku.php?id=treffen:20190903_mitgliederversammlung",
-        "download":""
-     }
-  ]
+      {
+         "title":"Sommerfest / Sommertalks '19",
+         "start":"2019-08-31T15:00:00+02:00",
+         "end":"2019-08-31T23:00:00+02:00",
+         "loc1":"vspace.one",
+         "loc2":"Wilhelm-Binderstraße 19",
+         "loc3":"78048 Villingen-Schwenningen",
+         "price":0.0,
+         "desc":"Am 31.August wird bei uns das Sommerfest stattfinden. Dieses Jahr wollen wir auch ein Programm mit Talks anbieten. Wenn du deine Projekt, deine Abschlussarbeit oder deine Forschungsfrage vorstellen möchtest schreib uns eine kurze Email an max@vspace.one mit deinem Namen, Thema und Kurzbeschreibung. Los geht es um 15 Uhr.",
+         "link":"https://wiki.vspace.one/doku.php?id=treffen:sommertalks",
+         "download":"https://vspace.one/download/20190627_Sommertalks_CfP.pdf"
+      },
+      {
+         "title":"Außerordentliche Mitgliederversammlung",
+         "start":"2019-09-03T19:00:00+02:00",
+         "end":"2019-09-03T22:00:00+02:00",
+         "loc1":"vspace.one",
+         "loc2":"Wilhelm-Binderstraße 19",
+         "loc3":"78048 Villingen-Schwenningen",
+         "price":0.0,
+         "desc":"Wir führen eine Außerordentliche Mitgliederversammlung durch. Jeder ist herzlich eingeladen! Stimmberechtigt sind Mitglieder des vspace.one e.V.. Die Tagesordnung wird demnächst veröffentlicht.",
+         "link":"https://wiki.vspace.one/doku.php?id=treffen:20190903_mitgliederversammlung",
+         "download":""
+      }
+   ]
 }
