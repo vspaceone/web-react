@@ -2,16 +2,16 @@
   "apiversion": "0.2",
   "events":[
      {
-        "title":"TechEvent: Schaltplan und PCB Design mit KiCad",
-        "start":"2019-10-18T19:00:00+02:00",
-        "end":"2019-10-18T21:00:00+02:00",
+        "title":"Lightningtalks II",
+        "start":"2019-12-28T19:00:00+02:00",
+        "end":"2019-12-28T22:00:00+02:00",
         "loc1":"vspace.one",
         "loc2":"Wilhelm-Binderstraße 19",
         "loc3":"78048 Villingen-Schwenningen",
         "price":0.0,
-        "desc":"<p>Gemeinsam werden wir mit KiCad eine kleine Platine erstellen. Dazu beginnen wir mit dem Schaltplan. Anschließend wird jedem Element ein Footprint zugewiesen. Im nächsten Schritt wird daraus ein Layout erstellt. Also Leiterbahnen auf einer Platine. Dieses kann man sich dann für wenige Dollar in China als Platine bestellen. Wir werden den gesamten Prozess mit der kostenlosen und offenen Software KiCad durchführen.</p>",
-        "link":"https://wiki.vspace.one/doku.php?id=treffen:techevent20191018",
-        "download":"https://vspace.one/download/20191018_TechEvent_KiCad.pdf"
+        "desc":"<p>Wir werden wieder Lightningtalks halten! Wer mag darf gerne Vorträge oder Ähnliches mit bringen. Dauer pro Talk sollte zwischen 5 und 20 Minuten liegen. Talks können auch auf unserer Wikiseite eingetragen werden.</p>",
+        "link":"https://wiki.vspace.one/doku.php?id=treffen:lightningtalks20191228",
+        "download":""
      }
   ]
 }
