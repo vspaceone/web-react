@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import ICal from 'ical';
 import Moment from 'react-moment';
 import 'moment/locale/de';
+
+const DESIGNATOR_LINK = "Link"
+const DESIGNATOR_DOWNLOAD = "Download"
 
 class HomeEvents extends Component {
  
@@ -17,7 +21,7 @@ class HomeEvents extends Component {
         this.fetchEvents();
         this.interval = setInterval(() => {
             this.fetchEvents();
-        }, 30000);
+        }, /*30000*/30000);
     }
 
     componentWillUnmount() {
@@ -26,11 +30,103 @@ class HomeEvents extends Component {
     }
 
     fetchEvents = function(){
-        fetch('/events.json')
-            .then(response => response.json())
-            .then(json => {
-                this.setState({events: json})
-            });
+        var eventAPI = {events:[]};
+
+        // Fetch calendar data from public iCal resource
+        ICal.fromURL("https://cloud.vspace.one/remote.php/dav/public-calendars/L9bQJLgjy7a7iHr7?export", {}, (err, data) => {
+            
+            if (err !== undefined){
+                return;
+            }
+
+            for (let k in data) {
+                if (data.hasOwnProperty(k)) {
+                    var ev = data[k];
+                    console.log(ev)
+                    if (data[k].type === 'VEVENT') {
+                        
+                        // Discard old events
+                        if (ev.end < Date.now()){
+                            continue;
+                        }
+
+                        var isCancelled = false;
+                        // Check if event is cancelled
+                        if (ev.status !== undefined && ev.status === "CANCELLED"){
+                            isCancelled = true;
+                        }
+
+                        // Only for recurring events
+                        // Check if event is cancelled in reccurences
+                        if (ev.rrule !== undefined) {                            
+                            for (var recurrenceIdx in ev.recurrences){
+                                var recurrence = ev.recurrences[recurrenceIdx];
+
+                                if (recurrence.uid === ev.uid && recurrence.status === "CANCELLED"){
+                                    isCancelled = true;
+                                }
+                            }                            
+                        }
+
+                        // Do not show cancelled events
+                        if (isCancelled){
+                            continue;
+                        }
+
+                        var rawDescription = "";
+                        var download = "";
+                        var link = "";
+                        if (ev.description !== undefined){
+                            var descriptionLines = ev.description.split("\n");                            
+
+                            // Get lines starting with specific designators (<DESIGNATOR>: <Value>) and move separate them out from the description itself
+                            for (var i in descriptionLines){
+                                var line = descriptionLines[i];
+                                var designator = line.substring(0, line.search(":"));
+
+                                switch(designator){
+                                    case DESIGNATOR_DOWNLOAD:
+                                        download = line.substring(DESIGNATOR_DOWNLOAD.length + 1, line.length).trim();
+                                        break;
+                                    case DESIGNATOR_LINK:
+                                        link = line.substring(DESIGNATOR_LINK.length + 1, line.length).trim();
+                                        break;
+                                    default:
+                                        rawDescription += line + " ";
+                                }
+                            }
+                            rawDescription = rawDescription.trim();
+                        }
+
+                        // Build object corresponding to the previously used event-api
+                        eventAPI.events.push({
+                            title: ev.summary,
+                            start: ev.start,
+                            end: ev.end,
+                            loc1: ev.location,
+                            loc2:"",
+                            loc3:"",
+                            price:0.0,
+                            desc:`<p>${rawDescription}</p>`,
+                            link: link,
+                            download: download
+                        });
+                    }
+                }
+            }
+
+            // Sort by starting date
+            eventAPI.events.sort((a, b) => {
+                if (a.start < b.start){
+                    return -1;
+                } else if (b.start < a.start) {
+                    return 1;
+                }
+                return 0;
+            })
+
+            this.setState({events: eventAPI})
+        });
     }
 
     render() {        
@@ -78,6 +174,9 @@ class HomeEvents extends Component {
 
                     </div>
                 </div>
+
+                
+                
             </div>
         );
     }

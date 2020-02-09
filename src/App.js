@@ -75,7 +75,7 @@ class App extends Component {
     render() {
         return (
         <Router history={piwik.connectToHistory(history)}>
-            <div class="site">
+            <div className="site">
                 <Route 
                     path="/"                 
                     render={routeProps => (
@@ -85,7 +85,7 @@ class App extends Component {
                     )} 
                 />
 
-                <div class="site-content">
+                <div className="site-content">
                     <Switch>
                         <Route 
                             path="/" exact 

@@ -111,3 +111,6 @@ typings/
 # End of https://www.gitignore.io/api/node
 
 public/version
+
+# Files containing environmtment variables for different stages
+*env
