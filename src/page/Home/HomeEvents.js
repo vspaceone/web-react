@@ -3,6 +3,12 @@ import ICal from 'ical';
 import Moment from 'react-moment';
 import 'moment/locale/de';
 
+const CALENDAR_ICAL_URL = "https://cloud.vspace.one/remote.php/dav/public-calendars/L9bQJLgjy7a7iHr7?export";
+const CALENDAR_URL = "https://cloud.vspace.one/apps/calendar/p/L9bQJLgjy7a7iHr7";
+
+// Only look at this much next occurences, to prevent infinite loop
+const RECURRING_EVENT_LOOK_FORWARD = 5;
+
 const DESIGNATOR_LINK = "Link"
 const DESIGNATOR_DOWNLOAD = "Download"
 
@@ -33,20 +39,23 @@ class HomeEvents extends Component {
         var eventAPI = {events:[]};
 
         // Fetch calendar data from public iCal resource
-        ICal.fromURL("https://cloud.vspace.one/remote.php/dav/public-calendars/L9bQJLgjy7a7iHr7?export", {}, (err, data) => {
+        ICal.fromURL(CALENDAR_ICAL_URL, {}, (err, data) => {
             
             if (err !== undefined){
                 return;
             }
 
+            console.log(data)
+
             for (let k in data) {
                 if (data.hasOwnProperty(k)) {
                     var ev = data[k];
-                    console.log(ev)
                     if (data[k].type === 'VEVENT') {
                         
-                        // Discard old events
-                        if (ev.end < Date.now()){
+                        var isRecurringEvent = (ev.rrule !== undefined);
+                        var nextRecurrence = undefined;
+                        // Discard old events except recurring
+                        if (ev.end < Date.now() && !isRecurringEvent){
                             continue;
                         }
 
@@ -56,28 +65,61 @@ class HomeEvents extends Component {
                             isCancelled = true;
                         }
 
+                        var summary = ev.summary, start = ev.start, end = ev.end, location = ev.location, description = ev.description;
+
                         // Only for recurring events
                         // Check if event is cancelled in reccurences
-                        if (ev.rrule !== undefined) {                            
-                            for (var recurrenceIdx in ev.recurrences){
-                                var recurrence = ev.recurrences[recurrenceIdx];
-
-                                if (recurrence.uid === ev.uid && recurrence.status === "CANCELLED"){
-                                    isCancelled = true;
+                        var isOutOfScope = false;
+                        if (isRecurringEvent) {
+                            var lastDate;
+                            for (var i = 0; i < RECURRING_EVENT_LOOK_FORWARD; i++) {
+                                if (i === (RECURRING_EVENT_LOOK_FORWARD - 1)){
+                                    isOutOfScope = true;
                                 }
-                            }                            
+                                // get date of next recurrence
+                                var next = ev.rrule.after(lastDate ? lastDate : Date.now(),true);
+                                // get duration for calculating end of recurring date
+                                var duration = end.getTime() - start.getTime();
+
+                                // calculate new dates for recurrence
+                                start = next;
+                                end = new Date(next.getTime() + duration);
+
+                                var lookupKey = next.toISOString().substring(0,10);
+                                var recurrenceOverride = ev.recurrences === undefined ? undefined : ev.recurrences[lookupKey];
+                                var exception = ev.exdate === undefined ? undefined : ev.exdate[lookupKey];
+                                
+                                // If there is an exception for this recurrence or it is cancelled this should not be displayed
+                                // rather continue to search for further reccurences
+                                if (exception !== undefined 
+                                    || (recurrenceOverride 
+                                        && recurrenceOverride.status 
+                                        && recurrenceOverride.status === "CANCELLED")){
+                                    lastDate = end;
+                                    continue;
+                                }
+
+                                // check for and apply overrides
+                                if (recurrenceOverride !== undefined){
+                                    summary = recurrenceOverride.summary;
+                                    start = recurrenceOverride.start;
+                                    end = recurrenceOverride.end;
+                                    location = recurrenceOverride.location;
+                                }
+                                break;
+                            }
                         }
 
                         // Do not show cancelled events
-                        if (isCancelled){
+                        if (isCancelled || isOutOfScope){
                             continue;
                         }
 
                         var rawDescription = "";
                         var download = "";
                         var link = "";
-                        if (ev.description !== undefined){
-                            var descriptionLines = ev.description.split("\n");                            
+                        if (description !== undefined){
+                            var descriptionLines = description.split("\n");                            
 
                             // Get lines starting with specific designators (<DESIGNATOR>: <Value>) and move separate them out from the description itself
                             for (var i in descriptionLines){
@@ -100,16 +142,17 @@ class HomeEvents extends Component {
 
                         // Build object corresponding to the previously used event-api
                         eventAPI.events.push({
-                            title: ev.summary,
-                            start: ev.start,
-                            end: ev.end,
-                            loc1: ev.location,
+                            title: summary,
+                            start: start,
+                            end: end,
+                            loc1: location,
                             loc2:"",
                             loc3:"",
                             price:0.0,
                             desc:`<p>${rawDescription}</p>`,
                             link: link,
-                            download: download
+                            download: download,
+                            isRecurring: isRecurringEvent
                         });
                     }
                 }
@@ -142,41 +185,14 @@ class HomeEvents extends Component {
         return (
             <div className="container-fluid bg-2 text-center no-side-padding"  id="Events">
                 <div className="row">
-                    <h2 className="margin">Events</h2>
+                    <h2 className="">Events</h2>
+                    <h4 className="margin"><a href={CALENDAR_URL} target="_blank">Ganzer Kalender</a></h4>
                     <div id="events">
-
-                        <div className="event">
-                            <div className="row">
-                                <div className="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2 no-side-padding" >
-                                    <div className="event_date align-middle">
-                                        <div className="event_day text-center">Di</div>
-                                        <div className="event_month text-center">jeden</div>
-                                    </div>
-                                </div>
-                                <div className="col-xs-offset-1 col-xs-10 col-md-offset-0 col-md-6 no-side-padding" >
-                                    <div className="event_details">
-                                        <span className="event_titleline">
-                                        <span className="event_title">Chaostreff</span>
-                                        <span className="event_time">ab 19:00 Uhr</span>
-                                        <span className="event_icons">
-                                            <span className="glyphicon-calendar glyphicon"></span>
-                                        </span>
-                                        </span>
-                                        <span className="event_desc">
-                                            <p>Wir treffen uns jeden Dienstag ab 19:00 Uhr im vspace.one. Das ist der perfekte Termin, wenn uns kennenlernen willst oder einfach mal vorbeischauen möchtest. Komm einfach vorbei und sei willkommen!</p>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         { events }
 
                     </div>
-                </div>
-
-                
-                
+                </div>             
             </div>
         );
     }
@@ -231,6 +247,13 @@ class HomeEvent extends Component {
                 <div className="row">
                     <div className="col-xs-offset-1 col-xs-10 col-md-offset-2 col-md-2 no-side-padding" >
                         <div className="event_date align-middle">
+                            {event.isRecurring ?
+                                (
+                                    <span className="event_icons">
+                                        <span className="glyphicon-repeat glyphicon"></span>
+                                    </span>
+                                ): ""
+                            }
                             <div className="event_day text-center">
                                 <Moment 
                                     locale="de"
