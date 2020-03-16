@@ -106,6 +106,8 @@ class HomeEvents extends Component {
                                     end = recurrenceOverride.end;
                                     location = recurrenceOverride.location;
                                 }
+
+                                // Stop checking further recurrences because at this point the next one is found
                                 break;
                             }
                         }
@@ -183,10 +185,11 @@ class HomeEvents extends Component {
         }
 
         return (
-            <div className="container-fluid bg-2 text-center no-side-padding"  id="Events">
+            <div className="container-fluid bg-2 text-center no-side-padding"  id="Events">     
                 <div className="row">
                     <h2 className="">Events</h2>
                     <h4 className="margin"><a href={CALENDAR_URL} target="_blank">Ganzer Kalender</a></h4>
+                    <p>Aufgrund der Corona-Pandemie werden bis auf weiteres die Veranstaltungen abgesagt. Mehr infos siehe <a href="/#homeAlert">hier</a></p>
                     <div id="events">
 
                         { events }

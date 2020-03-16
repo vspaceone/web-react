@@ -14,7 +14,8 @@ class HomeJumbo extends Component {
                 style={{
                     position: 'relative',
                     padding: 0,
-                    backgroundColor: '#08A059',
+                    //backgroundColor: '#08A059',
+                    backgroundColor: 'crimson',
                     height: "670px"
                 }}
             >

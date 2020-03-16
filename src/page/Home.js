@@ -16,6 +16,7 @@ class Home extends Component {
         return (
             <div>
                 <HomeJumbo/>
+                <HomeInfoBoxAlert/>
                 <HomeInfoBox1/>
                 <HomeInfoBox2/>
                 <HomeInfoBox3/>
@@ -29,6 +30,51 @@ class Home extends Component {
         
         );
     }
+}
+
+function HomeInfoBoxAlert() {
+
+    var containerStyle = {
+        backgroundColor: "crimson",
+        color: "white"
+    }
+
+    var linkStyle = {
+        color:"white", 
+        textDecoration:""
+    }
+
+
+    return (
+        <div id="homeAlert" className="container-fluid bg-3 text-left" style={ containerStyle }>
+            <h2 className="margin">Situation zu COVID-19/Coronavirus</h2>
+            <p>
+            aufgrund der Corona Pandemie haben wir uns entschieden, 
+            offensiv und transparent mit dem Thema umzugehen.  <br/><br/>
+
+            Momentan gilt es, die Weiterverbreitung von COVID-19 – 
+            besser bekannt als Coronavirus – zu verlangsamen. 
+            Die Weiterverbreitung können wir alle bereits aktiv verlangsamen, 
+            indem wir uns an die uns bekannten Hygienemaßnahmen gemäß 
+            der allgemeinen Prinzipien der Risikoeinschätzung und 
+            Handlungsempfehlungen des Robert Koch Instituts halten. <br/><br/>
+
+            Aus diesem Grund wird der wöchentliche Chaostreff 
+            sowie alle anderen Veranstaltungen nun 
+            bis zum 20.April pausiert.
+            </p>
+            <br/><br/>
+
+            <p>
+                <ul>
+                    <li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risiko_Grossveranstaltungen.pdf?__blob=publicationFile" style={ linkStyle }>Allgemeine Prinzipien der Risikoeinschätzung und Handlungsempfehlung für Veranstaltungen<br/> - Robert Koch Institut </a></li>
+                    <li><a href="https://www.quarks.de/gesundheit/medizin/corona-virus-das-wissen-wir/" style={ linkStyle }>Coronavirus: Das wissen wir – und das nicht<br/> - Quarks</a></li>
+                </ul>
+                
+            </p>
+
+        </div>
+    );
 }
 
 function HomeInfoBox1() {

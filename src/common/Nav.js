@@ -22,10 +22,10 @@ class Nav extends Component {
                             <li><a href="/#Mitmachen">Mitmachen</a></li>
                             <li><a href="/#Ausstattung">Ausstattung</a></li>
                             <li><a href="/#Ort">Ort</a></li>
-                            <li><a href="/#Events">Events</a></li>
                         </ul>
                     </li>
 
+                    <li><a href="/#Events">Veranstaltungen</a></li>
                     <li><Link to="/faq">F&amp;A</Link></li>
                     <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
                     
@@ -33,11 +33,6 @@ class Nav extends Component {
                     <li>
                       <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">
                         <i className="fab fa-telegram"></i>
-                      </a>
-                    </li>                
-                    <li>
-                      <a className="faw-link" href="https://join.slack.com/t/vspaceone/shared_invite/enQtNDgzOTU2ODI4MTE4LTc1NTI5YjZjYjA0ZDU5N2UxOThiZTljYmY1ZGY1ZmRlMDM0MmYyMGNlZDA1NDk2YTAxODMxYWEzOWM5NWU5OGE">
-                        <i className="fab fa-slack"></i>
                       </a>
                     </li>
                     <li>
