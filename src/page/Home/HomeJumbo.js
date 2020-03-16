@@ -8,45 +8,51 @@ class HomeJumbo extends Component {
     }
 
     render() {
-        return (
-            <div 
-                className="container-fluid bg-1 text-center"
-                style={{
-                    position: 'relative',
-                    padding: 0,
-                    //backgroundColor: '#08A059',
-                    backgroundColor: 'crimson',
-                    height: "670px"
-                }}
-            >
-                <Particles height="670px" params={particleConfig} />
-                <div 
-                    id="particles-overlay"
-                    style={{
-                        height: '670px',
-                        marginTop: '30px',
-                        zIndex: 10,
-                        position: 'absolute',
-                        width: '100%',
-                        top: 0
-                    }}
-                >
-                    <h1 className="margin">Was ist der vspace.one?</h1>
-                    <img 
-                        src="pic/logo_vspaceone.svg" 
-                        className="img-responsive img-circle margin" 
-                        alt="Bird" width="350" height="350"
-                        style={{
-                            verticalAlign: 'middle',
-                            display: 'inline'
-                        }}/>
-                    <h1>
-                        Ein <i><a href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>  
-                        und <i><a href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
-                    </h1>
-                </div>
-            </div>
-        );
+
+      var linkStyle = {
+        color:"white", 
+        textDecoration:""
+      }
+
+      return (
+          <div 
+              className="container-fluid bg-1 text-center"
+              style={{
+                  position: 'relative',
+                  padding: 0,
+                  //backgroundColor: '#08A059',
+                  backgroundColor: 'crimson',
+                  height: "670px"
+              }}
+          >
+              <Particles height="670px" params={particleConfig} />
+              <div 
+                  id="particles-overlay"
+                  style={{
+                      height: '670px',
+                      marginTop: '30px',
+                      zIndex: 10,
+                      position: 'absolute',
+                      width: '100%',
+                      top: 0
+                  }}
+              >
+                  <h1 className="margin">Was ist der vspace.one?</h1>
+                  <img 
+                      src="pic/logo_vspaceone.svg" 
+                      className="img-responsive img-circle margin" 
+                      alt="Bird" width="350" height="350"
+                      style={{
+                          verticalAlign: 'middle',
+                          display: 'inline'
+                      }}/>
+                  <h1>
+                      Ein <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>  
+                      und <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
+                  </h1>
+              </div>
+          </div>
+      );
     }
 }
 

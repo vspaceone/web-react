@@ -41,7 +41,7 @@ function HomeInfoBoxAlert() {
 
     var linkStyle = {
         color:"white", 
-        textDecoration:""
+        textDecoration:"underline"
     }
 
 
@@ -67,8 +67,20 @@ function HomeInfoBoxAlert() {
 
             <p>
                 <ul>
-                    <li><a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risiko_Grossveranstaltungen.pdf?__blob=publicationFile" style={ linkStyle }>Allgemeine Prinzipien der Risikoeinschätzung und Handlungsempfehlung für Veranstaltungen<br/> - Robert Koch Institut </a></li>
-                    <li><a href="https://www.quarks.de/gesundheit/medizin/corona-virus-das-wissen-wir/" style={ linkStyle }>Coronavirus: Das wissen wir – und das nicht<br/> - Quarks</a></li>
+                    <li>
+                        <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risiko_Grossveranstaltungen.pdf?__blob=publicationFile" target="_blank" style={ linkStyle }>
+                            Allgemeine Prinzipien der Risikoeinschätzung und Handlungsempfehlung für Veranstaltungen<br/>
+                        </a>
+                        <span className="glyphicon glyphicon-new-window"></span> Robert Koch Institut
+                        
+                    </li>
+                    <li>
+                        <a href="https://www.quarks.de/gesundheit/medizin/corona-virus-das-wissen-wir/" target="_blank" style={ linkStyle }>
+                            Coronavirus: Das wissen wir – und das nicht<br/>
+                        </a>
+                        <span className="glyphicon glyphicon-new-window"></span> Quarks
+                        
+                    </li>
                 </ul>
                 
             </p>
