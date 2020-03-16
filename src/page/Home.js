@@ -47,6 +47,39 @@ function HomeInfoBoxAlert() {
 
     return (
         <div id="homeAlert" className="container-fluid bg-3 text-left" style={ containerStyle }>
+
+            <h2 className="margin">UPDATE 1</h2>
+            <h3 className="margin text-center">Situation zu COVID-19/Coronavirus</h3>
+            <p>
+            Am 16.03.2020 wurden konkrete Verordnungen aufgrund von der Bundesregierung und den Ländern ausgearbeiteten Leitlinien erlassen.
+            Diese Verordnung regelt weitere Einschränkungen des öffentlichen Lebens zum Schutz gegen die Pandemie, unter anderem
+            auch die Einstellung jeglicher Vereinsaktivitäten. <br/><br/>
+
+            Daher möchten wir Euch bitten, diesen Verordnungen nachzukommen und keine gemeinsamen Aktivitäten mehr in unseren Räumen stattfinden zu lassen.
+            </p>
+            <br/><br/>
+
+            <p>
+                <ul>
+                    <li>
+                        <a href="https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/landesregierung-beschliesst-massnahmen-gegen-die-ausbreitung-des-coronavirus/" target="_blank" style={ linkStyle }>
+                            Landesregierung beschließt Maßnahmen gegen die Ausbreitung des Coronavirus<br/>
+                        </a>
+                        <span className="glyphicon glyphicon-new-window"></span> Land Baden-Württemberg
+                        
+                    </li>
+                    <li>
+                        <a href="https://www.bundesregierung.de/breg-de/themen/meseberg/leitlinien-zum-kampf-gegen-die-corona-epidemie-1730942" target="_blank" style={ linkStyle }>
+                            Leitlinien zum Kampf gegen die Corona-Epidemie<br/>
+                        </a>
+                        <span className="glyphicon glyphicon-new-window"></span> Die Bundesregierung
+                        
+                    </li>
+                </ul>
+                
+            </p>
+            <br/><br/><br/>
+
             <h2 className="margin">Situation zu COVID-19/Coronavirus</h2>
             <p>
             aufgrund der Corona-Pandemie haben wir uns entschieden, 
