@@ -49,7 +49,7 @@ function HomeInfoBoxAlert() {
         <div id="homeAlert" className="container-fluid bg-3 text-left" style={ containerStyle }>
             <h2 className="margin">Situation zu COVID-19/Coronavirus</h2>
             <p>
-            aufgrund der Corona Pandemie haben wir uns entschieden, 
+            aufgrund der Corona-Pandemie haben wir uns entschieden, 
             offensiv und transparent mit dem Thema umzugehen.  <br/><br/>
 
             Momentan gilt es, die Weiterverbreitung von COVID-19 – 
@@ -59,7 +59,7 @@ function HomeInfoBoxAlert() {
             der allgemeinen Prinzipien der Risikoeinschätzung und 
             Handlungsempfehlungen des Robert Koch Instituts halten. <br/><br/>
 
-            Aus diesem Grund wird der wöchentliche Chaostreff 
+            Aus diesem Grund werden der wöchentliche Chaostreff 
             sowie alle anderen Veranstaltungen nun 
             bis zum 20.April pausiert.
             </p>
