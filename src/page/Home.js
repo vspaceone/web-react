@@ -92,9 +92,8 @@ function HomeInfoBoxAlert() {
             der allgemeinen Prinzipien der Risikoeinschätzung und 
             Handlungsempfehlungen des Robert Koch Instituts halten. <br/><br/>
 
-            Aus diesem Grund werden der wöchentliche Chaostreff 
-            sowie alle anderen Veranstaltungen nun 
-            bis zum 20.April pausiert.
+            Aus diesem Grund sind der wöchentliche Chaostreff 
+            sowie alle anderen Veranstaltungen bis auf Weiteres augesetzt.
             </p>
             <br/><br/>
 
