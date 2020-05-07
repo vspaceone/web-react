@@ -78,6 +78,9 @@ class HomeEvents extends Component {
                                 }
                                 // get date of next recurrence
                                 var next = ev.rrule.after(lastDate ? lastDate : Date.now(),true);
+                                if (!next){
+                                    continue;
+                                }
                                 // get duration for calculating end of recurring date
                                 var duration = end.getTime() - start.getTime();
 
@@ -189,7 +192,7 @@ class HomeEvents extends Component {
                 <div className="row">
                     <h2 className="">Events</h2>
                     <h4 className="margin"><a href={CALENDAR_URL} target="_blank">Ganzer Kalender</a></h4>
-                    <p>Aufgrund der Corona-Pandemie werden bis auf weiteres die Veranstaltungen abgesagt. Mehr infos siehe <a href="/#homeAlert">hier</a></p>
+                    <p>Aufgrund der Corona-Pandemie werden bis auf weiteres die Veranstaltungen vor Ort abgesagt. Mehr infos siehe <a href="/#homeAlert">hier</a></p>
                     <div id="events">
 
                         { events }
