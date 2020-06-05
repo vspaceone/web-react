@@ -93,7 +93,7 @@ function HomeInfoBoxAlert() {
             Handlungsempfehlungen des Robert Koch Instituts halten. <br/><br/>
 
             Aus diesem Grund sind der wöchentliche Chaostreff 
-            sowie alle anderen Veranstaltungen bis auf Weiteres augesetzt.
+            sowie alle anderen Veranstaltungen bis auf Weiteres ausgesetzt.
             </p>
             <br/><br/>
 
