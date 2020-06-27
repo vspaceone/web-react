@@ -4,6 +4,9 @@ pipeline {
         dockerImage = ''
         DOCKER_CREDENTIALS = 'docker-hub-vspaceone'
         DOCKER_IMAGE = 'vspaceone/web-react'
+
+        MASTER_STAGE_WEBHOOK = credentials('vspaceone-webhook-web-react')
+        BETA_STAGE_WEBHOOK = credentials('vspaceone-webhook-web-react')
     }
     stages {
         stage('Build image') {
@@ -37,15 +40,21 @@ pipeline {
                 }
             }
         }
-        /*stage('Push hash image') {
-            steps {
-                script {
-                    docker.withRegistry( '', DOCKER_CREDENTIALS ) {
-                        shortCommit = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
-                        dockerImage.push(shortCommit)
-                    }
-                }
+        stage('Send master webhooks') {
+            when {
+                expression { env.BRANCH_NAME == 'master' }
             }
-        }*/
+            steps {
+                sh "curl $MASTER_STAGE_WEBHOOK"
+            }
+        }
+        stage('Send beta webhooks') {
+            when {
+                expression { env.BRANCH_NAME == 'beta' }
+            }
+            steps {
+                sh "curl $BETA_STAGE_WEBHOOK"
+            }
+        }
     }
 }
