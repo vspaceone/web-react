@@ -6,7 +6,7 @@ pipeline {
         DOCKER_IMAGE = 'vspaceone/web-react'
 
         MASTER_STAGE_WEBHOOK = credentials('vspaceone-webhook-web-react')
-        BETA_STAGE_WEBHOOK = credentials('vspaceone-webhook-web-react')
+        BETA_STAGE_WEBHOOK = credentials('vspaceone-webhook-web-beta')
     }
     stages {
         stage('Build image') {
