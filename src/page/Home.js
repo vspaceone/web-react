@@ -62,14 +62,14 @@ function HomeInfoBoxAlert() {
             <p>
                 <ul>
                     <li>
-                        <a href="https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/landesregierung-beschliesst-massnahmen-gegen-die-ausbreitung-des-coronavirus/" target="_blank" style={ linkStyle }>
+                        <a href="https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/landesregierung-beschliesst-massnahmen-gegen-die-ausbreitung-des-coronavirus/" target="_blank" rel="noopener noreferrer" style={ linkStyle }>
                             Landesregierung beschließt Maßnahmen gegen die Ausbreitung des Coronavirus<br/>
                         </a>
                         <span className="glyphicon glyphicon-new-window"></span> Land Baden-Württemberg
                         
                     </li>
                     <li>
-                        <a href="https://www.bundesregierung.de/breg-de/themen/meseberg/leitlinien-zum-kampf-gegen-die-corona-epidemie-1730942" target="_blank" style={ linkStyle }>
+                        <a href="https://www.bundesregierung.de/breg-de/themen/meseberg/leitlinien-zum-kampf-gegen-die-corona-epidemie-1730942" target="_blank" rel="noopener noreferrer" style={ linkStyle }>
                             Leitlinien zum Kampf gegen die Corona-Epidemie<br/>
                         </a>
                         <span className="glyphicon glyphicon-new-window"></span> Die Bundesregierung
@@ -100,14 +100,14 @@ function HomeInfoBoxAlert() {
             <p>
                 <ul>
                     <li>
-                        <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risiko_Grossveranstaltungen.pdf?__blob=publicationFile" target="_blank" style={ linkStyle }>
+                        <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risiko_Grossveranstaltungen.pdf?__blob=publicationFile" target="_blank" rel="noopener noreferrer" style={ linkStyle }>
                             Allgemeine Prinzipien der Risikoeinschätzung und Handlungsempfehlung für Veranstaltungen<br/>
                         </a>
                         <span className="glyphicon glyphicon-new-window"></span> Robert Koch Institut
                         
                     </li>
                     <li>
-                        <a href="https://www.quarks.de/gesundheit/medizin/corona-virus-das-wissen-wir/" target="_blank" style={ linkStyle }>
+                        <a href="https://www.quarks.de/gesundheit/medizin/corona-virus-das-wissen-wir/" target="_blank" rel="noopener noreferrer" style={ linkStyle }>
                             Coronavirus: Das wissen wir – und das nicht<br/>
                         </a>
                         <span className="glyphicon glyphicon-new-window"></span> Quarks
