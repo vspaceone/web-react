@@ -16,7 +16,6 @@ class Home extends Component {
         return (
             <div>
                 <HomeJumbo/>
-                <HomeInfoBoxAlert/>
                 <HomeInfoBox1/>
                 <HomeInfoBox2/>
                 <HomeInfoBox3/>
@@ -30,95 +29,6 @@ class Home extends Component {
         
         );
     }
-}
-
-function HomeInfoBoxAlert() {
-
-    var containerStyle = {
-        backgroundColor: "crimson",
-        color: "white"
-    }
-
-    var linkStyle = {
-        color:"white", 
-        textDecoration:"underline"
-    }
-
-
-    return (
-        <div id="homeAlert" className="container-fluid bg-3 text-left" style={ containerStyle }>
-
-            <h2 className="margin">UPDATE 1</h2>
-            <h3 className="margin text-center">Situation zu COVID-19/Coronavirus</h3>
-            <p>
-            Am 16.03.2020 wurden konkrete Verordnungen aufgrund von der Bundesregierung und den Ländern ausgearbeiteten Leitlinien erlassen.
-            Diese Verordnung regelt weitere Einschränkungen des öffentlichen Lebens zum Schutz gegen die Pandemie, unter anderem
-            auch die Einstellung jeglicher Vereinsaktivitäten. <br/><br/>
-
-            Daher möchten wir Euch bitten, diesen Verordnungen nachzukommen und keine gemeinsamen Aktivitäten mehr in unseren Räumen stattfinden zu lassen.
-            </p>
-            <br/><br/>
-
-            <p>
-                <ul>
-                    <li>
-                        <a href="https://www.baden-wuerttemberg.de/de/service/presse/pressemitteilung/pid/landesregierung-beschliesst-massnahmen-gegen-die-ausbreitung-des-coronavirus/" target="_blank" style={ linkStyle }>
-                            Landesregierung beschließt Maßnahmen gegen die Ausbreitung des Coronavirus<br/>
-                        </a>
-                        <span className="glyphicon glyphicon-new-window"></span> Land Baden-Württemberg
-                        
-                    </li>
-                    <li>
-                        <a href="https://www.bundesregierung.de/breg-de/themen/meseberg/leitlinien-zum-kampf-gegen-die-corona-epidemie-1730942" target="_blank" style={ linkStyle }>
-                            Leitlinien zum Kampf gegen die Corona-Epidemie<br/>
-                        </a>
-                        <span className="glyphicon glyphicon-new-window"></span> Die Bundesregierung
-                        
-                    </li>
-                </ul>
-                
-            </p>
-            <br/><br/><br/>
-
-            <h2 className="margin">Situation zu COVID-19/Coronavirus</h2>
-            <p>
-            aufgrund der Corona-Pandemie haben wir uns entschieden, 
-            offensiv und transparent mit dem Thema umzugehen.  <br/><br/>
-
-            Momentan gilt es, die Weiterverbreitung von COVID-19 – 
-            besser bekannt als Coronavirus – zu verlangsamen. 
-            Die Weiterverbreitung können wir alle bereits aktiv verlangsamen, 
-            indem wir uns an die uns bekannten Hygienemaßnahmen gemäß 
-            der allgemeinen Prinzipien der Risikoeinschätzung und 
-            Handlungsempfehlungen des Robert Koch Instituts halten. <br/><br/>
-
-            Aus diesem Grund sind der wöchentliche Chaostreff 
-            sowie alle anderen Veranstaltungen bis auf Weiteres ausgesetzt.
-            </p>
-            <br/><br/>
-
-            <p>
-                <ul>
-                    <li>
-                        <a href="https://www.rki.de/DE/Content/InfAZ/N/Neuartiges_Coronavirus/Risiko_Grossveranstaltungen.pdf?__blob=publicationFile" target="_blank" style={ linkStyle }>
-                            Allgemeine Prinzipien der Risikoeinschätzung und Handlungsempfehlung für Veranstaltungen<br/>
-                        </a>
-                        <span className="glyphicon glyphicon-new-window"></span> Robert Koch Institut
-                        
-                    </li>
-                    <li>
-                        <a href="https://www.quarks.de/gesundheit/medizin/corona-virus-das-wissen-wir/" target="_blank" style={ linkStyle }>
-                            Coronavirus: Das wissen wir – und das nicht<br/>
-                        </a>
-                        <span className="glyphicon glyphicon-new-window"></span> Quarks
-                        
-                    </li>
-                </ul>
-                
-            </p>
-
-        </div>
-    );
 }
 
 function HomeInfoBox1() {

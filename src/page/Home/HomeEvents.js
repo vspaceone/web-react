@@ -53,7 +53,6 @@ class HomeEvents extends Component {
                     if (data[k].type === 'VEVENT') {
                         
                         var isRecurringEvent = (ev.rrule !== undefined);
-                        var nextRecurrence = undefined;
                         // Discard old events except recurring
                         if (ev.end < Date.now() && !isRecurringEvent){
                             continue;
@@ -191,7 +190,7 @@ class HomeEvents extends Component {
             <div className="container-fluid bg-2 text-center no-side-padding"  id="Events">     
                 <div className="row">
                     <h2 className="">Events</h2>
-                    <h4 className="margin"><a href={CALENDAR_URL} target="_blank">Ganzer Kalender</a></h4>
+                    <h4 className="margin"><a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Ganzer Kalender</a></h4>
                     <p>Aufgrund der Corona-Pandemie werden bis auf weiteres die Veranstaltungen vor Ort abgesagt. Mehr infos siehe <a href="/#homeAlert">hier</a></p>
                     <div id="events">
 
