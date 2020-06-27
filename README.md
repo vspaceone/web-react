@@ -1,4 +1,4 @@
-![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/vspaceone/web-react.svg?style=flat-square)
+[![Build Status](https://jenkins.vspace.one/buildStatus/icon?job=vspaceone%2Fweb-react%2Fmaster)](https://jenkins.vspace.one/job/vspaceone/job/web-react/job/master/)
 
 # vspace.one website 2.0
 This repo holds the code for the new vspace.one website written in React.
