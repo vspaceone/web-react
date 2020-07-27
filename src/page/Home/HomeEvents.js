@@ -191,7 +191,6 @@ class HomeEvents extends Component {
                 <div className="row">
                     <h2 className="">Events</h2>
                     <h4 className="margin"><a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer">Ganzer Kalender</a></h4>
-                    <p>Aufgrund der Corona-Pandemie werden bis auf weiteres die Veranstaltungen vor Ort abgesagt. Mehr infos siehe <a href="/#homeAlert">hier</a></p>
                     <div id="events">
 
                         { events }
