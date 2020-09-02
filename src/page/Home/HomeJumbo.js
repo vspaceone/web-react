@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
+import { ParallaxBanner } from 'react-scroll-parallax';
+import 'react-slideshow-image/dist/styles.css'
+
 
 class HomeJumbo extends Component {
 
@@ -9,53 +12,146 @@ class HomeJumbo extends Component {
 
     render() {
 
-      var linkStyle = {
-        color:"white", 
-        textDecoration:""
-      }
+        var boxHeight = '670px';
 
-      return (
-          <div 
-              className="container-fluid bg-1 text-center"
-              style={{
-                  position: 'relative',
-                  padding: 0,
-                  backgroundColor: '#08A059',
-                  height: "670px"
-              }}
-          >
-              <Particles height="670px" params={particleConfig} />
-              <div 
-                  id="particles-overlay"
-                  style={{
-                      height: '670px',
-                      marginTop: '30px',
-                      zIndex: 10,
-                      position: 'absolute',
-                      width: '100%',
-                      top: 0
-                  }}
-              >
-                  <h1 className="margin">Was ist der vspace.one?</h1>
-                  <img 
-                      src="pic/logo_vspaceone.svg" 
-                      className="img-responsive img-circle margin" 
-                      alt="Bird" width="350" height="350"
-                      style={{
-                          verticalAlign: 'middle',
-                          display: 'inline'
-                      }}/>
-                  <h1>
-                      Ein <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>  
-                      und <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
-                  </h1>
-              </div>
-          </div>
-      );
+        var h1Style = {textShadow: "2px 2px 4px black"};
+
+        var linkStyle = {
+            color:"white", 
+            textDecoration:""
+        }
+
+        var randomImage = images[parseInt(images.length * Math.random())];
+
+        return (
+            <div 
+                className="container-fluid bg-1 text-center"
+                style={{
+                    position: 'relative',
+                    padding: 0,
+                    height: boxHeight
+                }}
+            >
+                
+                    <ParallaxBanner
+                        layers={[
+                            randomImage
+                        ]}
+                        style={{
+                            height: boxHeight,
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+                    <Particles 
+                        height={boxHeight}
+                        params={particleConfig}
+                        style={{
+                            zIndex: 5,
+                            position: "absolute",
+                            top: 0,
+                            left: 0
+                        }}
+                    />
+                    <div 
+                        id="particles-overlay"
+                        style={{
+                            height: boxHeight,
+                            paddingTop: '30px',
+                            zIndex: 10,
+                            position: 'absolute',
+                            width: '100%',
+                            top: 0
+                        }}
+                    >
+                    <h1 className="margin" style={h1Style}>Was ist der vspace.one?</h1>
+                    <img 
+                        src="pic/logo_vspaceone.svg" 
+                        className="img-responsive img-circle margin" 
+                        alt="Bird" width="350" height="350"
+                        style={{
+                            verticalAlign: 'middle',
+                            display: 'inline'
+                        }}/>
+                    <h1 style={h1Style}>
+                        Ein <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>  
+                        und <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
+                    </h1>
+                </div>
+            </div>
+        );
     }
 }
 
 export default HomeJumbo;
+
+const images = [
+    {
+        image: 'pic/vspaceone_prusa_mk3s_small.jpg',
+        amount: -0.2,
+        props: {
+            style: {
+                backgroundPosition: '48% 50%',
+                backgroundSize: 'auto 150vw',
+                filter: "blur(2px)"
+            }
+        }
+    },
+    {
+        image: 'pic/vspaceone_4bit_adder_small.jpg',
+        amount: -0.2,
+        props: {
+            style: {
+                backgroundPosition: '48% 55%',
+                backgroundSize: 'auto 110vw',
+            }
+        }
+    },
+    {
+        image: 'pic/vspaceone_motoren_small.jpg',
+        amount: -0.2,
+        props: {
+            style: {
+                backgroundPosition: '50% 50%',
+                backgroundSize: 'auto 100vw',
+            }
+        }
+    },
+    {
+        image: 'pic/vspaceone_cap_drawers_small.jpg',
+        amount: -0.2,
+        props: {
+            style: {
+                backgroundPosition: '60% 50%',
+                backgroundSize: 'auto 100vw',
+                filter: "blur(1px)"
+            }
+        }
+    },
+    {
+        image: 'pic/vspaceone_big_psu_small.jpg',
+        amount: -0.2,
+        props: {
+            style: {
+                backgroundPosition: '53% 40%',
+                backgroundSize: 'auto 100vw',
+                filter: "blur(2px)",
+            }
+        }
+    },
+    {
+        image: 'pic/vspaceone_scope_small.jpg',
+        amount: -0.2,
+        props: {
+            style: {
+                backgroundPosition: '46% 90%',
+                backgroundSize: 'auto 85vw',
+                filter: "blur(1px)"
+            }
+        }
+    }
+];
 
 var particleConfig = {
     "particles": {
