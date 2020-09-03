@@ -21,7 +21,7 @@ class HomeJumbo extends Component {
             textDecoration:""
         }
 
-        var randomImage = images[2/*parseInt(images.length * Math.random())*/];
+        var randomImage = images[parseInt(images.length * Math.random())];
 
         return (
             <div 
