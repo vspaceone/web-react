@@ -7,7 +7,7 @@ import 'react-slideshow-image/dist/styles.css'
 class HomeJumbo extends Component {
 
     shouldComponentUpdate(nextProps, nextState) {
-        return false
+        return true
     }
 
     render() {
@@ -21,7 +21,7 @@ class HomeJumbo extends Component {
             textDecoration:""
         }
 
-        var randomImage = images[parseInt(images.length * Math.random())];
+        var randomImage = images[2/*parseInt(images.length * Math.random())*/];
 
         return (
             <div 
@@ -93,7 +93,7 @@ const images = [
         props: {
             style: {
                 backgroundPosition: '48% 50%',
-                backgroundSize: 'auto 150vw',
+                backgroundSize: 'auto 150%',
                 filter: "blur(2px)"
             }
         }
@@ -104,7 +104,7 @@ const images = [
         props: {
             style: {
                 backgroundPosition: '48% 55%',
-                backgroundSize: 'auto 110vw',
+                backgroundSize: 'auto 200%',
             }
         }
     },
@@ -114,7 +114,7 @@ const images = [
         props: {
             style: {
                 backgroundPosition: '50% 50%',
-                backgroundSize: 'auto 100vw',
+                backgroundSize: 'auto 100%',
             }
         }
     },
@@ -124,7 +124,7 @@ const images = [
         props: {
             style: {
                 backgroundPosition: '60% 50%',
-                backgroundSize: 'auto 100vw',
+                backgroundSize: 'auto 100%',
                 filter: "blur(1px)"
             }
         }
@@ -135,7 +135,7 @@ const images = [
         props: {
             style: {
                 backgroundPosition: '53% 40%',
-                backgroundSize: 'auto 100vw',
+                backgroundSize: 'auto 100%',
                 filter: "blur(2px)",
             }
         }
@@ -146,7 +146,7 @@ const images = [
         props: {
             style: {
                 backgroundPosition: '46% 90%',
-                backgroundSize: 'auto 85vw',
+                backgroundSize: 'auto 85%',
                 filter: "blur(1px)"
             }
         }
