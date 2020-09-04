@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import ReactPiwik from 'react-piwik';
+import { ParallaxBanner } from 'react-scroll-parallax';
 
 import {Marker, Popup, Map, TileLayer} from 'react-leaflet';
 
 import HomeJumbo from './Home/HomeJumbo.js'
 import HomeEvents from './Home/HomeEvents.js';
+import { min } from 'moment';
 
 class Home extends Component {
 
@@ -80,12 +82,8 @@ function HomeInfoBox2() {
     );
 }
 
-function HomeInfoBox3() {
-    return (
-        <div className="container-fluid no-side-padding bg-3 text-center" id="Ausstattung">
-            <h2 className="margin">Ausstattung</h2><br/>
-            <div className="row">
-                <div className="col-sm-4">
+/*
+<div className="col-sm-4">
                     <p>Für unsere Verbindung und Vernetzung in aller Welt sorgt ein Router mit Internetzugang. Für Gäste betreiben wir einen <a href="https://freifunk.net/">Freifunk Zugangspunkt</a>.</p>
                 </div>
                 <div className="col-sm-4">
@@ -116,9 +114,231 @@ function HomeInfoBox3() {
                     <img src="pic/vspaceone_elektronik.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Lager und Projektboxen"/>
                 </div>
                 </div>
+
+<ParallaxBanner
+                        layers={[
+                            randomImage
+                        ]}
+                        style={{
+                            height: boxHeight,
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+
+*/
+
+class HomeInfoBox3 extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { windowWidth: window.innerWidth };
+    }
+
+    handleResize = (e) => {
+        this.setState({ windowWidth: window.innerWidth });
+    };
+
+    componentDidMount() {
+        window.addEventListener("resize", this.handleResize);
+    }
+
+    componentWillUnmount() {
+        window.addEventListener("resize", this.handleResize);
+    } 
+
+    render() {
+
+        var topContainerStyle = {
+            marginTop: "-20px",
+            marginBottom: "-80px"
+        }
+
+        var parallaxWrapperStyle = {
+            position: 'relative',
+            height: '50vh', //'500px'
+            width: "100%",
+            marginTop: "10px",
+            marginBottom: "10px"
+        }
+
+        var rowTextClasses = "col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"
+
+        var defaultParallaxAmount = 0.5;
+
+        var minCalculatedParallaxBackgroundWidth = 1000;
+        var calculatedParallaxBackgroundWidth = 
+            Math.max(this.state.windowWidth, minCalculatedParallaxBackgroundWidth);
+        var finalWidth = calculatedParallaxBackgroundWidth + 'px';
+
+        return (
+            <div className="container-fluid no-side-padding bg-3 text-center" style={topContainerStyle} id="Ausstattung">
+                <div className="row">                
+                    <div className={rowTextClasses}>
+                        <h2>Ausstattung</h2><br/>
+                        <p>Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.</p>
+                    </div>
+                </div>
+
+                <div style={parallaxWrapperStyle} >
+                    <ParallaxBanner
+                        layers={[
+                            {
+                                image: 'pic/vspaceone_ausstattung_1.jpg',
+                                amount: defaultParallaxAmount,
+                                props: {
+                                    style: {
+                                        backgroundPosition: '50% 100%',
+                                        backgroundSize: 'auto ' + finalWidth,
+                                        backgroundRepeat: "no-repeat"
+                                    }
+                                }
+                            }
+                        ]}
+                        style={{
+                            width: "100%",  
+                            height: parallaxWrapperStyle.height,    
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+                </div>
+
+                <div className="row">                
+                    <div className={rowTextClasses}>
+                        <h3>3D Druck</h3>
+                        <p>Unser neuer Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.</p>
+                    </div>
+                </div>
+
+                <div style={parallaxWrapperStyle} >
+                    <ParallaxBanner
+                        layers={[
+                            {
+                                image: 'pic/vspaceone_prusa_mk3s_small.jpg',
+                                amount: defaultParallaxAmount,
+                                props: {
+                                    style: {
+                                        backgroundPosition: '48% 100%',
+                                        backgroundSize: 'auto ' + finalWidth,
+                                        backgroundRepeat: "no-repeat"
+                                    }
+                                }
+                            },
+                        ]}
+                        style={{
+                            width: "100%",  
+                            height: parallaxWrapperStyle.height,    
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+                </div>
+
+                <div className="row">                
+                    <div className={rowTextClasses}>
+                        <h3>Elektronik</h3>
+                        <p>Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.</p>
+                    </div>
+                </div>
+
+                <div style={parallaxWrapperStyle} >
+                    <ParallaxBanner
+                        layers={[
+                            {
+                                image: 'pic/vspaceone_big_psu_small.jpg',
+                                amount: defaultParallaxAmount,
+                                props: {
+                                    style: {
+                                        backgroundPosition: '60% 100%',
+                                        backgroundSize: 'auto ' + finalWidth,
+                                        backgroundRepeat: "no-repeat"
+                                    }
+                                }
+                            },
+                        ]}
+                        style={{
+                            width: "100%",  
+                            height: parallaxWrapperStyle.height,    
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+                </div>
+                
+                <div className="row">                
+                    <div className={rowTextClasses}>
+                        <p>Eine Wand an sortierten Elektronikkomponenten bietet eine Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.</p>
+                    </div>
+                </div>
+
+                <div style={parallaxWrapperStyle} >
+                    <ParallaxBanner
+                        layers={[
+                            {
+                                image: 'pic/vspaceone_drawer_wall_small.jpg',
+                                amount: defaultParallaxAmount,
+                                props: {
+                                    style: {
+                                        backgroundPosition: '65% 100%',
+                                        backgroundSize: 'auto ' + finalWidth,
+                                        backgroundRepeat: "no-repeat"
+                                    }
+                                }
+                            },
+                        ]}
+                        style={{
+                            width: "100%",  
+                            height: parallaxWrapperStyle.height,    
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+                </div>
+
+                <div className="row">                
+                    <div className={rowTextClasses}>
+                        <h3>Holz und Metall</h3>
+                        <p>
+                            Unsere noch nicht allzu große, aber ständig wachsende, 
+                            Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine
+                            Projekte in unseren Räumen bereit.
+                        </p>
+                    </div>
+                </div>
+
+                <div style={parallaxWrapperStyle} >
+                    <ParallaxBanner
+                        layers={[
+                            {
+                                image: 'pic/vspaceone_motoren_small.jpg',
+                                amount: defaultParallaxAmount,
+                                props: {
+                                    style: {
+                                        backgroundPosition: '48% 50%',
+                                        backgroundSize: 'auto ' + finalWidth,
+                                        backgroundRepeat: "no-repeat"
+                                    }
+                                }
+                            },
+                        ]}
+                        style={{
+                            width: "100%",  
+                            height: parallaxWrapperStyle.height,    
+                            zIndex: 1,
+                            position: "absolute"
+                        }}
+                        >
+                    </ParallaxBanner>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 class HomeState extends Component{ //style="margin-top:2px"

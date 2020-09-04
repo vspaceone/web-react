@@ -6,11 +6,101 @@ import 'react-slideshow-image/dist/styles.css'
 
 class HomeJumbo extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { windowWidth: window.innerWidth };
+    }
+
+    handleResize = (e) => {
+        this.setState({ windowWidth: window.innerWidth });
+    };
+
+    componentDidMount() {
+        window.addEventListener("resize", this.handleResize);
+    }
+
+    componentWillUnmount() {
+        window.addEventListener("resize", this.handleResize);
+    } 
+
     shouldComponentUpdate(nextProps, nextState) {
         return true
     }
 
     render() {
+        const parallaxAmount = 0.5;
+
+        var minCalculatedParallaxBackgroundWidth = 1000;
+        var calculatedParallaxBackgroundWidth = 
+            Math.max(this.state.windowWidth, minCalculatedParallaxBackgroundWidth);
+        var finalWidth = calculatedParallaxBackgroundWidth + 'px';
+
+        const images = [
+            {
+                image: 'pic/vspaceone_prusa_mk3s_small.jpg',
+                amount: parallaxAmount,
+                props: {
+                    style: {
+                        backgroundPosition: '48% 50%',
+                        backgroundSize: 'auto ' + finalWidth,
+                        filter: "blur(2px)"
+                    }
+                }
+            },
+            {
+                image: 'pic/vspaceone_4bit_adder_small.jpg',
+                amount: parallaxAmount,
+                props: {
+                    style: {
+                        backgroundPosition: '48% 55%',
+                        backgroundSize: 'auto ' + finalWidth,
+                    }
+                }
+            },
+            {
+                image: 'pic/vspaceone_motoren_small.jpg',
+                amount: parallaxAmount,
+                props: {
+                    style: {
+                        backgroundPosition: '50% 50%',
+                        backgroundSize: 'auto ' + finalWidth,
+                    }
+                }
+            },
+            {
+                image: 'pic/vspaceone_cap_drawers_small.jpg',
+                amount: parallaxAmount,
+                props: {
+                    style: {
+                        backgroundPosition: '60% 50%',
+                        backgroundSize: 'auto ' + finalWidth,
+                        filter: "blur(1px)"
+                    }
+                }
+            },
+            {
+                image: 'pic/vspaceone_big_psu_small.jpg',
+                amount: parallaxAmount,
+                props: {
+                    style: {
+                        backgroundPosition: '53% 40%',
+                        backgroundSize: 'auto ' + finalWidth,
+                        filter: "blur(2px)",
+                    }
+                }
+            },
+            {
+                image: 'pic/vspaceone_scope_small.jpg',
+                amount: parallaxAmount,
+                props: {
+                    style: {
+                        backgroundPosition: '46% 90%',
+                        backgroundSize: 'auto ' + finalWidth,
+                        filter: "blur(1px)"
+                    }
+                }
+            }
+        ];
 
         var boxHeight = '670px';
 
@@ -85,73 +175,6 @@ class HomeJumbo extends Component {
 }
 
 export default HomeJumbo;
-
-const images = [
-    {
-        image: 'pic/vspaceone_prusa_mk3s_small.jpg',
-        amount: -0.2,
-        props: {
-            style: {
-                backgroundPosition: '48% 50%',
-                backgroundSize: 'auto 150%',
-                filter: "blur(2px)"
-            }
-        }
-    },
-    {
-        image: 'pic/vspaceone_4bit_adder_small.jpg',
-        amount: -0.2,
-        props: {
-            style: {
-                backgroundPosition: '48% 55%',
-                backgroundSize: 'auto 200%',
-            }
-        }
-    },
-    {
-        image: 'pic/vspaceone_motoren_small.jpg',
-        amount: -0.2,
-        props: {
-            style: {
-                backgroundPosition: '50% 50%',
-                backgroundSize: 'auto 100%',
-            }
-        }
-    },
-    {
-        image: 'pic/vspaceone_cap_drawers_small.jpg',
-        amount: -0.2,
-        props: {
-            style: {
-                backgroundPosition: '60% 50%',
-                backgroundSize: 'auto 100%',
-                filter: "blur(1px)"
-            }
-        }
-    },
-    {
-        image: 'pic/vspaceone_big_psu_small.jpg',
-        amount: -0.2,
-        props: {
-            style: {
-                backgroundPosition: '53% 40%',
-                backgroundSize: 'auto 100%',
-                filter: "blur(2px)",
-            }
-        }
-    },
-    {
-        image: 'pic/vspaceone_scope_small.jpg',
-        amount: -0.2,
-        props: {
-            style: {
-                backgroundPosition: '46% 90%',
-                backgroundSize: 'auto 85%',
-                filter: "blur(1px)"
-            }
-        }
-    }
-];
 
 var particleConfig = {
     "particles": {
