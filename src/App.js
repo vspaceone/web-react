@@ -4,8 +4,6 @@ import CookieConsent, { Cookies } from "react-cookie-consent";
 import ReactPiwik from 'react-piwik';
 import history from './history.js'
 
-import { ParallaxProvider } from 'react-scroll-parallax';
-
 import Nav from './common/Nav.js'
 import Footer from './common/Footer.js'
 
@@ -76,7 +74,6 @@ class App extends Component {
 
     render() {
         return (
-        <ParallaxProvider>
         <Router history={piwik.connectToHistory(history)}>
             <div className="site">
                 <Route 
@@ -156,7 +153,6 @@ class App extends Component {
 
             </div>            
         </Router>
-        </ParallaxProvider>
         );
     }
 }

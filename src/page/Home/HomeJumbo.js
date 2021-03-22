@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import { ParallaxBanner } from 'react-scroll-parallax';
-import 'react-slideshow-image/dist/styles.css'
-
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 class HomeJumbo extends Component {
 
@@ -28,79 +27,6 @@ class HomeJumbo extends Component {
     }
 
     render() {
-        const parallaxAmount = 0.5;
-
-        var minCalculatedParallaxBackgroundWidth = 1000;
-        var calculatedParallaxBackgroundWidth = 
-            Math.max(this.state.windowWidth, minCalculatedParallaxBackgroundWidth);
-        var finalWidth = calculatedParallaxBackgroundWidth + 'px';
-
-        const images = [
-            {
-                image: 'pic/vspaceone_prusa_mk3s_small.jpg',
-                amount: parallaxAmount,
-                props: {
-                    style: {
-                        backgroundPosition: '48% 50%',
-                        backgroundSize: 'auto ' + finalWidth,
-                        filter: "blur(2px)"
-                    }
-                }
-            },
-            {
-                image: 'pic/vspaceone_4bit_adder_small.jpg',
-                amount: parallaxAmount,
-                props: {
-                    style: {
-                        backgroundPosition: '48% 55%',
-                        backgroundSize: 'auto ' + finalWidth,
-                    }
-                }
-            },
-            {
-                image: 'pic/vspaceone_motoren_small.jpg',
-                amount: parallaxAmount,
-                props: {
-                    style: {
-                        backgroundPosition: '50% 50%',
-                        backgroundSize: 'auto ' + finalWidth,
-                    }
-                }
-            },
-            {
-                image: 'pic/vspaceone_cap_drawers_small.jpg',
-                amount: parallaxAmount,
-                props: {
-                    style: {
-                        backgroundPosition: '60% 50%',
-                        backgroundSize: 'auto ' + finalWidth,
-                        filter: "blur(1px)"
-                    }
-                }
-            },
-            {
-                image: 'pic/vspaceone_big_psu_small.jpg',
-                amount: parallaxAmount,
-                props: {
-                    style: {
-                        backgroundPosition: '53% 40%',
-                        backgroundSize: 'auto ' + finalWidth,
-                        filter: "blur(2px)",
-                    }
-                }
-            },
-            {
-                image: 'pic/vspaceone_scope_small.jpg',
-                amount: parallaxAmount,
-                props: {
-                    style: {
-                        backgroundPosition: '46% 90%',
-                        backgroundSize: 'auto ' + finalWidth,
-                        filter: "blur(1px)"
-                    }
-                }
-            }
-        ];
 
         var boxHeight = '670px';
 
@@ -111,29 +37,45 @@ class HomeJumbo extends Component {
             textDecoration:""
         }
 
-        var randomImage = images[parseInt(images.length * Math.random())];
-
         return (
             <div 
                 className="container-fluid bg-1 text-center"
                 style={{
                     position: 'relative',
                     padding: 0,
-                    height: boxHeight
+                    height: boxHeight,
+                    overflow: "hidden"
                 }}
             >
-                
-                    <ParallaxBanner
-                        layers={[
-                            randomImage
-                        ]}
-                        style={{
-                            height: boxHeight,
-                            zIndex: 1,
-                            position: "absolute"
-                        }}
-                        >
-                    </ParallaxBanner>
+                    <CarouselProvider
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={100}
+                        totalSlides={6}
+                        infinite={true}
+                        interval={10000}
+                        isPlaying={true}
+                    >
+                        <Slider>
+                            <Slide index={0}>
+                              <img src="pic/vspaceone_prusa_mk3s_small.jpg" style={{width: "100%", marginTop: "-15vh",zIndex: "1"}}/>
+                            </Slide>
+                            <Slide index={1}>
+                              <img src="pic/vspaceone_4bit_adder_small.jpg" style={{width: "100%", marginTop: "-18vh", zIndex: "1"}}/>
+                            </Slide>
+                            <Slide index={2}>
+                              <img src="pic/vspaceone_motoren_small.jpg" style={{width: "100%", marginTop: "-14vh", zIndex: "1"}}/>
+                            </Slide>
+                            <Slide index={3}>
+                              <img src="pic/vspaceone_cap_drawers_small.jpg" style={{width: "100%", zIndex: "1"}}/>
+                            </Slide>
+                            <Slide index={4}>
+                              <img src="pic/vspaceone_big_psu_small.jpg" style={{width: "100%", marginTop: "-8vh", zIndex: "1"}}/>
+                            </Slide>
+                            <Slide index={5}>
+                              <img src="pic/vspaceone_scope_small.jpg" style={{width: "100%", marginTop: "-20vh", zIndex: "1"}}/>
+                            </Slide>
+                          </Slider>
+                    </CarouselProvider>
                     <Particles 
                         height={boxHeight}
                         params={particleConfig}

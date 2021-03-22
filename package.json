@@ -3,21 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brainhubeu/react-carousel": "^2.0.2",
     "ical": "^0.6.0",
     "leaflet": "^1.6.0",
     "moment": "^2.27.0",
     "momentjs": "^2.0.0",
+    "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
     "react-cookie-consent": "^2.5.0",
     "react-dom": "^16.13.1",
+    "react-image": "^4.0.3",
     "react-leaflet": "^2.7.0",
     "react-moment": "^0.9.7",
     "react-particles-js": "^2.7.1",
     "react-piwik": "^1.8.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-    "react-scroll-parallax": "^2.3.4",
-    "react-slideshow-image": "^3.2.0"
+    "react-slideshow-image": "^3.4.3",
+    "react-twitter-widgets": "^1.9.5"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,12 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import ReactPiwik from 'react-piwik';
-import { ParallaxBanner } from 'react-scroll-parallax';
 
 import {Marker, Popup, Map, TileLayer} from 'react-leaflet';
 
 import HomeJumbo from './Home/HomeJumbo.js'
 import HomeEvents from './Home/HomeEvents.js';
-import { min } from 'moment';
+
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
+import { Timeline } from 'react-twitter-widgets'
 
 class Home extends Component {
 
@@ -19,8 +23,9 @@ class Home extends Component {
             <div>
                 <HomeJumbo/>
                 <HomeInfoBox1/>
-                <HomeInfoBox2/>
                 <HomeInfoBox3/>
+                <HomeInfoBoxMitmachen/>
+                <HomeInfoBoxFeed/>
                 <HomeEvents />
                 <HomeState state={ this.props.spaceapi.state } />
                 <HomePosition 
@@ -36,24 +41,28 @@ class Home extends Component {
 function HomeInfoBox1() {
     return (
         <div className="container-fluid bg-3 text-left">
-            <h2 className="margin">Was wir machen</h2>
-            <p>
-                Unser Ziel ist der Wissensaustausch sowie die Bildung aller interessierten
-                in den Bereichen neuartiger computergestützter Technologien (wie zum Beispiel aber nicht ausschließlich
-                3D-­Druck, CNC, Internet der Dinge und Robotik), der Elektrotechnik und Elektronik
-                sowie auf dem Gebiet der Reparatur und Wartung.
-                Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces das bieten einer Plattform,
-                um seinen Interessen in diesen Gebieten nachzugehen.
-            </p>
-            <br/><br/>
-            <p className="text-center"><a href="?page=faq">Mehr Fragen zu uns und was wir machen beantworten wir hier!</a></p>
+            <div className="row">
+                <div className="col-sm-12">
+                    <h2 className="margin">Was wir machen</h2>
+                    <p>
+                        Unser Ziel ist der Wissensaustausch sowie die Bildung aller interessierten
+                        in den Bereichen neuartiger computergestützter Technologien (wie zum Beispiel aber nicht ausschließlich
+                        3D-­Druck, CNC, Internet der Dinge und Robotik), der Elektrotechnik und Elektronik
+                        sowie auf dem Gebiet der Reparatur und Wartung.
+                        Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces das bieten einer Plattform,
+                        um seinen Interessen in diesen Gebieten nachzugehen.
+                    </p>
+                    <br/><br/>
+                    <p className="text-center"><Link to="/faq">Mehr Fragen zu uns und was wir machen beantworten wir hier!</Link></p>
+                </div>                
+            </div>
         </div>
     );
 }
 
-function HomeInfoBox2() {
+function HomeInfoBoxMitmachen() {
     return (
-        <div className="container-fluid bg-2 text-center no-side-padding" id="Mitmachen">
+        <div className="container-fluid bg-3 text-center no-side-padding" id="Mitmachen">
             <h2 className="margin">Mitmachen</h2>
 
             <div style={{marginRight: '10px', marginLeft: '10px'}}>
@@ -64,7 +73,7 @@ function HomeInfoBox2() {
                     </div>
                     <div className="col-sm-6">
                         <h3>Mitglied werden</h3>
-                        <p>Bei uns kann Jeder und Jede mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik begeistern sind willkommen. Wenn euch gefällt was wir tun und ihr uns unterstützen wollt findet ihr unser Beitrittsformular <a href="https://vspace.one/?page=mitgliedwerden">hier</a>.</p>
+                        <p>Bei uns kann Jeder und Jede mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik begeistern sind willkommen. Wenn euch gefällt was wir tun und ihr uns unterstützen wollt findet ihr unser Beitrittsformular <Link to="/mitgliedwerden">hier</Link>.</p>
                     </div>
                 </div>
                 <div className="row">
@@ -82,263 +91,149 @@ function HomeInfoBox2() {
     );
 }
 
-/*
-<div className="col-sm-4">
-                    <p>Für unsere Verbindung und Vernetzung in aller Welt sorgt ein Router mit Internetzugang. Für Gäste betreiben wir einen <a href="https://freifunk.net/">Freifunk Zugangspunkt</a>.</p>
-                </div>
-                <div className="col-sm-4">
-                <p>Für die Umsetzung cooler Projekte haben wir eine Vielzahl an Werkzeugen und Maschinen (z.B. einen 3D-Drucker). Eine aktuelle Liste gibt es im <a href="https://wiki.vspace.one">Wiki</a>.</p>
-                </div>
-                <div className="col-sm-4">
-                <p>Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.</p>
-                </div>
-                <div className="row">
-                <div className="col-sm-4">
-                    <img src="pic/vspaceone_ausstattung_1.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Maschinenraum"/>
-                </div>
-                <div className="col-sm-4">
-                    <img src="pic/vspaceone_ausstattung_2.jpg" className="img-responsive margin" style={{width: '100%'}} alt="vspace.one Logo"/>
-                </div>
-                <div className="col-sm-4">
-                    <img src="pic/vspaceone_ausstattung_3.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Brücke"/>
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-4">
-                    <img src="pic/vspaceone_ausstattung_4.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Make things awesome Logo"/>
-                </div>
-                <div className="col-sm-4">
-                    <img src="pic/vspaceone_arbeitsplatz3.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Arbeitsplatz"/>
-                </div>
-                <div className="col-sm-4">
-                    <img src="pic/vspaceone_elektronik.jpg" className="img-responsive margin" style={{width: '100%'}} alt="Lager und Projektboxen"/>
-                </div>
-                </div>
-
-<ParallaxBanner
-                        layers={[
-                            randomImage
-                        ]}
-                        style={{
-                            height: boxHeight,
-                            zIndex: 1,
-                            position: "absolute"
+function HomeInfoBoxFeed() {
+    return (
+        <div className="container-fluid bg-2 text-center" id="Aktuelles">
+            <div className="row">
+                <div className="col-sm-12">
+                    <h2 className="margin">Aktuelles</h2>
+                    <Timeline
+                        dataSource={{
+                            sourceType: 'profile',
+                            screenName: 'vspaceone'
                         }}
-                        >
-                    </ParallaxBanner>
-
-*/
+                        options={{
+                            height: '80vh'
+                        }}
+                    />
+                </div>
+            </div>
+        
+        </div>
+    );
+}
 
 class HomeInfoBox3 extends Component {
 
-    constructor(props) {
+    constructor(props){
         super(props);
-        this.state = { windowWidth: window.innerWidth };
+        this.state = {value: 0}
+        this.onChange = this.onChange.bind(this);
     }
 
-    handleResize = (e) => {
-        this.setState({ windowWidth: window.innerWidth });
-    };
-
-    componentDidMount() {
-        window.addEventListener("resize", this.handleResize);
+    onChange(value){
+        this.setState({ value });
     }
 
-    componentWillUnmount() {
-        window.addEventListener("resize", this.handleResize);
-    } 
+    render(){       
 
-    render() {
-
-        var topContainerStyle = {
-            marginTop: "-20px",
-            marginBottom: "-80px"
+        const topContainerStyle = {
+            marginTop: "0px",
+            marginBottom: "-80px",
+            paddingTop: "40px"
         }
 
-        var parallaxWrapperStyle = {
-            position: 'relative',
-            height: '50vh', //'500px'
-            width: "100%",
-            marginTop: "10px",
-            marginBottom: "10px"
+        const carouselContentWrapperStyle = {
+            position: "relative",
+            maxHeight: "40vh",
+            overflow: "hidden"
         }
 
-        var rowTextClasses = "col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"
-
-        var defaultParallaxAmount = 0.5;
-
-        var minCalculatedParallaxBackgroundWidth = 1000;
-        var calculatedParallaxBackgroundWidth = 
-            Math.max(this.state.windowWidth, minCalculatedParallaxBackgroundWidth);
-        var finalWidth = calculatedParallaxBackgroundWidth + 'px';
+        const rowTextClasses = "col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"
 
         return (
-            <div className="container-fluid no-side-padding bg-3 text-center" style={topContainerStyle} id="Ausstattung">
-                <div className="row">                
-                    <div className={rowTextClasses}>
-                        <h2>Ausstattung</h2><br/>
-                        <p>Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.</p>
-                    </div>
-                </div>
+            <div className="container-fluid no-side-padding bg-2 text-center" style={topContainerStyle} id="Ausstattung">
+                <div>
+                    <CarouselProvider
+                        naturalSlideWidth={100}
+                        naturalSlideHeight={80}
+                        totalSlides={5}
+                        interval={5000}
+                        isPlaying={true}
+                    >
+                        <DotGroup />
+                        <Slider>
+                            <Slide index={0}>
+                                <div>
+                                    <div className="row">                
+                                        <div className={rowTextClasses}>
+                                            <h2>Ausstattung</h2><br/>
+                                            <p>Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.</p>
+                                        </div>
+                                    </div>
 
-                <div style={parallaxWrapperStyle} >
-                    <ParallaxBanner
-                        layers={[
-                            {
-                                image: 'pic/vspaceone_ausstattung_1.jpg',
-                                amount: defaultParallaxAmount,
-                                props: {
-                                    style: {
-                                        backgroundPosition: '50% 100%',
-                                        backgroundSize: 'auto ' + finalWidth,
-                                        backgroundRepeat: "no-repeat"
-                                    }
-                                }
-                            }
-                        ]}
-                        style={{
-                            width: "100%",  
-                            height: parallaxWrapperStyle.height,    
-                            zIndex: 1,
-                            position: "absolute"
-                        }}
-                        >
-                    </ParallaxBanner>
-                </div>
+                                    <div>
+                                        <CatchImage src={"pic/vspaceone_maschinenraum.jpg"} />
+                                    </div>
+                                </div>
+                            </Slide>
+                            <Slide index={1}>
+                                <div>
+                                    <div className="row">                
+                                        <div className={rowTextClasses}>
+                                            <h3>3D Druck</h3>
+                                            <p>Unser neuer Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.</p>
+                                        </div>
+                                    </div>
 
-                <div className="row">                
-                    <div className={rowTextClasses}>
-                        <h3>3D Druck</h3>
-                        <p>Unser neuer Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.</p>
-                    </div>
-                </div>
+                                    <div>
+                                        <CatchImage src={"pic/vspaceone_prusa_mk3s_small.jpg"} />
+                                    </div>
+                                </div>
+                            </Slide>
+                            <Slide index={2}>
+                                <div>
+                                    <div className="row">                
+                                        <div className={rowTextClasses}>
+                                            <h3>Elektronik</h3>
+                                            <p>Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.</p>
+                                        </div>
+                                    </div>
 
-                <div style={parallaxWrapperStyle} >
-                    <ParallaxBanner
-                        layers={[
-                            {
-                                image: 'pic/vspaceone_prusa_mk3s_small.jpg',
-                                amount: defaultParallaxAmount,
-                                props: {
-                                    style: {
-                                        backgroundPosition: '48% 100%',
-                                        backgroundSize: 'auto ' + finalWidth,
-                                        backgroundRepeat: "no-repeat"
-                                    }
-                                }
-                            },
-                        ]}
-                        style={{
-                            width: "100%",  
-                            height: parallaxWrapperStyle.height,    
-                            zIndex: 1,
-                            position: "absolute"
-                        }}
-                        >
-                    </ParallaxBanner>
-                </div>
+                                    <div>
+                                        <CatchImage src={"pic/vspaceone_big_psu_small.jpg"} />
+                                    </div>
+                                </div>
+                            </Slide>
+                            <Slide index={3}>
+                                <div>
+                                    <div className="row">    
+                                        <div className={rowTextClasses}>
+                                            <h3>Elektronik</h3>
+                                            <p>Eine Wand an sortierten Elektronikkomponenten bietet eine Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.</p>
+                                        </div>
+                                    </div>
 
-                <div className="row">                
-                    <div className={rowTextClasses}>
-                        <h3>Elektronik</h3>
-                        <p>Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.</p>
-                    </div>
-                </div>
+                                    <div>
+                                        <CatchImage src={"pic/vspaceone_drawer_wall_small.jpg"} />
+                                    </div>
+                                </div>
+                            </Slide>
+                            <Slide index={4}>
+                                <div>
+                                    <div className="row">                
+                                        <div className={rowTextClasses}>
+                                            <h3>Holz und Metall</h3>
+                                            <p>
+                                                Unsere noch nicht allzu große, aber ständig wachsende, 
+                                                Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine
+                                                Projekte in unseren Räumen bereit.
+                                            </p>
+                                        </div>
+                                    </div>
 
-                <div style={parallaxWrapperStyle} >
-                    <ParallaxBanner
-                        layers={[
-                            {
-                                image: 'pic/vspaceone_big_psu_small.jpg',
-                                amount: defaultParallaxAmount,
-                                props: {
-                                    style: {
-                                        backgroundPosition: '60% 100%',
-                                        backgroundSize: 'auto ' + finalWidth,
-                                        backgroundRepeat: "no-repeat"
-                                    }
-                                }
-                            },
-                        ]}
-                        style={{
-                            width: "100%",  
-                            height: parallaxWrapperStyle.height,    
-                            zIndex: 1,
-                            position: "absolute"
-                        }}
-                        >
-                    </ParallaxBanner>
-                </div>
-                
-                <div className="row">                
-                    <div className={rowTextClasses}>
-                        <p>Eine Wand an sortierten Elektronikkomponenten bietet eine Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.</p>
-                    </div>
-                </div>
-
-                <div style={parallaxWrapperStyle} >
-                    <ParallaxBanner
-                        layers={[
-                            {
-                                image: 'pic/vspaceone_drawer_wall_small.jpg',
-                                amount: defaultParallaxAmount,
-                                props: {
-                                    style: {
-                                        backgroundPosition: '65% 100%',
-                                        backgroundSize: 'auto ' + finalWidth,
-                                        backgroundRepeat: "no-repeat"
-                                    }
-                                }
-                            },
-                        ]}
-                        style={{
-                            width: "100%",  
-                            height: parallaxWrapperStyle.height,    
-                            zIndex: 1,
-                            position: "absolute"
-                        }}
-                        >
-                    </ParallaxBanner>
-                </div>
-
-                <div className="row">                
-                    <div className={rowTextClasses}>
-                        <h3>Holz und Metall</h3>
-                        <p>
-                            Unsere noch nicht allzu große, aber ständig wachsende, 
-                            Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine
-                            Projekte in unseren Räumen bereit.
-                        </p>
-                    </div>
-                </div>
-
-                <div style={parallaxWrapperStyle} >
-                    <ParallaxBanner
-                        layers={[
-                            {
-                                image: 'pic/vspaceone_motoren_small.jpg',
-                                amount: defaultParallaxAmount,
-                                props: {
-                                    style: {
-                                        backgroundPosition: '48% 50%',
-                                        backgroundSize: 'auto ' + finalWidth,
-                                        backgroundRepeat: "no-repeat"
-                                    }
-                                }
-                            },
-                        ]}
-                        style={{
-                            width: "100%",  
-                            height: parallaxWrapperStyle.height,    
-                            zIndex: 1,
-                            position: "absolute"
-                        }}
-                        >
-                    </ParallaxBanner>
+                                    <div>
+                                        <CatchImage src={"pic/vspaceone_holzundmetall.jpg"} />
+                                    </div>
+                                </div>
+                            </Slide>
+                        </Slider>
+                    </CarouselProvider>
                 </div>
             </div>
         );
-    }
+    }    
+    
 }
 
 class HomeState extends Component{ //style="margin-top:2px"
@@ -415,6 +310,34 @@ class HomePosition extends React.Component {
                 <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
             </div>
         );       
+
+    }
+}
+
+class CatchImage extends Component{
+
+    render(){
+
+        const maxHeight = this.props.maxHeight ? this.props.maxHeight : 50;
+    
+        const containerStyle = {
+            position: "relative",
+            overflow: "hidden"
+        }
+    
+        const verticalPosition = this.props.verticalPosition ? this.props.verticalPosition : 0;
+    
+        const style = {
+            width: "100%",
+            zIndex: "-1",
+            marginTop: verticalPosition + "%"
+        }
+    
+        return (
+        <div style={containerStyle}>
+            <img src={this.props.src} style={style}/>
+        </div>
+        )
 
     }
 }
