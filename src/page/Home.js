@@ -7,7 +7,7 @@ import {Marker, Popup, Map, TileLayer} from 'react-leaflet';
 import HomeJumbo from './Home/HomeJumbo.js'
 import HomeEvents from './Home/HomeEvents.js';
 
-import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, DotGroup, ButtonPlay } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import { Timeline } from 'react-twitter-widgets'
@@ -23,7 +23,7 @@ class Home extends Component {
             <div>
                 <HomeJumbo/>
                 <HomeInfoBox1/>
-                <HomeInfoBox3/>
+                <HomeInfoBoxBanner/>
                 <HomeInfoBoxMitmachen/>
                 <HomeInfoBoxFeed/>
                 <HomeEvents />
@@ -113,7 +113,7 @@ function HomeInfoBoxFeed() {
     );
 }
 
-class HomeInfoBox3 extends Component {
+class HomeInfoBoxBanner extends Component {
 
     constructor(props){
         super(props);
@@ -125,108 +125,68 @@ class HomeInfoBox3 extends Component {
         this.setState({ value });
     }
 
-    render(){       
+    render(){
+
+        const slideContent = [
+            {
+                    title: "Ausstattung",
+                    text: "Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.",
+                    imageSrc: "pic/vspaceone_maschinenraum.jpg"
+            },
+            {
+                    title: "3D Druck",
+                    text: "Unser neuer Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.",
+                    imageSrc: "pic/vspaceone_prusa_mk3s_small.jpg"
+            },
+            {
+                    title: "Elektronik",
+                    text: "Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.",
+                    imageSrc: "pic/vspaceone_big_psu_small.jpg"
+            },
+            {
+                    title: "Reparatur",
+                    text: "Eine Wand voll mit sortierten Elektronikkomponenten bietet die Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.",
+                    imageSrc: "pic/vspaceone_drawer_wall_small.jpg"
+            },
+            {
+                    title: "Holz und Metall",
+                    text: "Unsere noch nicht allzu große, aber ständig wachsende, Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine Projekte in unseren Räumen bereit.",
+                    imageSrc: "pic/vspaceone_holzundmetall.jpg"
+            }
+        ]
 
         const topContainerStyle = {
             marginTop: "0px",
             marginBottom: "-80px",
-            paddingTop: "40px"
+            paddingTop: "40px",
+            maxHeight: "100vh",
+            minHeight: "70vh"
         }
-
-        const carouselContentWrapperStyle = {
-            position: "relative",
-            maxHeight: "40vh",
-            overflow: "hidden"
-        }
-
-        const rowTextClasses = "col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"
 
         return (
             <div className="container-fluid no-side-padding bg-2 text-center" style={topContainerStyle} id="Ausstattung">
                 <div>
                     <CarouselProvider
                         naturalSlideWidth={100}
-                        naturalSlideHeight={80}
-                        totalSlides={5}
-                        interval={5000}
+                        naturalSlideHeight={100}
+                        totalSlides={slideContent.length}
+                        interval={10000}
                         isPlaying={true}
+                        infinite={true}
                     >
                         <DotGroup />
-                        <Slider>
-                            <Slide index={0}>
-                                <div>
-                                    <div className="row">                
-                                        <div className={rowTextClasses}>
-                                            <h2>Ausstattung</h2><br/>
-                                            <p>Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.</p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <CatchImage src={"pic/vspaceone_maschinenraum.jpg"} />
-                                    </div>
-                                </div>
-                            </Slide>
-                            <Slide index={1}>
-                                <div>
-                                    <div className="row">                
-                                        <div className={rowTextClasses}>
-                                            <h3>3D Druck</h3>
-                                            <p>Unser neuer Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.</p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <CatchImage src={"pic/vspaceone_prusa_mk3s_small.jpg"} />
-                                    </div>
-                                </div>
-                            </Slide>
-                            <Slide index={2}>
-                                <div>
-                                    <div className="row">                
-                                        <div className={rowTextClasses}>
-                                            <h3>Elektronik</h3>
-                                            <p>Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.</p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <CatchImage src={"pic/vspaceone_big_psu_small.jpg"} />
-                                    </div>
-                                </div>
-                            </Slide>
-                            <Slide index={3}>
-                                <div>
-                                    <div className="row">    
-                                        <div className={rowTextClasses}>
-                                            <h3>Elektronik</h3>
-                                            <p>Eine Wand an sortierten Elektronikkomponenten bietet eine Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.</p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <CatchImage src={"pic/vspaceone_drawer_wall_small.jpg"} />
-                                    </div>
-                                </div>
-                            </Slide>
-                            <Slide index={4}>
-                                <div>
-                                    <div className="row">                
-                                        <div className={rowTextClasses}>
-                                            <h3>Holz und Metall</h3>
-                                            <p>
-                                                Unsere noch nicht allzu große, aber ständig wachsende, 
-                                                Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine
-                                                Projekte in unseren Räumen bereit.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <CatchImage src={"pic/vspaceone_holzundmetall.jpg"} />
-                                    </div>
-                                </div>
-                            </Slide>
+                        <Slider style={{minHeight: "70vh", maxHeight: "100vh"}}>
+                            <>
+                                {slideContent.map((content, idx) => (
+                                    <Slide index={idx}>
+                                        <HomeInfoBoxBannerSlide
+                                            title={content.title}
+                                            text={content.text}
+                                            imageSrc={content.imageSrc}
+                                        />
+                                    </Slide>
+                                ))}
+                            </>
                         </Slider>
                     </CarouselProvider>
                 </div>
@@ -234,6 +194,24 @@ class HomeInfoBox3 extends Component {
         );
     }    
     
+}
+
+function HomeInfoBoxBannerSlide(props) {
+
+    const rowTextClasses = "col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"
+
+    return (
+        <>
+            <div className="row">                
+                <div className={rowTextClasses}>
+                    <h3>{props.title}</h3>
+                    <p>{props.text}</p>
+                </div>
+            </div>
+
+            <div style={{zIndex: "1", overflow: "hidden", backgroundSize: "cover", objectFit: "contain", backgroundPosition: "center", backgroundImage: `url(${props.imageSrc})`, height: "100%", maxHeight: "100vh"}}></div>
+        </>
+    )
 }
 
 class HomeState extends Component{ //style="margin-top:2px"

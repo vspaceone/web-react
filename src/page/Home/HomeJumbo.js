@@ -28,14 +28,25 @@ class HomeJumbo extends Component {
 
     render() {
 
-        var boxHeight = '670px';
+        const showButtons = false;
 
-        var h1Style = {textShadow: "2px 2px 4px black"};
+        const boxHeight = '670px';
 
-        var linkStyle = {
+        const h1Style = {textShadow: "2px 2px 4px black"};
+
+        const linkStyle = {
             color:"white", 
             textDecoration:""
         }
+
+        const images = [
+          "pic/vspaceone_prusa_mk3s_small.jpg",
+          "pic/vspaceone_4bit_adder_small.jpg",
+          "pic/vspaceone_motoren_small.jpg",
+          "pic/vspaceone_cap_drawers_small.jpg",
+          "pic/vspaceone_big_psu_small.jpg",
+          "pic/vspaceone_scope_small.jpg"
+        ]
 
         return (
             <div 
@@ -47,70 +58,62 @@ class HomeJumbo extends Component {
                     overflow: "hidden"
                 }}
             >
-                    <CarouselProvider
-                        naturalSlideWidth={100}
-                        naturalSlideHeight={100}
-                        totalSlides={6}
-                        infinite={true}
-                        interval={10000}
-                        isPlaying={true}
-                    >
-                        <Slider>
-                            <Slide index={0}>
-                              <img src="pic/vspaceone_prusa_mk3s_small.jpg" style={{width: "100%", marginTop: "-15vh",zIndex: "1"}}/>
+                <CarouselProvider
+                    naturalSlideWidth={100}
+                    naturalSlideHeight={100}
+                    totalSlides={images.length}
+                    infinite={true}
+                    interval={10000}
+                    isPlaying={true}
+                >
+                    <Slider style={{height: boxHeight}}>
+                        <>
+                            {images.map((image, idx) => (
+                            <Slide index={idx}>
+                                <div style={{zIndex: "1", overflow: "hidden", backgroundSize: "cover", objectFit: "contain", backgroundPosition: "center", backgroundImage: `url(${image})`, height: boxHeight}}></div>
                             </Slide>
-                            <Slide index={1}>
-                              <img src="pic/vspaceone_4bit_adder_small.jpg" style={{width: "100%", marginTop: "-18vh", zIndex: "1"}}/>
-                            </Slide>
-                            <Slide index={2}>
-                              <img src="pic/vspaceone_motoren_small.jpg" style={{width: "100%", marginTop: "-14vh", zIndex: "1"}}/>
-                            </Slide>
-                            <Slide index={3}>
-                              <img src="pic/vspaceone_cap_drawers_small.jpg" style={{width: "100%", zIndex: "1"}}/>
-                            </Slide>
-                            <Slide index={4}>
-                              <img src="pic/vspaceone_big_psu_small.jpg" style={{width: "100%", marginTop: "-8vh", zIndex: "1"}}/>
-                            </Slide>
-                            <Slide index={5}>
-                              <img src="pic/vspaceone_scope_small.jpg" style={{width: "100%", marginTop: "-20vh", zIndex: "1"}}/>
-                            </Slide>
-                          </Slider>
-                    </CarouselProvider>
-                    <Particles 
-                        height={boxHeight}
-                        params={particleConfig}
-                        style={{
-                            zIndex: 5,
-                            position: "absolute",
-                            top: 0,
-                            left: 0
-                        }}
-                    />
-                    <div 
-                        id="particles-overlay"
-                        style={{
-                            height: boxHeight,
-                            paddingTop: '30px',
-                            zIndex: 10,
-                            position: 'absolute',
-                            width: '100%',
-                            top: 0
-                        }}
-                    >
-                    <h1 className="margin" style={h1Style}>Was ist der vspace.one?</h1>
-                    <img 
-                        src="pic/logo_vspaceone.svg" 
-                        className="img-responsive img-circle margin" 
-                        alt="Bird" width="350" height="350"
-                        style={{
-                            verticalAlign: 'middle',
-                            display: 'inline'
-                        }}/>
-                    <h1 style={h1Style}>
-                        Ein <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>  
-                        und <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
-                    </h1>
-                </div>
+                            ))}
+                        </>
+                    </Slider>
+                    <div style={{display: showButtons ? "flex" : "none", justifyContent: "center", position: "absolute", zIndex: 15, top: 0, left: 0, height: boxHeight, width: "100%"}}>
+                        <DotGroup style={{zIndex: 10}} />
+                    </div>
+                </CarouselProvider>
+                <Particles 
+                    height={boxHeight}
+                    params={particleConfig}
+                    style={{
+                        zIndex: 5,
+                        position: "absolute",
+                        top: 0,
+                        left: 0
+                    }}
+                />
+                <div 
+                    id="particles-overlay"
+                    style={{
+                        height: boxHeight,
+                        paddingTop: '30px',
+                        zIndex: 10,
+                        position: 'absolute',
+                        width: '100%',
+                        top: 0
+                    }}
+                >
+                <h1 className="margin" style={h1Style}>Was ist der vspace.one?</h1>
+                <img 
+                    src="pic/logo_vspaceone.svg" 
+                    className="img-responsive img-circle margin" 
+                    alt="Bird" width="350" height="350"
+                    style={{
+                        verticalAlign: 'middle',
+                        display: 'inline'
+                    }}/>
+                <h1 style={h1Style}>
+                    Ein <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>  
+                    und <i><a style={ linkStyle } href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
+                </h1>
+            </div>
             </div>
         );
     }
