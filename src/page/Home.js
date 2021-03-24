@@ -105,6 +105,7 @@ function HomeInfoBoxFeed() {
                         options={{
                             height: '80vh'
                         }}
+                        renderError={(_err) => <p>Twitter-Widget konnte nicht geladen werden.<br></br>Bitte überprüfe Deine Ad- oder Skriptblocker.</p>}
                     />
                 </div>
             </div>

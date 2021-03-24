@@ -184,10 +184,12 @@ class HomeEvents extends Component {
             events = this.state.events.events.map((val,index) => (           
                 <HomeEvent key={index} event={val} />
             ));
-        } else if (!this.state.events.events || this.state.events.events.length == 0){
+        } 
+        
+        if (!this.state.events.events || this.state.events.events.length == 0){
             events = (
                 <div>
-                    <p>Keine events geplant.</p>
+                    <p>In nächster Zeit keine Events geplant.</p>
                 </div>
             )
         }
