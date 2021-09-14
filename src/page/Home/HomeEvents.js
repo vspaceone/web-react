@@ -3,8 +3,8 @@ import ICal from 'ical';
 import Moment from 'react-moment';
 import 'moment/locale/de';
 
-const CALENDAR_ICAL_URL = "https://cloud.vspace.one/remote.php/dav/public-calendars/L9bQJLgjy7a7iHr7?export";
-const CALENDAR_URL = "https://cloud.vspace.one/apps/calendar/p/L9bQJLgjy7a7iHr7";
+const CALENDAR_ICAL_URL = "https://hub.vspace.one/remote.php/dav/public-calendars/f6MfGLnsGScRqd4Y?export";
+const CALENDAR_URL = "https://hub.vspace.one/apps/calendar/p/f6MfGLnsGScRqd4Y";
 
 // Only look at this much next occurences, to prevent infinite loop
 const RECURRING_EVENT_LOOK_FORWARD = 5;
