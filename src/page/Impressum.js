@@ -18,8 +18,8 @@ class Impressum extends Component {
                 <p>Damian Jesionek<br />Linus Dold<br />Lukas Timmermann<br />Nikolai Müller</p>
                 <h2>Kontakt:</h2>
                 <p>
-                    Telefon: 0176 31642695<br />
-                    E-Mail: public [at] lists.vspace.one oder vorstand [at] lists.vspace.one
+                    Telefon: 07721 2968141<br />
+                    E-Mail: vorstand [at] lists.vspace.one
                 </p>
                 <h2>Datenschutzerklärung</h2>
                 <p>Es gilt die folgenden <a href="?page=datenschutzerklärung" style={{color: '#ffffff'}}>Datenschutzerklärung</a>.</p>

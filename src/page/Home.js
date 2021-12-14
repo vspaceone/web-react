@@ -1,4 +1,4 @@
-import React, { Component, Suspense, useEffect } from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import ReactPiwik from 'react-piwik';
 
@@ -7,7 +7,7 @@ import {Marker, Popup, Map, TileLayer} from 'react-leaflet';
 import HomeJumbo from './Home/HomeJumbo.js'
 import HomeEvents from './Home/HomeEvents.js';
 
-import { CarouselProvider, Slider, Slide, DotGroup, ButtonPlay } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import { Timeline } from 'react-twitter-widgets'
@@ -48,9 +48,12 @@ function HomeInfoBox1() {
                         Unser Ziel ist der Wissensaustausch sowie die Bildung aller interessierten
                         in den Bereichen neuartiger computergestützter Technologien (wie zum Beispiel aber nicht ausschließlich
                         3D-­Druck, CNC, Internet der Dinge und Robotik), der Elektrotechnik und Elektronik
-                        sowie auf dem Gebiet der Reparatur und Wartung.
+                        sowie auch auf Gebieten der Reparatur und Wartung.
+                        <br></br><br></br>
                         Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces das bieten einer Plattform,
-                        um seinen Interessen in diesen Gebieten nachzugehen.
+                        um seinen Interessen in diesen Gebieten nachzugehen von Programmieren bis Holz- und Metallwerken ist fast alles dabei. 
+                        <br></br><br></br>
+                        Dazu haben wir eine immer größer werdende Werkstatt, die für jeden zugänglich sein soll!
                     </p>
                     <br/><br/>
                     <p className="text-center"><Link to="/faq">Mehr Fragen zu uns und was wir machen beantworten wir hier!</Link></p>
@@ -75,8 +78,6 @@ function HomeInfoBoxMitmachen() {
                         <h3>Mitglied werden</h3>
                         <p>Bei uns kann Jeder und Jede mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik begeistern sind willkommen. Wenn euch gefällt was wir tun und ihr uns unterstützen wollt findet ihr unser Beitrittsformular <Link to="/mitgliedwerden">hier</Link>.</p>
                     </div>
-                </div>
-                <div className="row">
                     <div className="col-sm-6">
                         <h3>Telegram</h3>
                         <p>Für die inoffizielle Kommunikation verwenden wir eine <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegramgruppe</a>. Telegram ist eine Nachrichtenapp, ähnlich WhatsApp. Wenn du dich interessierst und wissen willst, was bei uns los ist, trete ihr bei oder schreibe uns eine Email an info[at]vspace.one.</p>
@@ -84,6 +85,10 @@ function HomeInfoBoxMitmachen() {
                     <div className="col-sm-6">
                         <h3>Mailingliste</h3>
                         <p>Die 'offizielle' Kommunikation, wie Einladungen zu Veranstaltungen, läuft über unsere <a href="https://lists.vspace.one/postorius/lists/public.lists.vspace.one/">Mailingliste</a>. Trag dich ein und bleib up-to-date. Das ist die Wahl, falls du nur auf dem Laufenden bleiben willst. (ca. 1 Mail pro Monat)</p>
+                    </div>
+                    <div className="col-sm-6">
+                        <h3>Spenden</h3>
+                        <p>Dir gefällt was wir machen, hast aber keine Möglichkeit oder Lust Mitglied zu werden? Gerne nehmen wir wie <Link to="/mitgliedwerden">hier beschrieben</Link> deine Spende als Überweisung an.</p>
                     </div>
                 </div>
             </div>
@@ -158,10 +163,12 @@ class HomeInfoBoxBanner extends Component {
 
         const topContainerStyle = {
             marginTop: "0px",
-            marginBottom: "-80px",
+            //marginBottom: "-80px",
             paddingTop: "40px",
             maxHeight: "100vh",
-            minHeight: "70vh"
+            minHeight: "70vh",
+            zIndex: "-4",
+            overflow: "hidden"
         }
 
         return (
@@ -289,34 +296,6 @@ class HomePosition extends React.Component {
                 <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
             </div>
         );       
-
-    }
-}
-
-class CatchImage extends Component{
-
-    render(){
-
-        const maxHeight = this.props.maxHeight ? this.props.maxHeight : 50;
-    
-        const containerStyle = {
-            position: "relative",
-            overflow: "hidden"
-        }
-    
-        const verticalPosition = this.props.verticalPosition ? this.props.verticalPosition : 0;
-    
-        const style = {
-            width: "100%",
-            zIndex: "-1",
-            marginTop: verticalPosition + "%"
-        }
-    
-        return (
-        <div style={containerStyle}>
-            <img src={this.props.src} style={style}/>
-        </div>
-        )
 
     }
 }

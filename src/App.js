@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import CookieConsent, { Cookies } from "react-cookie-consent";
+import CookieConsent from "react-cookie-consent";
 import ReactPiwik from 'react-piwik';
 import history from './history.js'
 
@@ -13,9 +13,11 @@ import Datenschutz from './page/Datenschutz.js'
 import Downloads from './page/Downloads.js';
 import FAQ from './page/FAQ.js'
 import MitgliedWerden from './page/MitgliedWerden.js';
+import Spenden from './page/Spenden.js';
 import Page404 from './page/404.js';
 
 import './App.css';
+import Sponsoren from './page/Sponsoren.js';
 
 const piwik = new ReactPiwik({
     url: 'https://matomo.vspace.one',
@@ -73,6 +75,7 @@ class App extends Component {
     }
 
     render() {
+        document.body.style.backgroundColor = "#f8f8f8"
         return (
         <Router history={piwik.connectToHistory(history)}>
             <div className="site">
@@ -126,6 +129,20 @@ class App extends Component {
                             path="/mitgliedwerden" exact 
                             render={routeProps => (
                                 <MitgliedWerden {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
+
+                        <Route 
+                            path="/spenden" exact 
+                            render={routeProps => (
+                                <Spenden {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
+
+                        <Route 
+                            path="/sponsoren" exact 
+                            render={routeProps => (
+                                <Sponsoren {...routeProps} spaceapi={this.state.spaceapi}/>
                             )}  
                         />
 

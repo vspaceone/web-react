@@ -9,19 +9,21 @@ class Downloads extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-center label-warning" id="downloads">
-            <h1 style={{marginBottom: '10px'}}>Downloads</h1>
-            <div className="row">
-                <div style={{textAlign:'left'}} className="col-sm-3"></div>
-                <div style={{textAlign:'left'}} className="col-sm-6">
-                <ul>
-                    <li><a style={{color: '#ffffff'}} href="download/satzung_v1.1.pdf">Satzung</a></li>
-                    <li><a style={{color: '#ffffff'}} href="download/beitragsordnung_v1.2.pdf">Beitragsordnung</a></li>
-                    <li><a style={{color: '#ffffff'}} href="download/beitrittserklaerung_v1.2.pdf">Beitrittserklaerung</a></li>
-                    <li><a style={{color: '#ffffff'}} href="download/beitrittserklaerung_interactive_v1.2.pdf">Beitrittserklaerung (interaktives pdf)</a></li>
-                </ul>
+            <div className="container-fluid bg-3 text-center label-warning" id="downloads">
+            <div style={{marginBottom: '2rem'}} className="row">
+                    <div className="col-sm-12">
+                        <h1>Downloads</h1>
+                    </div>
                 </div>
-                <div style={{textAlign:'left'}} className="col-sm-3"></div>
+            <div className="row">
+                <div style={{textAlign:'center'}} className="col-sm-12">
+                    <ul>
+                        <li><a href="download/satzung_v1.1.pdf">Satzung</a></li>
+                        <li><a href="download/beitragsordnung_v1.2.pdf">Beitragsordnung</a></li>
+                        <li><a href="download/beitrittserklaerung_v1.2.pdf">Beitrittserklärung</a></li>
+                        <li><a href="download/beitrittserklaerung_interactive_v1.2.pdf">Beitrittserklärung (interaktives pdf)</a></li>
+                    </ul>
+                </div>
             </div>
             </div>     
         );

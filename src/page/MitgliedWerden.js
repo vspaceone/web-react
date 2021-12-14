@@ -11,12 +11,18 @@ class MitgliedWerden extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-center label-warning" id="getamember">
-                <h1 style={{marginBottom: '10px'}}>Mitglied werden</h1>
+            <div className="container-fluid bg-3 text-center label-warning" id="getamember">
+                <div style={{marginBottom: '2rem'}} className="row">
+                    <div className="col-sm-12">
+                        <h1>Mitglied Werden</h1>
+                    </div>
+                </div>
                 <div className="row">
-                    <div style={{textAlign:'left'}} className="col-sm-offset-2 col-sm-8">
-                        Lade dir unter <Link to="/downloads" >Downloads</Link> die Beitrittserklärung herunter, bring sie mit in den Space und drücke sie einem der Vorstände in die Hände. Dafür eignet sich beispielsweise das zweiwöchig stattfindende Plenum
-                        am Dienstagabend. Alternativ schicke sie an folgende Adresse:<br/><br/> vspace.one e.V <br/> Wilhelm-Binder-Str. 19 <br/> 78048 Villingen
+                    <div style={{textAlign:'center'}} className="col-sm-offset-2 col-sm-8">
+                        Lade dir unter <Link to="/downloads" >Downloads</Link> die Beitrittserklärung herunter, bring sie mit in den Space und drücke sie einem der Vorstände in die Hände. Dafür eignet sich beispielsweise das regelmäßig stattfindende Treffen
+                        am Dienstagabend.
+                        <br/><br/>
+                        Alternativ schicke sie an folgende Adresse:<br/><br/> vspace.one e.V <br/> Wilhelm-Binder-Str. 19 <br/> 78048 Villingen
                     </div>
                 </div>
             </div>     

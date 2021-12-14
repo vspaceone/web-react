@@ -96,7 +96,7 @@ class FAQ extends Component {
                     <h2 class="margin">Wann treffe ich euch an?</h2>
                     <p>
                         Überwiegend treffen wir uns jeden Dienstagabend ab etwa 19.00 Uhr. Die meisten Mitglieder haben ihren eigenen Schlüssel und können somit rein, wann immer sie wollen.
-                        Ob gerade jemand da ist, erfährst du unter <a href="https://vspace.one/dashboard.php">https://vspace.one/dashboard.php</a> sowie auch auf direkt auf vspace.one.
+                        Ob gerade jemand da ist erfährst du direkt auf vspace.one.
                         Durch die SpaceAPI gibt es zudem auch fertige Apps, um sich den Raumstatus anzeigen zu lassen. Wer die Daten lieber selbst verarbeiten möchte,
                         findet sie hier: <a href="https://vspace.one/spaceapi.json">https://vspace.one/spaceapi.json</a>
                     </p>
@@ -109,8 +109,6 @@ class FAQ extends Component {
                         Dieser Liste könnt ihr natürlich bei Interesse an aktuellen Informationen <a href="https://lists.vspace.one/postorius/lists/public.lists.vspace.one/">hier beitreten!</a>
                         <br/>
                         Unserer Telegram Gruppe könnt ihr <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">hier beitreten!</a>
-                        <br/>
-                        Wir haben ebenfalls einen Workspace auf Slack dem ihr <a href="https://join.slack.com/t/vspaceone/shared_invite/enQtNDgzOTU2ODI4MTE4LTc1NTI5YjZjYjA0ZDU5N2UxOThiZTljYmY1ZGY1ZmRlMDM0MmYyMGNlZDA1NDk2YTAxODMxYWEzOWM5NWU5OGE">hier beitreten könnt!</a>
                     </p>
                 </div>
 

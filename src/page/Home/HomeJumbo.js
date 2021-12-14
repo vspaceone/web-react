@@ -48,14 +48,15 @@ class HomeJumbo extends Component {
           "pic/vspaceone_scope_small.jpg"
         ]
 
+
         return (
             <div 
                 className="container-fluid bg-1 text-center"
                 style={{
-                    position: 'relative',
-                    padding: 0,
-                    height: boxHeight,
-                    overflow: "hidden"
+                  position: 'relative',
+                  padding: 0,
+                  height: boxHeight,
+                  overflow: "hidden"
                 }}
             >
                 <CarouselProvider

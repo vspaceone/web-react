@@ -4,6 +4,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     color: #f5f6f7;
+    background-color: #f8f8f8;
 }
 
 h1 {
@@ -47,7 +48,7 @@ p {
 }
 
 .bg-3 {
-    background-color: #ffffff;
+    background-color: #f8f8f8;
     /* White */
     color: #555555;
 }
