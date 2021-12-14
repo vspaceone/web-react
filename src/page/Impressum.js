@@ -19,7 +19,7 @@ class Impressum extends Component {
                 <h2>Kontakt:</h2>
                 <p>
                     Telefon: 07721 2968141<br />
-                    E-Mail: vorstand [at] lists.vspace.one
+                    E-Mail: vorstand [at] vspace.one
                 </p>
                 <h2>Datenschutzerklärung</h2>
                 <p>Es gilt die folgenden <a href="?page=datenschutzerklärung" style={{color: '#ffffff'}}>Datenschutzerklärung</a>.</p>
