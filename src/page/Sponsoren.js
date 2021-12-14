@@ -16,7 +16,7 @@ class Sponsoren extends Component {
             rel: "noopener noreferrer"
         } 
 
-        let netcupLogo = <a {...netcupLinkParams}><Img src="/pic/sponsors/netcup_logo_RGB_color.svg"></Img></a>
+        let netcupLogo = <a {...netcupLinkParams}><Img src="/pic/sponsors/netcup_logo_RGB_color.svg" alt="Netcup Logo"></Img></a>
         let netcupText = <p><a {...netcupLinkParams}>netcup.de – Ihr Ansprechpartner für qualitatives Webhosting, Servermanagement, Colocation</a> und weitere Internetdienstleistungen für einen erfolgreichen, zuverlässigen und sicheren Internetauftritt.</p>
 
         let infoLogo = <Img style={{width:"100%"}} src="/pic/sponsors/undraw_businessman_re_mlee.svg"></Img>
