@@ -27,7 +27,16 @@ class Nav extends Component {
 
                     <li><a href="/#Events">Veranstaltungen</a></li>
                     <li><Link to="/faq">F&amp;A</Link></li>
-                    <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
+                    
+
+                    <li className="dropdown">
+                        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unterstützen<span className="caret"></span></a>
+                        <ul className="dropdown-menu">
+                            <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
+                            <li><Link to="/spenden">Spenden</Link></li>
+                            <li><Link to="/sponsoren">Sponsoren</Link></li>
+                        </ul>
+                    </li>
                     
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
                     <li>
