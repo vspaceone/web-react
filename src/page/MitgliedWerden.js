@@ -23,6 +23,9 @@ class MitgliedWerden extends Component {
                         am Dienstagabend.
                         <br/><br/>
                         Alternativ schicke sie an folgende Adresse:<br/><br/> vspace.one e.V <br/> Wilhelm-Binder-Str. 19 <br/> 78048 Villingen
+                        <br/><br/>
+                        Oder an folgende E-Mail Adresse:<br/><br/>
+                        <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a>
                     </div>
                 </div>
             </div>     

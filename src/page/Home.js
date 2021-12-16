@@ -275,6 +275,7 @@ class HomePosition extends React.Component {
                 <h2 className="margin">Wo findest du uns?</h2>
                 <p>Du findest uns in der Doppelstadt Villingen-Schwenningen.</p>
                 <p>Unsere Adresse lautet:<br/> { address  }</p><br/>
+                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/stehen.stetig.mächtig">///stehen.stetig.mächtig</a></p><br/>
                 <p></p>                
                 
                 <Map center={mapConfig.center} zoom={mapConfig.zoom} style={{

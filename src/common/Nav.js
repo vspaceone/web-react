@@ -25,7 +25,7 @@ class Nav extends Component {
                         </ul>
                     </li>
 
-                    <li><a href="/#Events">Veranstaltungen</a></li>
+                    <li><a href="/#Events">Termine</a></li>
                     <li><Link to="/faq">F&amp;A</Link></li>
                     
 
@@ -37,8 +37,17 @@ class Nav extends Component {
                             <li><Link to="/sponsoren">Sponsoren</Link></li>
                         </ul>
                     </li>
-                    
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
+                    <li>
+                      <a className="faw-link" href="https://twitter.com/vspaceone">
+                        <i className="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a className="faw-link" href="https://github.com/vspaceone">
+                        <i className="fab fa-github"></i>
+                      </a>
+                    </li>
                     <li>
                       <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">
                         <i className="fab fa-telegram"></i>
