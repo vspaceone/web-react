@@ -39,18 +39,18 @@ class Nav extends Component {
                     </li>
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
                     <li>
-                      <a className="faw-link" href="https://twitter.com/vspaceone">
-                        <i className="fab fa-twitter"></i>
+                      <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank">
+                        <i className="fab fa-telegram"></i>
                       </a>
                     </li>
                     <li>
-                      <a className="faw-link" href="https://github.com/vspaceone">
+                      <a className="faw-link" href="https://github.com/vspaceone" target="_blank">
                         <i className="fab fa-github"></i>
                       </a>
                     </li>
                     <li>
-                      <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">
-                        <i className="fab fa-telegram"></i>
+                      <a className="faw-link" href="https://twitter.com/vspaceone" target="_blank">
+                        <i className="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
