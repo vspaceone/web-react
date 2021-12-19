@@ -20,7 +20,7 @@ class Sponsoren extends Component {
         let netcupText = <p><a {...netcupLinkParams}>netcup.de – Ihr Ansprechpartner für qualitatives Webhosting, Servermanagement, Colocation und weitere Internetdienstleistungen</a> für einen erfolgreichen, zuverlässigen und sicheren Internetauftritt.</p>
 
         let infoLogo = <Img style={{width:"100%"}} src="/pic/sponsors/undraw_businessman_re_mlee.svg"></Img>
-        let infoText = <p>Interesse an einer Kooperation?<br></br>Dann kontaktiere uns über vorstand [at] vspace.one</p>
+        let infoText = <p>Interesse an einer Kooperation?<br></br>Dann kontaktiere uns über <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a></p>
 
         return (
             <div className="container-fluid bg-3 text-center label-warning" id="getamember">
