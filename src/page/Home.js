@@ -53,7 +53,7 @@ function HomeInfoBox1() {
                         Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces das bieten einer Plattform,
                         um seinen Interessen in diesen Gebieten nachzugehen von Programmieren bis Holz- und Metallwerken ist fast alles dabei. 
                         <br></br><br></br>
-                        Dazu haben wir eine immer größer werdende Werkstatt, die für jeden zugänglich sein soll!
+                        Dazu haben wir eine immer größer werdende offene Werkstatt, die für jeden zugänglich sein soll!
                     </p>
                     <br/><br/>
                     <p className="text-center"><Link to="/faq">Mehr Fragen zu uns und was wir machen beantworten wir hier!</Link></p>
