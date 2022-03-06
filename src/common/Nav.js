@@ -37,7 +37,19 @@ class Nav extends Component {
                             <li><Link to="/sponsoren">Sponsoren</Link></li>
                         </ul>
                     </li>
+
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
+
+                    <li className="dropdown">
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span className="caret"></span></a>
+                      <ul className="dropdown-menu">
+                        <li><a href="https://twitter.com/vspaceone" target="_blank"><i className="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.facebook.com/vspace.one" target="_blank"><i className="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/vspace.one/" target="_blank"><i className="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://toot.kif.rocks/@vspaceone" target="_blank"><i className="fab fa-mastodon"></i> Mastodon</a></li>
+                      </ul>
+                    </li>
+
                     <li>
                       <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank">
                         <i className="fab fa-telegram"></i>
@@ -46,11 +58,6 @@ class Nav extends Component {
                     <li>
                       <a className="faw-link" href="https://github.com/vspaceone" target="_blank">
                         <i className="fab fa-github"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a className="faw-link" href="https://twitter.com/vspaceone" target="_blank">
-                        <i className="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
