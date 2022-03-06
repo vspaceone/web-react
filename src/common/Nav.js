@@ -41,7 +41,7 @@ class Nav extends Component {
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
 
                     <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social Media<span className="caret"></span></a>
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span className="caret"></span></a>
                       <ul className="dropdown-menu">
                         <li><a href="https://twitter.com/vspaceone" target="_blank"><i className="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="https://www.facebook.com/vspace.one" target="_blank"><i className="fab fa-facebook"></i> Facebook</a></li>
