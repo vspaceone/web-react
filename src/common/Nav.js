@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class Nav extends Component {
   render() {
     return (
-      <nav className="navbar navbar-default">
+      <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container">
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -47,6 +47,8 @@ class Nav extends Component {
                         <li><a href="https://www.facebook.com/vspace.one" target="_blank"><i className="fab fa-facebook"></i> Facebook</a></li>
                         <li><a href="https://www.instagram.com/vspace.one/" target="_blank"><i className="fab fa-instagram"></i> Instagram</a></li>
                         <li><a href="https://toot.kif.rocks/@vspaceone" target="_blank"><i className="fab fa-mastodon"></i> Mastodon</a></li>
+                        <li className="divider"></li>
+                        <li><a href="/freunde" target="_blank"><i className="fab fa-users"></i>Freunde, Partner, Kooperationen</a></li>
                       </ul>
                     </li>
 

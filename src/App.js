@@ -12,6 +12,8 @@ import Impressum from './page/Impressum.js'
 import Datenschutz from './page/Datenschutz.js'
 import Downloads from './page/Downloads.js';
 import FAQ from './page/FAQ.js'
+import Freunde from './page/Freunde.js'
+import Tour from './page/Tour.js'
 import MitgliedWerden from './page/MitgliedWerden.js';
 import Spenden from './page/Spenden.js';
 import Page404 from './page/404.js';
@@ -143,6 +145,20 @@ class App extends Component {
                             path="/sponsoren" exact 
                             render={routeProps => (
                                 <Sponsoren {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
+
+                        <Route 
+                            path="/freunde" exact 
+                            render={routeProps => (
+                                <Freunde {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
+
+                        <Route 
+                            path="/tour" exact 
+                            render={routeProps => (
+                                <Tour {...routeProps} spaceapi={this.state.spaceapi}/>
                             )}  
                         />
 
