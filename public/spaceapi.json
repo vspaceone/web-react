@@ -4,9 +4,9 @@
     "logo": "https://vspace.one/pic/logo_vspaceone.svg",
     "url": "https://vspace.one",
     "location": {
-        "address": "Wilhelm-Binder-Str. 19, 78048 VS-Villingen, Germany",
-        "lat": 48.065002,
-        "lon": 8.456495
+        "address": "Am Krebsgraben 15 (Gebäude 8), 78048 VS-Villingen, Germany",
+        "lat":     48.067688,
+        "lon":     8.444397
     },
     "contact": {
         "phone": "+4977219463980",

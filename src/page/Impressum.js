@@ -12,7 +12,7 @@ class Impressum extends Component {
             <div className="container-fluid bg-2 text-center">
                 <h1>Impressum</h1>
                 <h2>Angaben gemäß § 5 TMG:</h2>
-                <p>vspace.one e.V.<br /> Wilhelm-Binder-Str. 19<br /> 78048 Villingen
+                <p>vspace.one e.V.<br /> Am Krebsgraben 15 (Gebäude 8)<br /> 78048 Villingen
                 </p>
                 <h2>Vertreten durch:</h2>
                 <p>Damian Jesionek<br />Linus Dold<br />Lukas Timmermann<br />Nikolai Müller</p>
