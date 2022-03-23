@@ -269,24 +269,18 @@ class HomePosition extends React.Component {
                 </Popup>
             </Marker>
         );
-        /*
-                <p>Du findest uns in der Doppelstadt Villingen-Schwenningen.</p>
-                <p>Unsere Adresse lautet:<br/> { address  }</p><br/>
-                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/stehen.stetig.mächtig">///stehen.stetig.mächtig</a></p><br/>
-                <p></p>
-
-                <p>Wenn der vspace.one offen ist kannst du uns auch anrufen.</p>
-                <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
-        */
 
         return (
             <div className="container-fluid bg-2 text-center" id="Ort">
                 <h2 className="margin">Wo findest du uns?</h2>
 
                 <p>Du findest uns in der Doppelstadt Villingen-Schwenningen.</p>
-                <p>Unsere Adresse lautet:<br/> Am Krebsgraben 15 (Gebäude 8) <br/> 78048 Villingen-Schwenningen </p>
-                <p>Für den exakten Standort kannst du uns auch über What3Words finden:<br/><a href = "https://w3w.co/rotes.hörer.dorfplatz">///rotes.hörer.dorfplatz</a></p><br/>
+                <p>Unsere Adresse lautet:<br/> { address  }</p><br/>
+                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/rotes.hörer.dorfplatz">///rotes.hörer.dorfplatz</a></p><br/>
                 <p></p>
+
+                <p>Wenn der vspace.one offen ist kannst du uns auch anrufen.</p>
+                <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
 
                 <Map center={mapConfig.center} zoom={mapConfig.zoom} style={{
                     width: '100%',
