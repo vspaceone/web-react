@@ -269,21 +269,25 @@ class HomePosition extends React.Component {
                 </Popup>
             </Marker>
         );
+        /*
+                <p>Du findest uns in der Doppelstadt Villingen-Schwenningen.</p>
+                <p>Unsere Adresse lautet:<br/> { address  }</p><br/>
+                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/stehen.stetig.mächtig">///stehen.stetig.mächtig</a></p><br/>
+                <p></p>
+
+                <p>Wenn der vspace.one offen ist kannst du uns auch anrufen.</p>
+                <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
+        */
 
         return (
             <div className="container-fluid bg-2 text-center" id="Ort">
                 <h2 className="margin">Wo findest du uns?</h2>
 
-                <p><b>Achtung!</b><br/> Wir ziehen im Laufe vom März 2022 in neue Räumlichkeiten und werden anschließend an folgender Adresse zu finden sein:</p>
-                <p>Am Krebsgraben 15 (Gebäude 8), 78048 Villingen-Schwenningen, Germany</p>
-                <p>Genauer Standort:<br/><a href = "https://w3w.co/rotes.hörer.dorfplatz">///rotes.hörer.dorfplatz</a></p><br/>
-                <br/>
-
                 <p>Du findest uns in der Doppelstadt Villingen-Schwenningen.</p>
-                <p>Unsere Adresse lautet:<br/> { address  }</p><br/>
-                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/stehen.stetig.mächtig">///stehen.stetig.mächtig</a></p><br/>
-                <p></p>                
-                
+                <p>Unsere Adresse lautet:<br/> Am Krebsgraben 15 (Gebäude 8) <br/> 78048 Villingen-Schwenningen </p>
+                <p>Für den exakten Standort kannst du uns auch über What3Words finden:<br/><a href = "https://w3w.co/rotes.hörer.dorfplatz">///rotes.hörer.dorfplatz</a></p><br/>
+                <p></p>
+
                 <Map center={mapConfig.center} zoom={mapConfig.zoom} style={{
                     width: '100%',
                     height: '30vh'
@@ -298,9 +302,7 @@ class HomePosition extends React.Component {
                 <a href="http://www.openstreetmap.org/?mlat=48.06501&amp;mlon=8.45645#map=18/48.06502/8.45645"><i>Große Karte anzeigen</i></a>
                 </small>
 
-
-                <p>Wenn der vspace.one offen ist kannst du uns auch anrufen.</p>
-                <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
+                <p>Aktuell sind wir leider nicht per Telefon erreichbar.</p>                
             </div>
         );       
 
