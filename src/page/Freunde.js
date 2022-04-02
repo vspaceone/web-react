@@ -19,17 +19,11 @@ class Freunde extends Component {
         let vowLogo = <a {...netcupLinkParams}><Img style={{maxWidth:"100%"}}  src="/pic/logos/logo_VOW_klein.gif" alt="Netcup Logo"></Img></a>
         let vowText = <p><a {...netcupLinkParams}></a>Wir sind Mitglied im Verband Offener Werkstätten und beziehen dort auch unsere Versicherungen</p>
 
-        let darcLogo = <a {...netcupLinkParams}><Img style={{maxWidth:"100%"}}  src="/pic/logos/logo_darc.png" alt="Netcup Logo"></Img></a>
-        let darcText = <p><a {...netcupLinkParams}></a>Ortsverbände A14 und A18 des Deutschen Amateur Radio Clubs sind räumlich und ideell in unserer unmittelbaren Nähe</p>
-
         let freifunkLogo = <Img style={{maxWidth:"100%"}} src="/pic/logos/logo_freifunk.png"></Img>
         let freifunkText = <p>Wir bieten ein Freifunk WLAN in unseren Räumen</p>
 
         let lugLogo = <Img style={{maxWidth:"100%"}} src="/pic/logos/logo_lug-vs.png"></Img>
         let lugText = <p>Mit der Linux User Group sind wir regelmäßig in Kontakt und hatten auch schon einen gemeinsamen Linux-Day</p>
-
-        let immvestLogo = <Img style={{maxWidth:"100%"}} src="/pic/logos/logo-immvest.jpg"></Img>
-        let immvestText = <p>Die Immvest GmbH als Eigentümerin des Technologiepark VS unterstützt uns mit tollen Räumlichkeiten</p>
 
         return (
             <div className="container-fluid bg-3 text-center label-warning" id="getamember">
@@ -40,13 +34,9 @@ class Freunde extends Component {
                 </div>
                 <Freund num={0} logo={vowLogo} text={vowText} />
                 <div style={{marginBottom: '20rem'}}></div>
-                <Freund num={1} logo={darcLogo} text={darcText} />
+                <Freund num={1} logo={lugLogo} text={lugText} />
                 <div style={{marginBottom: '20rem'}}></div>
                 <Freund num={2} logo={freifunkLogo} text={freifunkText} />
-                <div style={{marginBottom: '20rem'}}></div>
-                <Freund num={3} logo={lugLogo} text={lugText} />
-                <div style={{marginBottom: '20rem'}}></div>
-                <Freund num={4} logo={immvestLogo} text={immvestText} />
             </div>     
         );
     }
