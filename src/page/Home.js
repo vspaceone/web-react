@@ -270,6 +270,9 @@ class HomePosition extends React.Component {
             </Marker>
         );
 
+        const mapLink = "http://www.openstreetmap.org/?mlat=" + pos[0] + "&amp;mlon=" + pos[1] + "#map=18/" + pos[0] + "/" + pos[1];
+
+
         return (
             <div className="container-fluid bg-2 text-center" id="Ort">
                 <h2 className="margin">Wo findest du uns?</h2>
@@ -293,10 +296,10 @@ class HomePosition extends React.Component {
                     {marker}
                 </Map>
                 <small>
-                <a href="http://www.openstreetmap.org/?mlat=48.06501&amp;mlon=8.45645#map=18/48.06502/8.45645"><i>Große Karte anzeigen</i></a>
+                <a href={mapLink}><i>Große Karte anzeigen</i></a>
                 </small>
 
-                <p>Aktuell sind wir leider nicht per Telefon erreichbar.</p>                
+                <p>Wenn wir offen haben sind wir vor Ort unter folgender Nummer erreichbar:<br/><a href={"tel:" + phone}>07721 946 39 80</a></p>                
             </div>
         );       
 
