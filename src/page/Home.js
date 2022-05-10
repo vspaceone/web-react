@@ -72,7 +72,7 @@ function HomeInfoBoxMitmachen() {
                 <div className="row">
                     <div className="col-sm-6">
                         <h3>Vorbeischauen</h3>
-                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch Dienstags ab 19:00 bei uns in der Wilhelm-Binderstraße 19 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
+                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch Dienstags ab 19:00 bei uns in der Am Krebsgraben 15 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
                     </div>
                     <div className="col-sm-6">
                         <h3>Mitglied werden</h3>

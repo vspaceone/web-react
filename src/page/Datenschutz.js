@@ -59,10 +59,10 @@ class Datenschutz extends Component {
                 <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist die:</p>
 
                 <p>vspace.one e.V.</p>
-                <p>Wilhelm-Binder-Str. 19</p>
+                <p>Am Krebsgraben 15</p>
                 <p>78048 VS-Villingen</p>
                 <p>Deutschland</p>
-                <p>Tel.: 077219463980</p>
+                <p>Tel.: 07721 2968141</p>
                 <p>E-Mail: info@vspace.one</p>
                 <p>Website: vspace.one</p>
 
