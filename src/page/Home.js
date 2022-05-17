@@ -136,7 +136,7 @@ class HomeInfoBoxBanner extends Component {
         const slideContent = [
             {
                     title: "Ausstattung",
-                    text: "Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.",
+                    text: "Wir haben drei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an dank unserer vieler Maschinen an größeren Projekten gearbeitet werden. Das Labor ist mit einem großzügigen Elektronikarbeitsplatz ausgestattet.",
                     imageSrc: "pic/vspaceone_maschinenraum.jpg"
             },
             {
