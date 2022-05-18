@@ -15,6 +15,7 @@ import FAQ from './page/FAQ.js'
 import MitgliedWerden from './page/MitgliedWerden.js';
 import Spenden from './page/Spenden.js';
 import Page404 from './page/404.js';
+import Danke from './page/Danke.js';
 
 import './App.css';
 import Sponsoren from './page/Sponsoren.js';
@@ -143,6 +144,13 @@ class App extends Component {
                             path="/sponsoren" exact 
                             render={routeProps => (
                                 <Sponsoren {...routeProps} spaceapi={this.state.spaceapi}/>
+                            )}  
+                        />
+
+                        <Route 
+                            path="/danke" exact 
+                            render={routeProps => (
+                                <Danke {...routeProps} spaceapi={this.state.spaceapi}/>
                             )}  
                         />
 

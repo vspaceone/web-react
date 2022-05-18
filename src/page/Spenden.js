@@ -24,7 +24,7 @@ class Spenden extends Component {
                         Wir sind froh über jede Spende, die bei uns ankommt. Als gemeinnütziger Verein können wir selbstverständlich auf Wunsch Spendenbescheinigungen ausstellen. 
                         Melde Dich dazu nach erfolgter Überweisung per E-Mail an vorstand [at] vspace.one und nenne uns Deine Kontaktdaten sowie die IBAN mit Betrag damit wir die Spende zuordnen können.
                         <br/>
-                        Dazu könnt Ihr uns einfach den gewählten Betrag mit dem Betreff "Spende" überweisen. 
+                        Dazu könnt Ihr uns einfach den gewählten Betrag mit dem Betreff "Spende" überweisen oder alternativ eine Spende über PayPal senden.
                         Zweckgebundene Spenden nimmt der Vorstand nach erfolgter Absprache an, sofern der Zweck mit der Satzung kompatibel ist.
                         </p>
                     </div>

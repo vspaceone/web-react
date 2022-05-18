@@ -11,8 +11,8 @@ const DonateButton = () => {
     const buttonId = useMemo(() => `ID-${generateId()}`, []);
     useEffect(() => {
         const button = window.PayPal.Donation.Button({
-            env: 'production',
-            hosted_button_id:'E65JSN58NXQJ4',
+            env: 'sandbox', //production
+            hosted_button_id:'C2SEE2SWD3WHG', //Production Button Id: E65JSN58NXQJ4
             image: {
                 src:'https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif',
                 alt: 'Donate with PayPal button',
