@@ -238,3 +238,15 @@ footer {
 .site-content {
     flex: 1 !important;
 }
+
+.inline-block-child {
+    display: inline-block;
+    margin: 5em;
+  }
+
+  .parent {
+    padding: 1rem;
+  }
+  .child {
+    padding: 1rem;
+  }

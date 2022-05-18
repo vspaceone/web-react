@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Img } from 'react-image';
 import ReactPiwik from 'react-piwik';
+import DonateButton from './PayPalDonateButton';
+
 
 class Spenden extends Component {
 
@@ -27,14 +29,21 @@ class Spenden extends Component {
                         </p>
                     </div>
                 </div>
-                <div style={{marginBottom: '2rem'}} className="row">
-                    <div style={{textAlign:'center'}} className="col-sm-12">
+                <div className="parent">
+                    <div className="child inline-block-child">
                         <p>
-                        QR-Code mit Kontodaten:<br/>
-                        <Img src="/pic/donation-qr-code.png"></Img>
+                            Spenden über PayPal:
+                            <DonateButton />
+                        </p>
+                    </div>
+                    <div className="child inline-block-child">
+                        <p>
+                            QR-Code mit Kontodaten:<br/>
+                            <Img src="/pic/donation-qr-code.png"></Img>
                         </p>
                     </div>
                 </div>
+            
                 <div style={{marginBottom: '2rem'}} className="row">
                     <div style={{textAlign:'left'}} className="col-sm-12">
                         <p>
@@ -50,7 +59,7 @@ class Spenden extends Component {
                                         <td>Volksbank eG - Die Gestalterbank</td>
                                     </tr>
                                     <tr>
-                                    <   td>IBAN</td>
+                                    <td>IBAN</td>
                                         <td>DE76 6649 0000 0032 7297 03</td>
                                     </tr>
                                     <tr>
@@ -68,3 +77,4 @@ class Spenden extends Component {
 }
 
 export default Spenden;
+
