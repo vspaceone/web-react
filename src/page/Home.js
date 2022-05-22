@@ -297,9 +297,7 @@ class HomePosition extends React.Component {
                 </Map>
                 <small>
                 <a href={mapLink}><i>Große Karte anzeigen</i></a>
-                </small>
-
-                <p>Wenn wir offen haben sind wir vor Ort unter folgender Nummer erreichbar:<br/><a href={"tel:" + phone}>07721 946 39 80</a></p>                
+                </small>             
             </div>
         );       
 
