@@ -72,7 +72,7 @@ function HomeInfoBoxMitmachen() {
                 <div className="row">
                     <div className="col-sm-6">
                         <h3>Vorbeischauen</h3>
-                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch Dienstags ab 19:00 bei uns in der Wilhelm-Binderstraße 19 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
+                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch Dienstags ab 19:00 bei uns in der Am Krebsgraben 15 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
                     </div>
                     <div className="col-sm-6">
                         <h3>Mitglied werden</h3>
@@ -136,7 +136,7 @@ class HomeInfoBoxBanner extends Component {
         const slideContent = [
             {
                     title: "Ausstattung",
-                    text: "Wir haben zwei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an Projekten gearbeitet werden.",
+                    text: "Wir haben drei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an dank unserer vieler Maschinen an größeren Projekten gearbeitet werden. Das Labor ist mit einem großzügigen Elektronikarbeitsplatz ausgestattet.",
                     imageSrc: "pic/vspaceone_maschinenraum.jpg"
             },
             {
@@ -270,6 +270,9 @@ class HomePosition extends React.Component {
             </Marker>
         );
 
+        const mapLink = "http://www.openstreetmap.org/?mlat=" + pos[0] + "&amp;mlon=" + pos[1] + "#map=18/" + pos[0] + "/" + pos[1];
+
+
         return (
             <div className="container-fluid bg-2 text-center" id="Ort">
                 <h2 className="margin">Wo findest du uns?</h2>
@@ -293,10 +296,8 @@ class HomePosition extends React.Component {
                     {marker}
                 </Map>
                 <small>
-                <a href="http://www.openstreetmap.org/?mlat=48.06501&amp;mlon=8.45645#map=18/48.06502/8.45645"><i>Große Karte anzeigen</i></a>
-                </small>
-
-                <p>Aktuell sind wir leider nicht per Telefon erreichbar.</p>                
+                <a href={mapLink}><i>Große Karte anzeigen</i></a>
+                </small>             
             </div>
         );       
 

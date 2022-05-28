@@ -15,7 +15,7 @@ class Impressum extends Component {
                 <p>vspace.one e.V.<br /> Am Krebsgraben 15 (Gebäude 8)<br /> 78048 Villingen
                 </p>
                 <h2>Vertreten durch:</h2>
-                <p>Damian Jesionek<br />Linus Dold<br />Lukas Timmermann<br />Nikolai Müller</p>
+                <p>Damian Jesionek<br />Linus Dold<br />Nikolai Müller<br />Moritz Klaiber</p>
                 <h2>Kontakt:</h2>
                 <p>
                     Telefon: 07721 2968141<br />
