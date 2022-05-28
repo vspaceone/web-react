@@ -88,7 +88,7 @@ function HomeInfoBoxMitmachen() {
                     </div>
                     <div className="col-sm-6">
                         <h3>Spenden</h3>
-                        <p>Dir gefällt was wir machen, hast aber keine Möglichkeit oder Lust Mitglied zu werden? Gerne nehmen wir wie <Link to="/mitgliedwerden">hier beschrieben</Link> deine Spende als Überweisung an.</p>
+                        <p>Dir gefällt was wir machen, hast aber keine Möglichkeit oder Lust Mitglied zu werden? Gerne nehmen wir wie <Link to="/spenden">hier beschrieben</Link> deine Spende als Überweisung an.</p>
                     </div>
                 </div>
             </div>
