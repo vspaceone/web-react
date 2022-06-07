@@ -43,27 +43,12 @@ class Tour extends Component {
               id: 'node-1', 
               panorama: '/pic/panorama/maschinenraum_big.jpg',
               name: 'Maschinenraum',
-              markers: 
-              [
-                {
-                  "id": "marker-cbaxnbjvy5u",
-                  "image": "pin-red.png",
-                  "longitude": 2.507,
-                  "latitude": 0.00,
-                  "width": 32,
-                  "height": 32,
-                  "tooltip": {
-                    "content": "X-Carve",
-                    "position": "top center"
-                  }
-                }
-              ], 
               links: 
               [
                 { 
                   nodeId: 'node-2',     
-                  "longitude": 0.8,    
-                  "latitude": -0.029
+                  "longitude": 0.7,    
+                  "latitude": -0.00
                 }
               ] 
             },
@@ -71,33 +56,19 @@ class Tour extends Component {
               id: 'node-2', 
               panorama: '/pic/panorama/labor_big.jpg',
               name: 'Labor', 
-              markers: [
-                {
-                  "id": "marker-9a6v0fyx216",
-                  "image": "pin-red.png",
-                  "longitude": 2.180,
-                  "latitude": -0.3,
-                  "width": 32,
-                  "height": 32,
-                  "tooltip": {
-                    "content": "Anus Tee",
-                    "position": "top center"
-                  }
-                }
-              ],      
               links: [
-                { nodeId: 'node-1',"longitude": 5.781,    "latitude": 0.00}, 
-                { nodeId: 'node-3', "longitude": 1.088,    "latitude": 0.00}
+                { nodeId: 'node-1',"longitude": 5.8,    "latitude": 0.00}, 
+                { nodeId: 'node-3', "longitude": 1.0,    "latitude": 0.00}
               ] 
             },
             {
               id: 'node-3', 
               panorama: '/pic/panorama/bruecke_big.jpg',
-              name: 'Zehn Vorne', 
+              name: 'Brücke', 
               links: [
                 { 
                   nodeId: 'node-2',  
-                  "longitude": 5.264,    
+                  "longitude": 5.3,    
                   "latitude": 0.00
                 }
               ] 
