@@ -58,6 +58,11 @@ class Nav extends Component {
                       </a>
                     </li>
                     <li>
+                      <a className="faw-link" href="https://matrix.to/#/#vspaceone-general:matrix.org" target="_blank">
+                        <img className="fab" src="/pic/logos/Matrix.svg" style={{lineHeight:1, width: "30px", height: "30px"}}></img>
+                      </a>
+                    </li>
+                    <li>
                       <a className="faw-link" href="https://github.com/vspaceone" target="_blank">
                         <i className="fab fa-github"></i>
                       </a>

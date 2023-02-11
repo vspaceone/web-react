@@ -89,7 +89,7 @@ class FAQ extends Component {
 
                 <div class="container-fluid bg-3 text-left">
                     <h2 class="margin">Wo darf ich parken?</h2><br/>
-                    <p>Für Fahrräder steht am mittleren Eingang ein Fahrradständer bereit. Autos von Mitgliedern und Besuchern dürfen werktags ab 16 Uhr sowie am Wochenende und feiertags ganztags im Innenhof geparkt werden.</p>
+                    <p>Auf dem Gelände finden sich stets viele freie Parkplätze. Parkt gerne möglichst nahe an der in Google Maps markierten Stelle auf einem nicht reservierten Stellplatz.</p>
                 </div>
 
                 <div class="container-fluid bg-2 text-left">
@@ -105,10 +105,9 @@ class FAQ extends Component {
                 <div class="container-fluid bg-3 text-left">
                     <h2 class="margin">Wie Kontaktiere ich euch/eure Community?</h2><br/>
                     <p>
-                        Es gibt eine öffentliche Mailingliste: <a mailto="public@lists.vspace.one">public@lists.vspace.one</a>
-                        Dieser Liste könnt ihr natürlich bei Interesse an aktuellen Informationen <a href="https://lists.vspace.one/postorius/lists/public.lists.vspace.one/">hier beitreten!</a>
-                        <br/>
                         Unserer Telegram Gruppe könnt ihr <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">hier beitreten!</a>
+                        Und dem Matrix Room <a href="https://matrix.to/#/#vspaceone-general:matrix.org">hier!</a>
+                        Beide Chats sind miteinander verbunden, nutze also die App/Technologie die dir zusagt.
                     </p>
                 </div>
 

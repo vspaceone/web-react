@@ -80,11 +80,7 @@ function HomeInfoBoxMitmachen() {
                     </div>
                     <div className="col-sm-6">
                         <h3>Telegram</h3>
-                        <p>Für die inoffizielle Kommunikation verwenden wir eine <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegramgruppe</a>. Telegram ist eine Nachrichtenapp, ähnlich WhatsApp. Wenn du dich interessierst und wissen willst, was bei uns los ist, trete ihr bei oder schreibe uns eine Email an info[at]vspace.one.</p>
-                    </div>
-                    <div className="col-sm-6">
-                        <h3>Mailingliste</h3>
-                        <p>Die 'offizielle' Kommunikation, wie Einladungen zu Veranstaltungen, läuft über unsere <a href="https://lists.vspace.one/postorius/lists/public.lists.vspace.one/">Mailingliste</a>. Trag dich ein und bleib up-to-date. Das ist die Wahl, falls du nur auf dem Laufenden bleiben willst. (ca. 1 Mail pro Monat)</p>
+                        <p>Für die regelmäßige Kommunikation verwenden wir <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegramgruppe</a> und <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrixroom</a>. Telegram und Matrix sind Nachrichtenapps, ähnlich WhatsApp. Zudem sind beide Chats verbunden, nutze also was dir lieber ist! Wenn du dich interessierst und wissen willst, was bei uns los ist, trete ihr bei oder schreibe uns eine Email an info[at]vspace.one.</p>
                     </div>
                     <div className="col-sm-6">
                         <h3>Spenden</h3>
@@ -108,7 +104,7 @@ function HomeInfoBoxFeed() {
                             screenName: 'vspaceone'
                         }}
                         options={{
-                            height: '80vh'
+                            height: '800vh'
                         }}
                         renderError={(_err) => <p>Twitter-Widget konnte nicht geladen werden.<br></br>Bitte überprüfe Deine Ad- oder Skriptblocker.</p>}
                     />
@@ -158,6 +154,11 @@ class HomeInfoBoxBanner extends Component {
                     title: "Holz und Metall",
                     text: "Unsere noch nicht allzu große, aber ständig wachsende, Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine Projekte in unseren Räumen bereit.",
                     imageSrc: "pic/vspaceone_holzundmetall.jpg"
+            },
+            {
+                    title: "Gemeinsam zum Ziel",
+                    text: "Sich gegenseitig motivieren, inspirieren, helfen und voneinander lernen. Manches macht gemeinsam einfach mehr Spaß!",
+                    imageSrc: "pic/vspaceone_gemeinschaft.jpg"
             }
         ]
 
