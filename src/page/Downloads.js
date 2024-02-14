@@ -20,7 +20,7 @@ class Downloads extends Component {
                     <ul>
                         <li><a href="download/satzung_2024.pdf">Satzung</a></li>
                         <li><a href="download/beitragsordnung_v1.2.pdf">Beitragsordnung</a></li>
-                        <li><a href="download/raumordnung_2024.pdf">Beitragsordnung</a></li>
+                        <li><a href="download/raumordnung_2024.pdf">Raumordnung</a></li>
                         <li><a href="download/beitrittserklaerung_v1.3.pdf">Beitrittserklärung</a></li>
                         <li><a href="download/beitrittserklaerung_interactive_v1.3.pdf">Beitrittserklärung (interaktives pdf)</a></li>
                     </ul>
