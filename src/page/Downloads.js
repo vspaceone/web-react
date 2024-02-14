@@ -18,8 +18,9 @@ class Downloads extends Component {
             <div className="row">
                 <div style={{textAlign:'center'}} className="col-sm-12">
                     <ul>
-                        <li><a href="download/satzung_2022.pdf">Satzung</a></li>
+                        <li><a href="download/satzung_2024.pdf">Satzung</a></li>
                         <li><a href="download/beitragsordnung_v1.2.pdf">Beitragsordnung</a></li>
+                        <li><a href="download/raumordnung_2024.pdf">Beitragsordnung</a></li>
                         <li><a href="download/beitrittserklaerung_v1.3.pdf">Beitrittserklärung</a></li>
                         <li><a href="download/beitrittserklaerung_interactive_v1.3.pdf">Beitrittserklärung (interaktives pdf)</a></li>
                     </ul>
