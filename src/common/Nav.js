@@ -46,7 +46,7 @@ class Nav extends Component {
                         <li><a href="https://twitter.com/vspaceone" target="_blank"><i className="fab fa-twitter"></i> Twitter</a></li>
                         <li><a href="https://www.facebook.com/vspace.one" target="_blank"><i className="fab fa-facebook"></i> Facebook</a></li>
                         <li><a href="https://www.instagram.com/vspace.one/" target="_blank"><i className="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://toot.kif.rocks/@vspaceone" target="_blank"><i className="fab fa-mastodon"></i> Mastodon</a></li>
+                        <li><a rel="me" href="https://chaos.social/@vspaceone" target="_blank"><i className="fab fa-mastodon"></i> Mastodon</a></li>
                         <li className="divider"></li>
                         <li><a href="/freunde" target="_blank"><i className="fab fa-users"></i>Freunde, Partner, Kooperationen</a></li>
                       </ul>
