@@ -26,7 +26,6 @@ class Nav extends Component {
                     </li>
 
                     <li><a href="/mitgliedwerden">Mitglied werden</a></li>
-                    <li><Link to="/faq">F&amp;A</Link></li>
                     
 
                     <li className="dropdown">
