@@ -10,8 +10,6 @@ import HomeEvents from './Home/HomeEvents.js';
 import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
-import { Timeline } from 'react-twitter-widgets'
-
 class Home extends Component {
 
     componentDidMount(){
@@ -97,17 +95,12 @@ function HomeInfoBoxFeed() {
         <div className="container-fluid bg-2 text-center" id="Aktuelles">
             <div className="row">
                 <div className="col-sm-12">
-                    <h2 className="margin">Aktuelles</h2>
-                    <Timeline
-                        dataSource={{
-                            sourceType: 'profile',
-                            screenName: 'vspaceone'
-                        }}
-                        options={{
-                            height: '800vh'
-                        }}
-                        renderError={(_err) => <p>Twitter-Widget konnte nicht geladen werden.<br></br>Bitte überprüfe Deine Ad- oder Skriptblocker.</p>}
-                    />
+                    <h2 className="margin">Aktuelles aus dem Fediverse</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                           <mastodon-timeline account="vspaceone@chaos.social" limit="5" background-color="red"/>  
+                        </div>
+                    </div> 
                 </div>
             </div>
         

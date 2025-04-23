@@ -25,14 +25,12 @@ class Nav extends Component {
                         </ul>
                     </li>
 
-                    <li><a href="/#Events">Termine</a></li>
-                    <li><Link to="/faq">F&amp;A</Link></li>
+                    <li><a href="/mitgliedwerden">Mitglied werden</a></li>
                     
 
                     <li className="dropdown">
                         <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unterstützen<span className="caret"></span></a>
                         <ul className="dropdown-menu">
-                            <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
                             <li><Link to="/spenden">Spenden</Link></li>
                             <li><Link to="/sponsoren">Sponsoren</Link></li>
                         </ul>
@@ -63,8 +61,8 @@ class Nav extends Component {
                       </a>
                     </li>
                     <li>
-                      <a className="faw-link" href="https://github.com/vspaceone" target="_blank">
-                        <i className="fab fa-github"></i>
+                      <a className="faw-link" href="https://easyverein.com/public/vspaceone/?next=profile" target="_blank">
+                        <img className="fab" src="/pic/logos/easyverein.png" style={{lineHeight:1, width: "30px", height: "30px"}}></img>
                       </a>
                     </li>
                     <li>
