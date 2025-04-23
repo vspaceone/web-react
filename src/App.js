@@ -90,7 +90,7 @@ class App extends Component {
                     )} 
                 />
 
-                <div className="site-content">
+                <div className="site-content" style={{ position: 'absolute', left: '0', top: '0' }}>
                     <Switch>
                         <Route 
                             path="/" exact 
