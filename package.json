@@ -6,7 +6,7 @@
     "@brainhubeu/react-carousel": "^2.0.2",
     "ical": "^0.6.0",
     "leaflet": "^1.6.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.2",
     "momentjs": "^2.0.0",
     "photo-sphere-viewer": "^4.5.3",
     "pure-react-carousel": "^1.27.6",
