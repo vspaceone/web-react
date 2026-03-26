@@ -23,7 +23,6 @@ class Home extends Component {
                 <HomeInfoBox1/>
                 <HomeInfoBoxBanner/>
                 <HomeInfoBoxMitmachen/>
-                <HomeInfoBoxFeed/>
                 <HomeEvents />
                 <HomeState state={ this.props.spaceapi.state } />
                 <HomePosition 
@@ -43,13 +42,13 @@ function HomeInfoBox1() {
                 <div className="col-sm-12">
                     <h2 className="margin">Was wir machen</h2>
                     <p>
-                        Unser Ziel ist der Wissensaustausch sowie die Bildung aller interessierten
-                        in den Bereichen neuartiger computergestützter Technologien (wie zum Beispiel aber nicht ausschließlich
-                        3D-­Druck, CNC, Internet der Dinge und Robotik), der Elektrotechnik und Elektronik
-                        sowie auch auf Gebieten der Reparatur und Wartung.
+                        Unser Ziel ist der Wissensaustausch sowie die Bildung aller Interessierten
+                        in den Bereichen neuartiger computergestützter Technologien (wie zum Beispiel, aber nicht ausschließlich,
+                        3D-Druck, CNC, Internet der Dinge und Robotik), der Elektrotechnik und Elektronik
+                        sowie auf Gebieten der Reparatur und Wartung.
                         <br></br><br></br>
-                        Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces das bieten einer Plattform,
-                        um seinen Interessen in diesen Gebieten nachzugehen von Programmieren bis Holz- und Metallwerken ist fast alles dabei. 
+                        Natürlich bieten wir auch ganz im Sinne aller anderen Hacker- und Makerspaces eine Plattform,
+                        um seinen Interessen in diesen Gebieten nachzugehen – von Programmieren bis Holz- und Metallwerken ist fast alles dabei.
                         <br></br><br></br>
                         Dazu haben wir eine immer größer werdende offene Werkstatt, die für jeden zugänglich sein soll!
                     </p>
@@ -70,19 +69,19 @@ function HomeInfoBoxMitmachen() {
                 <div className="row">
                     <div className="col-sm-6">
                         <h3>Vorbeischauen</h3>
-                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch Dienstags ab 19:00 bei uns in der Am Krebsgraben 15 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
+                        <p>Du möchtest uns und unsere Räumlichkeiten gerne persönlich kennenlernen? Schau doch dienstags ab 18:00 bei uns in der Am Krebsgraben 15 in Villingen vorbei. Dienstags findet bei uns jede Woche der Chaostreff statt.</p>
                     </div>
                     <div className="col-sm-6">
                         <h3>Mitglied werden</h3>
-                        <p>Bei uns kann Jeder und Jede mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik begeistern sind willkommen. Wenn euch gefällt was wir tun und ihr uns unterstützen wollt findet ihr unser Beitrittsformular <Link to="/mitgliedwerden">hier</Link>.</p>
+                        <p>Bei uns kann jeder mitmachen. Interessierte Schüler, Studenten und Erwachsene, die sich für kreativen Umgang mit Technik begeistern, sind willkommen. Wenn euch gefällt, was wir tun, und ihr uns unterstützen wollt, findet ihr unser Beitrittsformular <Link to="/mitgliedwerden">hier</Link>.</p>
                     </div>
                     <div className="col-sm-6">
                         <h3>Telegram</h3>
-                        <p>Für die regelmäßige Kommunikation verwenden wir <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegramgruppe</a> und <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrixroom</a>. Telegram und Matrix sind Nachrichtenapps, ähnlich WhatsApp. Zudem sind beide Chats verbunden, nutze also was dir lieber ist! Wenn du dich interessierst und wissen willst, was bei uns los ist, trete ihr bei oder schreibe uns eine Email an info[at]vspace.one.</p>
+                        <p>Für die regelmäßige Kommunikation verwenden wir unsere <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegram-Gruppe</a> und unseren <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrix-Raum</a>. Telegram und Matrix sind Nachrichten-Apps, ähnlich wie WhatsApp. Zudem sind beide Chats miteinander verbunden, nutze also, was dir lieber ist! Wenn du dich interessierst und wissen willst, was bei uns los ist, tritt gerne bei oder schreibe uns eine E-Mail an info[at]vspace.one.</p>
                     </div>
                     <div className="col-sm-6">
                         <h3>Spenden</h3>
-                        <p>Dir gefällt was wir machen, hast aber keine Möglichkeit oder Lust Mitglied zu werden? Gerne nehmen wir wie <Link to="/spenden">hier beschrieben</Link> deine Spende als Überweisung an.</p>
+                        <p>Dir gefällt, was wir machen, aber du hast keine Möglichkeit oder Lust, Mitglied zu werden? Gerne nehmen wir, wie <Link to="/spenden">hier beschrieben</Link>, deine Spende als Überweisung an.</p>
                     </div>
                 </div>
             </div>
@@ -90,23 +89,6 @@ function HomeInfoBoxMitmachen() {
     );
 }
 
-function HomeInfoBoxFeed() {
-    return (
-        <div className="container-fluid bg-2 text-center" id="Aktuelles">
-            <div className="row">
-                <div className="col-sm-12">
-                    <h2 className="margin">Aktuelles aus dem Fediverse</h2>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                           <mastodon-timeline account="vspaceone@chaos.social" limit="5" background-color="red"/>  
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        
-        </div>
-    );
-}
 
 class HomeInfoBoxBanner extends Component {
 
@@ -130,28 +112,28 @@ class HomeInfoBoxBanner extends Component {
             },
             {
                 title: "3D Druck",
-                text: "Unser neuer Prusa i3 MK3s liefert dank zahlreicher Voreinstellungen und ausgeklügelter Features selbst nach kurzen Einweisungen in schnellster Zeit zu Ergebnissen die sich sehen lassen können.",
-                imageSrc: "pic/vspaceone_prusa_mk3s_small.jpg"
+                text: "Wir haben Drucker von Bambu, Prusa, Voron und weitere, um selbst nach kurzer Einweisung in schnellster Zeit Ergebnisse, die sich sehen lassen können, zu erzielen.",
+                imageSrc: "pic/replikatorraum-drucker.jpg"
             },
             {
                 title: "Elektronik",
-                text: "Der Elektronikarbeitsplatz lädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.",
+                text: "Der Elektronikarbeitsplatz im Laborlädt zum Hacken ein. Stets zur Hand sind Lötkolben, Heißluftstation, Multimeter, Labornetzteile, digitales Oszilloskop sowie ein Haufen Zubehör und natürlich Kabel.",
                 imageSrc: "pic/vspaceone_big_psu_small.jpg"
             },
             {
                 title: "Reparatur",
-                text: "Eine Wand voll mit sortierten Elektronikkomponenten bietet die Qual der Wahl von üblicherweise benötigen Bauteile wie Widerstände oder Kondensatoren.",
-                imageSrc: "pic/vspaceone_drawer_wall_small.jpg"
+                text: "Eine Wand voll mit sortierten Elektronikkomponenten bietet die Qual der Wahl von üblicherweise benötigten Bauteilen wie Widerständen oder Kondensatoren.",
+                imageSrc: "pic/laborneu.jpg"
             },
             {
                 title: "Holz und Metall",
                 text: "Unsere noch nicht allzu große, aber ständig wachsende, Ausstattung an Werkzeug und Maschinen steht jederzeit für große und kleine Projekte in unseren Räumen bereit.",
-                imageSrc: "pic/vspaceone_holzundmetall.jpg"
+                imageSrc: "pic/maschinenraumneu.jpg"
             },
             {
                 title: "Ausstattung",
-                text: "Wir haben drei moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum, kann an dank unserer vieler Maschinen an größeren Projekten gearbeitet werden. Das Labor ist mit einem großzügigen Elektronikarbeitsplatz ausgestattet.",
-                imageSrc: "pic/vspaceone_maschinenraum.jpg"
+                text: "Wir haben vier moderne Räume. In der Brücke stehen bequeme Sofas, ein Beamer und ein Kühlschrank. Im Maschinenraum kann man dank unserer vielen Maschinen an größeren Projekten arbeiten. Das Labor ist mit einem großzügigen Elektronikarbeitsplatz ausgestattet und der Replikatorraum bietet 3D-Drucker und gemütliche Plätze, um ihnen bei der Arbeit zuzuschauen.",
+                imageSrc: "pic/replikatorraum.jpg"
             }
         ]
 
@@ -273,10 +255,10 @@ class HomePosition extends React.Component {
 
                 <p>Du findest uns in der Doppelstadt Villingen-Schwenningen.</p>
                 <p>Unsere Adresse lautet:<br/> { address  }</p><br/>
-                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/rotes.hörer.dorfplatz">///rotes.hörer.dorfplatz</a></p><br/>
+                <p>Finde uns über What3Words:<br/><a href = "https://w3w.co/rotes.hörer.dorfplatz">{"///rotes.hörer.dorfplatz"}</a></p><br/>
                 <p></p>
 
-                <p>Wenn der vspace.one offen ist kannst du uns auch anrufen.</p>
+                <p>Wenn der vspace.one offen ist, kannst du uns auch anrufen.</p>
                 <p>Telefon: <a href={"tel:" + phone} style={{color: '#dddddd'}}>{phone}</a></p>
 
                 <Map center={mapConfig.center} zoom={mapConfig.zoom} style={{

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
-import { CarouselProvider, Slider, Slide, DotGroup } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import { Viewer, Animation } from "photo-sphere-viewer";
 import "photo-sphere-viewer/dist/photo-sphere-viewer.css"
 class HomeJumbo extends Component {
@@ -63,7 +61,7 @@ class HomeJumbo extends Component {
       function nextImage(){
         if (viewer.getPosition().longitude > 6 && viewer.getPosition().longitude < 6.1){
           const index = ziz.state.imageIndex;
-          var nextIndex = index == (panoramaList.length-1) ? 0 : (index+1);
+          var nextIndex = index === (panoramaList.length-1) ? 0 : (index+1);
           ziz.setState({imageIndex: nextIndex})
           viewer.setPanorama(panoramaList[nextIndex],{showLoader: false})
           console.log("switch to panorama index " + nextIndex)
@@ -81,10 +79,6 @@ class HomeJumbo extends Component {
 
     render() {
 
-        const showButtons = false;
-
-        const boxHeight = '670px';
-
         const h1Style = {
           textShadow: "2px 2px 4px black"
         };
@@ -94,15 +88,6 @@ class HomeJumbo extends Component {
             textDecoration:"",
             zIndex: "10"
         }
-
-        const images = [
-          "pic/vspaceone_prusa_mk3s_small.jpg",
-          "pic/vspaceone_4bit_adder_small.jpg",
-          "pic/vspaceone_motoren_small.jpg",
-          "pic/vspaceone_cap_drawers_small.jpg",
-          "pic/vspaceone_big_psu_small.jpg",
-          "pic/vspaceone_scope_small.jpg"
-        ]
 
         /*
         
@@ -166,7 +151,7 @@ class HomeJumbo extends Component {
                     und <i><a style={linkStyle} href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
                   </h1>
                   <h3 style={h1Style}>
-                    <a style={linkStyle} href="/tour" >Hier gehts zur virtuellen Space-Tour!</a>
+                    <a style={linkStyle} href="/tour" >Hier geht's zur virtuellen Space-Tour!</a>
                   </h3>
                 </div>
               </div>

@@ -41,10 +41,6 @@ export default Sponsoren;
 
 class Sponsor extends Component {
 
-    constructor(props){
-        super(props)
-    }
-
     render() {
 
         let key = this.props.num

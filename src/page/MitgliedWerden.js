@@ -15,7 +15,7 @@ class MitgliedWerden extends Component {
         return (
             <div className="container-fluid bg-3 label-warning" id="">
                 <div className='no-side-padding' style={{overflow: 'hidden'}}>
-                    <img className="img-fluid w-100 h-100" style={{width:'80vw','object-fit': 'cover',height: '10em'}} src="/pic/vspaceone_gemeinschaft.jpg"></img>
+                    <img className="img-fluid w-100 h-100" style={{width:'80vw','object-fit': 'cover',height: '10em'}} src="/pic/vspaceone_gemeinschaft.jpg" alt=""></img>
                     <div class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center" style={{top: 0, left: 0}}>
                         <h1 className="text-white text-center" style={{ textShadow: '2px 2px 4px rgba(0,0,0,)', margin: 0,padding: '20px'}}> 
                             Werde ein Teil unserer Community!

@@ -126,8 +126,8 @@ class HomeEvents extends Component {
                             var descriptionLines = description.split("\n");                            
 
                             // Get lines starting with specific designators (<DESIGNATOR>: <Value>) and move separate them out from the description itself
-                            for (var i in descriptionLines){
-                                var line = descriptionLines[i];
+                            for (var j in descriptionLines){
+                                var line = descriptionLines[j];
                                 var designator = line.substring(0, line.search(":"));
 
                                 switch(designator){
@@ -186,7 +186,7 @@ class HomeEvents extends Component {
             ));
         } 
         
-        if (!this.state.events.events || this.state.events.events.length == 0){
+        if (!this.state.events.events || this.state.events.events.length === 0){
             events = (
                 <div>
                     <p>In nächster Zeit keine Events geplant.</p>
