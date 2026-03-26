@@ -17,7 +17,7 @@ class Nav extends Component {
             <div className="collapse navbar-collapse" id="myNavbar">
                 <ul className="nav navbar-nav navbar-right">
                     <li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home<span className="caret"></span></a>
+                        <a href="/" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home<span className="caret"></span></a>
                         <ul className="dropdown-menu">
                             <li><a href="/#Mitmachen">Mitmachen</a></li>
                             <li><a href="/#Ausstattung">Ausstattung</a></li>
@@ -29,7 +29,7 @@ class Nav extends Component {
                     
 
                     <li className="dropdown">
-                        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unterstützen<span className="caret"></span></a>
+                        <a href="/spenden" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unterstützen<span className="caret"></span></a>
                         <ul className="dropdown-menu">
                             <li><Link to="/spenden">Spenden</Link></li>
                             <li><Link to="/sponsoren">Sponsoren</Link></li>
@@ -39,30 +39,30 @@ class Nav extends Component {
                     <li><a href="https://wiki.vspace.one">Wiki</a></li>
 
                     <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span className="caret"></span></a>
+                      <a href="/freunde" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span className="caret"></span></a>
                       <ul className="dropdown-menu">
-                        <li><a href="https://twitter.com/vspaceone" target="_blank"><i className="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://www.facebook.com/vspace.one" target="_blank"><i className="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/vspace.one/" target="_blank"><i className="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://chaos.social/@vspaceone" target="_blank"><i className="fab fa-mastodon"></i> Mastodon</a></li>
+                        <li><a href="https://twitter.com/vspaceone" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="https://www.facebook.com/vspace.one" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/vspace.one/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://chaos.social/@vspaceone" target="_blank" rel="noopener noreferrer"><i className="fab fa-mastodon"></i> Mastodon</a></li>
                         <li className="divider"></li>
-                        <li><a href="/freunde" target="_blank"><i className="fab fa-users"></i>Freunde, Partner, Kooperationen</a></li>
+                        <li><a href="/freunde" target="_blank" rel="noopener noreferrer"><i className="fab fa-users"></i>Freunde, Partner, Kooperationen</a></li>
                       </ul>
                     </li>
 
                     <li>
-                      <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank">
+                      <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank" rel="noopener noreferrer">
                         <i className="fab fa-telegram"></i>
                       </a>
                     </li>
                     <li>
-                      <a className="faw-link" href="https://matrix.to/#/#vspaceone-general:matrix.org" target="_blank">
-                        <img className="fab" src="/pic/logos/Matrix.svg" style={{lineHeight:1, width: "30px", height: "30px"}}></img>
+                      <a className="faw-link" href="https://matrix.to/#/#vspaceone-general:matrix.org" target="_blank" rel="noopener noreferrer">
+                        <img className="fab" src="/pic/logos/Matrix.svg" style={{lineHeight:1, width: "30px", height: "30px"}} alt="Matrix"></img>
                       </a>
                     </li>
                     <li>
-                      <a className="faw-link" href="https://easyverein.com/public/vspaceone/?next=profile" target="_blank">
-                        <img className="fab" src="/pic/logos/easyverein.png" style={{lineHeight:1, width: "30px", height: "30px"}}></img>
+                      <a className="faw-link" href="https://easyverein.com/public/vspaceone/?next=profile" target="_blank" rel="noopener noreferrer">
+                        <img className="fab" src="/pic/logos/easyverein.png" style={{lineHeight:1, width: "30px", height: "30px"}} alt="EasyVerein"></img>
                       </a>
                     </li>
                     <li>

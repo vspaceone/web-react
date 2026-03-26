@@ -17,7 +17,7 @@ class Freunde extends Component {
         } 
 
         let vowLogo = <a {...netcupLinkParams}><Img style={{maxWidth:"100%"}}  src="/pic/logos/logo_VOW_klein.gif" alt="Netcup Logo"></Img></a>
-        let vowText = <p><a {...netcupLinkParams}></a>Wir sind Mitglied im Verband Offener Werkstätten und beziehen dort auch unsere Versicherungen</p>
+        let vowText = <p><a {...netcupLinkParams}>Verband Offener Werkstätten</a> – Wir sind Mitglied im Verband Offener Werkstätten und beziehen dort auch unsere Versicherungen</p>
 
         let freifunkLogo = <Img style={{maxWidth:"100%"}} src="/pic/logos/logo_freifunk.png"></Img>
         let freifunkText = <p>Wir bieten ein Freifunk WLAN in unseren Räumen</p>
@@ -45,10 +45,6 @@ class Freunde extends Component {
 export default Freunde;
 
 class Freund extends Component {
-
-    constructor(props){
-        super(props)
-    }
 
     render() {
 

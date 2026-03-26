@@ -95,7 +95,7 @@ class FAQ extends Component {
                 <div class="container-fluid bg-2 text-left">
                     <h2 class="margin">Wann treffe ich euch an?</h2>
                     <p>
-                        Überwiegend treffen wir uns jeden Dienstagabend ab etwa 19.00 Uhr. Die meisten Mitglieder haben ihren eigenen Schlüssel und können somit rein, wann immer sie wollen.
+                        Überwiegend treffen wir uns jeden Dienstagabend ab etwa 18.00 Uhr. Die meisten Mitglieder haben ihren eigenen Schlüssel und können somit rein, wann immer sie wollen.
                         Ob gerade jemand da ist erfährst du direkt auf vspace.one.
                         Durch die SpaceAPI gibt es zudem auch fertige Apps, um sich den Raumstatus anzeigen zu lassen. Wer die Daten lieber selbst verarbeiten möchte,
                         findet sie hier: <a href="https://vspace.one/spaceapi.json">https://vspace.one/spaceapi.json</a>
@@ -106,7 +106,7 @@ class FAQ extends Component {
                     <h2 class="margin">Wie Kontaktiere ich euch/eure Community?</h2><br/>
                     <p>
                         Unserer Telegram Gruppe könnt ihr <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">hier beitreten!</a>
-                        Und dem Matrix Room <a href="https://matrix.to/#/#vspaceone-general:matrix.org">hier!</a>
+                        Und dem Matrix-Room <a href="https://matrix.to/#/#vspaceone-general:matrix.org">hier!</a>
                         Beide Chats sind miteinander verbunden, nutze also die App/Technologie die dir zusagt.
                     </p>
                 </div>
