@@ -82,8 +82,7 @@ class Tour extends Component {
                         position: 'relative',
                         padding: 0,
                         height: "100vh",
-                        overflow: "hidden",
-                        paddingTop: "80px"
+                        overflow: "hidden"
                     }}
                 >
                     <div id="photosphere" style={{ height: "100%", width: "100%" }}></div>

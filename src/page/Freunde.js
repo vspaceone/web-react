@@ -56,8 +56,8 @@ class Freund extends Component {
 
         let itemStyle = {textAlign:'center'}
 
-        let bigView = (
-            <div className="partner-card">
+        return (
+            <div className="partner-card" style={{marginBottom: '2rem'}}>
                 <div style={{display:'flex', alignItems:'center'}} className="row hidden-xs hidden-sm">
                     <div {...itemStyle} className="col-xs-offset-0 col-xs-8">
                         {logoFirst ? logo : text}
@@ -66,11 +66,6 @@ class Freund extends Component {
                         {logoFirst ? text : logo}
                     </div>
                 </div>
-            </div>
-        )
-
-        let smallView = (
-            <div className="partner-card">
                 <div className="row visible-xs visible-sm">
                     <div {...itemStyle} className="col-xs-offset-0 col-xs-12">
                         {logo}
@@ -79,13 +74,6 @@ class Freund extends Component {
                         {text}
                     </div>
                 </div>
-            </div>
-        )
-
-        return (
-            <div style={{marginBottom: '2rem'}}>
-                {bigView}
-                {smallView}
             </div>
         );
     }

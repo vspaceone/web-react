@@ -14,23 +14,16 @@ class MitgliedWerden extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2" id="">
+            <div className="container-fluid bg-2" id="" style={{paddingTop: 0}}>
                 <div className='no-side-padding' style={{overflow: 'hidden', position: 'relative'}}>
-                    <img className="img-fluid w-100" style={{width:'80vw', objectFit: 'cover', height: '10em'}} src="/pic/vspaceone_gemeinschaft.jpg" alt=""></img>
+                    <img className="img-fluid w-100" style={{width:'100%', objectFit: 'cover', height: '16em'}} src="/pic/vspaceone_gemeinschaft.jpg" alt=""></img>
                     <div className="position-absolute w-100 h-100 d-flex justify-content-center align-items-center" style={{top: 0, left: 0, background: 'rgba(0,0,0,0.4)'}}>
                         <h1 className="text-white text-center" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', margin: 0, padding: '20px'}}>
                             Werde ein Teil unserer Community!
                         </h1>
                     </div>
                 </div>
-                <div style={{marginBottom: '2rem'}} className="row">
-                    <div className="col-sm-12">
-
-                    </div>
-                </div>
-
-
-                <div className="row">
+                <div style={{marginTop: '2rem'}} className="row">
                     <div style={{textAlign:'left'}} className='col-md-6'>
                         <div className="modern-card">
                             <h2 style={{textAlign:'left'}}>Online-Mitgliedsantrag</h2>

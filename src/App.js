@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, withRouter } from "react-router-dom";
 import CookieConsent from "react-cookie-consent";
 import ReactPiwik from 'react-piwik';
 import history from './history.js'
@@ -18,8 +18,21 @@ import MitgliedWerden from './page/MitgliedWerden.js';
 import Spenden from './page/Spenden.js';
 import Page404 from './page/404.js';
 
-import './App.css';
 import Sponsoren from './page/Sponsoren.js';
+
+import './App.css';
+
+class ScrollToTopComponent extends Component {
+    componentDidUpdate(prevProps) {
+        if (this.props.location.pathname !== prevProps.location.pathname) {
+            window.scrollTo(0, 0);
+        }
+    }
+    render() {
+        return null;
+    }
+}
+const ScrollToTop = withRouter(ScrollToTopComponent);
 
 const piwik = new ReactPiwik({
     url: 'https://matomo.vspace.one',
@@ -79,6 +92,7 @@ class App extends Component {
         document.body.style.backgroundColor = "#0f1117"
         return (
         <Router history={piwik.connectToHistory(history)}>
+            <ScrollToTop />
             <div className="site">
                 <Route 
                     path="/"                 

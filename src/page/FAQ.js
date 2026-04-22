@@ -19,19 +19,22 @@ class FAQ extends Component {
                     position: 'relative',
                     padding: 0,
                     backgroundColor: '#08A059',
-                    height: "200px"
+                    height: "250px"
                 }}
                 >
-                    <Particles height="200px" params={particleConfig} />
+                    <Particles height="250px" params={particleConfig} />
                     <div
                         id="particles-overlay"
                         style={{
-                            height: '200px',
-                            marginTop: '30px',
+                            height: '250px',
+                            paddingTop: '80px',
                             zIndex: 10,
                             position: 'absolute',
                             width: '100%',
-                            top: 0
+                            top: 0,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center'
                         }}
                     >
                         <h1 className="margin">Fragen und Antworten</h1>
