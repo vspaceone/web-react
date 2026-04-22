@@ -9,9 +9,10 @@ class Page404 extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-center">
+            <div className="container-fluid bg-2 text-center page-404">
                 <h1>404</h1>
-                <h2>Die angeforderte Seite existiert leider nicht.</h2>                
+                <h2>Diese Seite gibt es leider nicht.</h2>
+                <p>Zurück zur <a href="/">Startseite</a>?</p>
             </div>
         );
     }

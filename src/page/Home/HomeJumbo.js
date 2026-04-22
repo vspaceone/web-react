@@ -79,28 +79,11 @@ class HomeJumbo extends Component {
 
     render() {
 
-        const h1Style = {
-          textShadow: "2px 2px 4px black"
-        };
-
         const linkStyle = {
-            color:"white", 
-            textDecoration:"",
+            color: "white",
+            textDecoration: "none",
             zIndex: "10"
-        }
-
-        /*
-        
-        <img 
-                    src="pic/logo_vspaceone.svg" 
-                    className="img-responsive img-circle margin" 
-                    alt="Bird" width="350" height="350"
-                    style={
-                      verticalAlign: 'middle',
-                      display: 'inline'
-                  }}/>
-        
-        */
+        };
 
         return (
           <>
@@ -126,6 +109,15 @@ class HomeJumbo extends Component {
                   backgroundColor: "#bfbfbf7f"
                 }}
               />
+              <div className="hero-overlay" style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  zIndex: 7,
+                  pointerEvents: "none"
+              }}></div>
               <div
                 id="particles-overlay"
                 style={{
@@ -134,25 +126,48 @@ class HomeJumbo extends Component {
                   zIndex: 10,
                   position: 'absolute',
                   width: '100%',
-                  top: 0
+                  top: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
                 }}
               >
-                <h1 style={{textShadow: h1Style.textShadow, marginTop: "5vh" }}>vspace.one</h1>
+
+                <div className="fade-in-up-delay-1" style={{
+                  flex: 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '2vh 0',
+                  minHeight: 0,
+                  width: '100%'
+                }}>
+                  <img
+                      src="pic/logo_vspaceone.svg"
+                      alt="vspace.one Logo"
+                      style={{
+                        maxWidth: '90%',
+                        maxHeight: '100%',
+                        objectFit: 'contain',
+                        opacity: 0.85,
+                        filter: "drop-shadow(0 0 30px rgba(10, 194, 108, 0.3))"
+                      }}
+                  />
+                </div>
 
                 <div style={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  width: "100vw",
-                  marginBottom: "5vh"
+                  flexShrink: 0,
+                  width: "100%",
+                  paddingBottom: "5vh",
+                  textAlign: "center"
                 }}>
-                  <h1 style={h1Style}>
-                    Ein <i><a style={linkStyle} href="https://de.wikipedia.org/wiki/FabLab" >Makerspace </a></i>
-                    und <i><a style={linkStyle} href="https://de.wikipedia.org/wiki/Hackerspace" >Hackerspace</a></i>.
+                  <h1 className="fade-in-up-delay-1" style={{ marginBottom: "0.5rem" }}>
+                    Ein <i><a style={linkStyle} href="https://de.wikipedia.org/wiki/FabLab">Makerspace </a></i>
+                    und <i><a style={linkStyle} href="https://de.wikipedia.org/wiki/Hackerspace">Hackerspace</a></i>.
                   </h1>
-                  <h3 style={h1Style}>
-                    <a style={linkStyle} href="/tour" >Hier geht's zur virtuellen Space-Tour!</a>
-                  </h3>
+                  <p className="fade-in-up-delay-2" style={{ marginTop: "1rem" }}>
+                    <a className="btn-modern" href="/tour">Hier geht's zur virtuellen Space-Tour!</a>
+                  </p>
                 </div>
               </div>
 

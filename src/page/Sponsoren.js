@@ -14,25 +14,25 @@ class Sponsoren extends Component {
             href: "https://www.netcup.de/",
             target: "_blank",
             rel: "noopener noreferrer"
-        } 
+        }
 
         let netcupLogo = <a {...netcupLinkParams}><Img src="/pic/sponsors/netcup_logo_RGB_color.svg" alt="Netcup Logo"></Img></a>
-        let netcupText = <p><a {...netcupLinkParams}>netcup.de – Ihr Ansprechpartner für qualitatives Webhosting, Servermanagement, Colocation und weitere Internetdienstleistungen</a> für einen erfolgreichen, zuverlässigen und sicheren Internetauftritt.</p>
+        let netcupText = <p><a {...netcupLinkParams}>netcup.de</a> – Webhosting, Servermanagement, Colocation und weitere Internetdienstleistungen für einen zuverlässigen und sicheren Internetauftritt.</p>
 
         let infoLogo = <Img style={{width:"100%"}} src="/pic/sponsors/undraw_businessman_re_mlee.svg"></Img>
-        let infoText = <p>Interesse an einer Kooperation?<br></br>Dann kontaktiere uns über <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a></p>
+        let infoText = <p>Interesse an einer Kooperation?<br></br>Schreib uns an <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a></p>
 
         return (
-            <div className="container-fluid bg-3 text-center label-warning" id="getamember">
-                <div style={{marginBottom: '10rem'}} className="row">
+            <div className="container-fluid bg-2 text-center" id="getamember">
+                <div style={{marginBottom: '3rem'}} className="row">
                     <div className="col-sm-offset-2 col-sm-8">
                         <h1>Unsere Sponsoren</h1>
                     </div>
                 </div>
                 <Sponsor num={0} logo={netcupLogo} text={netcupText} />
-                <div style={{marginBottom: '20rem'}}></div>
+                <div style={{marginBottom: '3rem'}}></div>
                 <Sponsor num={1} logo={infoLogo} text={infoText} />
-            </div>     
+            </div>
         );
     }
 }
@@ -47,33 +47,37 @@ class Sponsor extends Component {
         let logoFirst = (key%2 === 0)
         let logo = this.props.logo
         let text = this.props.text
-        
+
         let itemStyle = {textAlign:'center'}
 
         let bigView = (
-            <div style={{display:'flex', alignItems:'center'}} className="row hidden-xs hidden-sm">
-                <div {...itemStyle} className="col-xs-offset-0 col-xs-8">
-                    {logoFirst ? logo : text}
-                </div>
-                <div {...itemStyle} className="col-xs-offset-0 col-xs-4">
-                    {logoFirst ? text : logo}
+            <div className="partner-card">
+                <div style={{display:'flex', alignItems:'center'}} className="row hidden-xs hidden-sm">
+                    <div {...itemStyle} className="col-xs-offset-0 col-xs-8">
+                        {logoFirst ? logo : text}
+                    </div>
+                    <div {...itemStyle} className="col-xs-offset-0 col-xs-4">
+                        {logoFirst ? text : logo}
+                    </div>
                 </div>
             </div>
         )
 
         let smallView = (
-            <div className="row visible-xs visible-sm">
-                <div {...itemStyle} className="col-xs-offset-0 col-xs-12">
-                    {logo}
+            <div className="partner-card">
+                <div className="row visible-xs visible-sm">
+                    <div {...itemStyle} className="col-xs-offset-0 col-xs-12">
+                        {logo}
+                    </div>
+                    <div {...itemStyle} className="col-xs-offset-0 col-xs-12">
+                        {text}
+                    </div>
                 </div>
-                <div {...itemStyle} className="col-xs-offset-0 col-xs-12">
-                    {text}
-                </div>
-            </div>  
+            </div>
         )
 
         return (
-            <div style={{marginBottom: '10rem'}}>
+            <div style={{marginBottom: '2rem'}}>
                 {bigView}
                 {smallView}
             </div>

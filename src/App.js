@@ -48,7 +48,6 @@ class App extends Component {
     componentDidMount() {
         window.addEventListener('hashchange', () => {
             this.setState({
-                spaceapi: [],
                 route: window.location.hash.substr(1)
             })
         })
@@ -77,7 +76,7 @@ class App extends Component {
     }
 
     render() {
-        document.body.style.backgroundColor = "#f8f8f8"
+        document.body.style.backgroundColor = "#0f1117"
         return (
         <Router history={piwik.connectToHistory(history)}>
             <div className="site">
@@ -90,7 +89,7 @@ class App extends Component {
                     )} 
                 />
 
-                <div className="site-content" style={{'margin-top': '-36px' }}>
+                <div className="site-content" style={{ marginTop: '-36px' }}>
                     <Switch>
                         <Route 
                             path="/" exact 
@@ -176,8 +175,8 @@ class App extends Component {
                     declineButtonText="Nicht Einverstanden"
                     enableDeclineButton
                     cookieName="cookieConsent"
-                    style={{ background: "#2B373B" }}
-                    buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                    style={{ background: "#1a1d28", borderTop: "1px solid rgba(255,255,255,0.06)" }}
+                    buttonStyle={{ background: "#0ac26c", color: "#fff", fontSize: "13px", borderRadius: "20px", padding: "8px 20px" }}
                     declineButtonStyle={{ fontSize: "13px" }}
                 >
                     Wir benutzen Cookies um diese Seite schöner zu machen.

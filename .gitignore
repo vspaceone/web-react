@@ -114,3 +114,6 @@ public/version
 
 # Files containing environmtment variables for different stages
 *env
+
+.claude
+.omc

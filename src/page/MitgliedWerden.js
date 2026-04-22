@@ -13,46 +13,48 @@ class MitgliedWerden extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-3 label-warning" id="">
-                <div className='no-side-padding' style={{overflow: 'hidden'}}>
-                    <img className="img-fluid w-100 h-100" style={{width:'80vw','object-fit': 'cover',height: '10em'}} src="/pic/vspaceone_gemeinschaft.jpg" alt=""></img>
-                    <div class="position-absolute w-100 h-100 d-flex justify-content-center align-items-center" style={{top: 0, left: 0}}>
-                        <h1 className="text-white text-center" style={{ textShadow: '2px 2px 4px rgba(0,0,0,)', margin: 0,padding: '20px'}}> 
+            <div className="container-fluid bg-2" id="">
+                <div className='no-side-padding' style={{overflow: 'hidden', position: 'relative'}}>
+                    <img className="img-fluid w-100" style={{width:'80vw', objectFit: 'cover', height: '10em'}} src="/pic/vspaceone_gemeinschaft.jpg" alt=""></img>
+                    <div className="position-absolute w-100 h-100 d-flex justify-content-center align-items-center" style={{top: 0, left: 0, background: 'rgba(0,0,0,0.4)'}}>
+                        <h1 className="text-white text-center" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)', margin: 0, padding: '20px'}}>
                             Werde ein Teil unserer Community!
                         </h1>
                     </div>
                 </div>
                 <div style={{marginBottom: '2rem'}} className="row">
                     <div className="col-sm-12">
-                        
+
                     </div>
                 </div>
 
 
                 <div className="row">
                     <div style={{textAlign:'left'}} className='col-md-6'>
+                        <div className="modern-card">
+                            <h2 style={{textAlign:'left'}}>Online-Mitgliedsantrag</h2>
 
-                        <h2 style={{textAlign:'left'}}>Online-Mitgliedsantrag</h2>
+                            <p>Am schnellsten geht es online – füll einfach unser Formular aus:</p>
 
-                        Nutze unseren Online-Mitgliedsantrag direkt hier: <br></br>
-                            
-                        <a href="https://easyverein.com/public/vspaceone/applicationform/9916" target='blank'>Online-Mitgliedsantrag</a>
-
+                            <a className="btn-modern" href="https://easyverein.com/public/vspaceone/applicationform/9916" target='blank'>Zum Mitgliedsantrag</a>
+                        </div>
                     </div>
-                    
-                    <div style={{textAlign:'left'}} className="col-md-6">
-                    <h2 style={{textAlign:'left'}}>Old-School auf Papier</h2>
 
-                        Lade dir unter <Link to="/downloads" >Downloads</Link> die Beitrittserklärung herunter, bring sie mit in den Space und drücke sie einem der Vorstände in die Hände. Dafür eignet sich beispielsweise das regelmäßig stattfindende Treffen
-                        am Dienstagabend.
-                        <br/><br/>
-                        Alternativ schicke sie an folgende Adresse:<br/><br/> vspace.one e.V <br/> Am Krebsgraben 15 <br/> 78048 Villingen
-                        <br/><br/>
-                        Oder an folgende E-Mail Adresse:<br/><br/>
-                        <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a>
+                    <div style={{textAlign:'left'}} className="col-md-6">
+                        <div className="modern-card">
+                            <h2 style={{textAlign:'left'}}>Klassisch auf Papier</h2>
+
+                            <p>Lade die Beitrittserklärung unter <Link to="/downloads">Downloads</Link> herunter und gib sie einem Vorstand in die Hand – zum Beispiel beim Chaostreff am Dienstagabend.</p>
+                            <p>
+                            Per Post: <br/> vspace.one e.V. <br/> Am Krebsgraben 15 <br/> 78048 Villingen
+                            </p>
+                            <p>
+                            Per E-Mail: <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>     
+            </div>
         );
     }
 }

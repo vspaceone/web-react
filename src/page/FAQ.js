@@ -12,7 +12,7 @@ class FAQ extends Component {
     render() {
         return (
             <div>
-                <div 
+                <div
                 className="container-fluid bg-1 text-center"
                 style={{
                     position: 'relative',
@@ -22,7 +22,7 @@ class FAQ extends Component {
                 }}
                 >
                     <Particles height="200px" params={particleConfig} />
-                    <div 
+                    <div
                         id="particles-overlay"
                         style={{
                             height: '200px',
@@ -37,114 +37,103 @@ class FAQ extends Component {
                     </div>
                 </div>
 
-                <div class="container-fluid bg-2 text-left">
-                    <h2 class="margin">Was ist der vspace.one e.V.?</h2>
-                    <p>Wir sind ein gemeinnütziger Hacker- und Makerspace!</p>
-                </div>
+                <div className="container-fluid bg-2 text-left">
+                    <div className="faq-item">
+                        <h2 className="margin">Was ist der vspace.one e.V.?</h2>
+                        <p>Wir sind ein gemeinnütziger Hacker- und Makerspace!</p>
+                    </div>
 
-                <div class="container-fluid bg-3 text-left">
-                    <h2 class="margin">Was ist ein Hackerspace? Und wo wir gleich dabei sind... Was ist ein Makerspace?</h2><br/>
-                    <p>
-                        Hacker- und Makerspaces sind primär Orte für Wissensaustausch und Bildung in verschiedenen Bereichen
-                        der Wissenschaft und unterschiedlicher Technologien.
-                        <br/>
-                        Hackerspaces konzentrieren sich dabei eher auf informationstechnische Wissensgebiete wie bspw. Programmierung,
-                        während sich Makerspaces eher auf mechanische bzw. handwerkliche Gebiete konzentrieren wie unter anderem 3D-Druck und Holzbearbeitung.
-                    </p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Was ist ein Hackerspace? Und was ist ein Makerspace?</h2>
+                        <p>
+                            Hacker- und Makerspaces sind Orte für Wissensaustausch und Bildung rund um Wissenschaft und Technologie.
+                            <br/>
+                            Hackerspaces fokussieren sich eher auf Programmierung und Informationstechnik, während Makerspaces den Schwerpunkt auf handwerkliche Gebiete wie 3D-Druck und Holzbearbeitung legen.
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-2 text-left">
-                    <h2 class="margin">Was ist ein Hacker? Sollte ich Angst haben?</h2>
-                    <p>
-                        Der Begriff "Hacker" bezeichnet für uns primär nicht das, was im Allgemeinen umgangssprachlich
-                        darunter verstanden wird.
-                        <br/><br/>
-                        Die kurze und oberflächliche Antwort: Ein Hacker ist ein Tüftler.
-                        <br/><br/>
-                        Die etwas längere Antwort gibt eine Aussage von <a href="https://de.wikipedia.org/wiki/Wau_Holland">Wau Holland</a>:
-                        „Ein Hacker ist jemand, der versucht einen Weg zu finden, wie man mit einer Kaffeemaschine Toast zubereiten kann“.
-                        Ein Hacker löst also nicht unbedingt nur Probleme, er versucht auch zu experimentieren und das Machbare zu erkunden
-                        wo er nur kann!
-                        <br/><br/>
-                        Eine sehr ausführliche Antwort und weiterführende links bietet der <a href="https://de.wikipedia.org/wiki/Hacker">Wikipedia Artikel zum Begriff "Hacker"</a>
-                    </p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Was ist ein Hacker? Sollte ich Angst haben?</h2>
+                        <p>
+                            Bei uns bedeutet "Hacker" nicht das, was man vielleicht aus den Nachrichten kennt.
+                            <br/><br/>
+                            Kurz gesagt: Ein Hacker ist ein Tüftler.
+                            <br/><br/>
+                            Oder wie <a href="https://de.wikipedia.org/wiki/Wau_Holland">Wau Holland</a> es formulierte:
+                            „Ein Hacker ist jemand, der versucht einen Weg zu finden, wie man mit einer Kaffeemaschine Toast zubereiten kann."
+                            Ein Hacker löst also nicht nur Probleme – er experimentiert und erkundet das Machbare, wo er nur kann!
+                            <br/><br/>
+                            Mehr dazu im <a href="https://de.wikipedia.org/wiki/Hacker">Wikipedia-Artikel zum Begriff „Hacker"</a>.
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-3 text-left">
-                    <h2 class="margin">Was macht ihr nun?</h2><br/>
-                    <p>
-                        Unser Ziel ist der Wissensaustausch sowie die Bildung aller interessierten
-                        in den Bereichen neuartiger computergestützter Technologien (wie zum Beispiel aber nicht ausschließlich
-                        3D-­Druck, CNC, Internet der Dinge und Robotik), der Elektrotechnik und Elektronik
-                        sowie auf dem Gebiet der Reparatur und Wartung.
-                        Natürlich aber auch ganz im Sinne aller anderen Hacker- und Makerspaces das bieten einer Plattform,
-                        um seinen Interessen in diesen Gebieten nachzugehen.
-                    </p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Was macht ihr konkret?</h2>
+                        <p>
+                            Wir tauschen Wissen aus und bilden uns weiter – in Bereichen wie 3D-Druck, CNC, Internet der Dinge, Robotik, Elektrotechnik und Reparatur.
+                            Zudem versuchen wir dieses Wissen auch in Kinderferienprogrammen und Workshops weiterzugeben.
+                            <br/><br/>
+                            Und wie jeder gute Hacker- und Makerspace bieten wir eine Plattform, um seinen Interessen in diesen Gebieten nachzugehen.
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-2 text-left">
-                    <h2 class="margin">Wo finde ich euch?</h2>
-                    <p>Die Antwort auf diese Frage sollte <a href="https://vspace.one/#Ort">hier auf der Website immer aktuell sein.</a></p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Wo finde ich euch?</h2>
+                        <p>Unsere aktuelle Adresse und eine Karte findest du <a href="https://vspace.one/#Ort">hier auf der Startseite</a>.</p>
+                    </div>
 
-                <div class="container-fluid bg-3 text-left">
-                    <h2 class="margin">Wo darf ich parken?</h2><br/>
-                    <p>Auf dem Gelände finden sich stets viele freie Parkplätze. Parkt gerne möglichst nahe an der in Google Maps markierten Stelle auf einem nicht reservierten Stellplatz.</p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Wo darf ich parken?</h2>
+                        <p>Auf dem Gelände gibt es viele freie Parkplätze. Parkt am besten möglichst nahe an der in Google Maps markierten Stelle auf einem nicht reservierten Stellplatz.</p>
+                    </div>
 
-                <div class="container-fluid bg-2 text-left">
-                    <h2 class="margin">Wann treffe ich euch an?</h2>
-                    <p>
-                        Überwiegend treffen wir uns jeden Dienstagabend ab etwa 18.00 Uhr. Die meisten Mitglieder haben ihren eigenen Schlüssel und können somit rein, wann immer sie wollen.
-                        Ob gerade jemand da ist erfährst du direkt auf vspace.one.
-                        Durch die SpaceAPI gibt es zudem auch fertige Apps, um sich den Raumstatus anzeigen zu lassen. Wer die Daten lieber selbst verarbeiten möchte,
-                        findet sie hier: <a href="https://vspace.one/spaceapi.json">https://vspace.one/spaceapi.json</a>
-                    </p>
-                </div> 
+                    <div className="faq-item">
+                        <h2 className="margin">Wann treffe ich euch an?</h2>
+                        <p>
+                            Jeden Dienstagabend ab etwa 18:00 Uhr. Die meisten Mitglieder haben einen eigenen Schlüssel und sind oft auch zu anderen Zeiten da.
+                            Ob gerade jemand vor Ort ist, siehst du am Raumstatus direkt auf vspace.one.
+                            Über die SpaceAPI gibt es auch fertige Apps dafür – oder du verarbeitest die Daten selbst: <a href="https://vspace.one/spaceapi.json">https://vspace.one/spaceapi.json</a>
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-3 text-left">
-                    <h2 class="margin">Wie Kontaktiere ich euch/eure Community?</h2><br/>
-                    <p>
-                        Unserer Telegram Gruppe könnt ihr <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">hier beitreten!</a>
-                        Und dem Matrix-Room <a href="https://matrix.to/#/#vspaceone-general:matrix.org">hier!</a>
-                        Beide Chats sind miteinander verbunden, nutze also die App/Technologie die dir zusagt.
-                    </p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Wie kontaktiere ich euch?</h2>
+                        <p>
+                            Tritt unserer <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegram-Gruppe</a> oder dem <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrix-Raum</a> bei – beide Chats sind miteinander verbunden. Nutze einfach, was dir lieber ist.
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-2 text-left">
-                    <h2 class="margin">Was sollte ich können bevor ich zu euch komme?</h2>
-                    <p>
-                        Sobald du unsere Räume betrittst hast du alle Voraussetzungen automatisch erfüllt. Glückwunsch!
-                        <br/><br/>
-                        Wir erheben keine Ansprüche auf irgendwelche Voraussetzungen die jemand erfüllen sollte und
-                        grundsätzlich ist bei uns jeder willkommen.
-                        Interesse und Neugierde sind aber auf keinen Fall von Nachteil!
-                    </p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Was muss ich können, um vorbeizukommen?</h2>
+                        <p>
+                            Sobald du unsere Räume betrittst, hast du alle Voraussetzungen erfüllt – Glückwunsch!
+                            <br/><br/>
+                            Bei uns ist jeder willkommen, ganz ohne Vorkenntnisse. Interesse und Neugierde schaden aber auf keinen Fall!
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-3 text-left">
-                    <h2 class="margin">Was sollte ich mitbringen, wenn ich zu euch komme?</h2><br/>
-                    <p>
-                        Wenn du nachts kommst, idealerweise ein Mobiltelefon und unsere Nummer, um im Space anzurufen, damit wir dir die Tür öffnen.
-                        Wir arbeiten aktuell daran, dass eingehende Anrufe auf jeden Fall bemerkt werden!
-                        <br/><br/>
-                        Ansonsten wäre Zeit und Interesse praktisch. Ein Notebook dabei zu haben ist üblicherweise auch gut.
-                        Getränke gibt es bei uns für je 1€, du darfst aber auch eigene mitbringen.
-                    </p>
-                </div>
+                    <div className="faq-item">
+                        <h2 className="margin">Was sollte ich mitbringen?</h2>
+                        <p>
+                            Zeit und Interesse – das reicht schon. Ein Notebook dabei zu haben ist oft praktisch.
+                            <br/><br/>
+                            Wenn du abends kommst, nimm am besten ein Mobiltelefon mit, um uns anzurufen, falls die Tür zu ist.
+                            Getränke gibt es bei uns für je 1 €, du darfst aber auch eigene mitbringen.
+                        </p>
+                    </div>
 
-                <div class="container-fluid bg-2 text-left">
-                    <h2 class="margin">Muss ich Mitglied werden um regelmäßig vorbeikommen zu dürfen?</h2>
-                    <p>
-                        Nein. Ihr seid eingeladen jederzeit vorbeizukommen - wenn wir offen haben und so oft ihr wollt.
-                        <br/><br/>
-                        Als Mitglied unterstützt ihr uns aber finanziell und genießt einige Vorteile.
-                        Eines davon ist z.B. ein Schlüssel zu unseren Räumlichkeiten um jederzeit freien Eintritt zu haben!
-                    </p>
+                    <div className="faq-item">
+                        <h2 className="margin">Muss ich Mitglied werden, um regelmäßig vorbeizukommen?</h2>
+                        <p>
+                            Nein! Ihr seid jederzeit eingeladen – wann immer wir offen haben, so oft ihr wollt.
+                            <br/><br/>
+                            Als Mitglied unterstützt ihr uns finanziell und genießt Vorteile – zum Beispiel einen eigenen Schlüssel für den Space!
+                        </p>
+                    </div>
                 </div>
 
             </div>
-        
+
         );
     }
 }
@@ -155,7 +144,7 @@ var particleConfig = {
     "particles": {
     "number": {
       "value": 50,
-      
+
     },
     "color": {
       "value": "#0ac26c"

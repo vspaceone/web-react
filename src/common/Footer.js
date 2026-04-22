@@ -30,12 +30,34 @@ class Footer extends Component {
     render(){
         return(
             <footer className="container-fluid bg-4 text-center">
-                <p><Link to="/impressum" >Impressum</Link> | <Link to="/datenschutz" >Datenschutzerklärung</Link> | <Link to="/downloads" >Downloads</Link> | <Link to="/mitgliedwerden" >Werde Mitglied!</Link> </p>
-                <br/>
+                <p style={textStyleOrg}>vspace.one e.V.</p>
+                <div style={linkContainerStyle}>
+                    <Link to="/impressum" style={linkStyle}>Impressum</Link>
+                    <Link to="/datenschutz" style={linkStyle}>Datenschutzerklärung</Link>
+                    <Link to="/downloads" style={linkStyle}>Downloads</Link>
+                    <Link to="/mitgliedwerden" style={linkStyle}>Werde Mitglied!</Link>
+                </div>
                 <p style={textStyleVersion}>{this.state.version}</p>
             </footer>
         );
     }
+}
+
+var textStyleOrg = {
+    fontWeight: "bold",
+    marginBottom: "0.5rem"
+}
+
+var linkContainerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "1rem",
+    marginBottom: "0.75rem"
+}
+
+var linkStyle = {
+    display: "inline-block"
 }
 
 var textStyleVersion = {

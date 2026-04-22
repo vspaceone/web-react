@@ -9,23 +9,22 @@ class Downloads extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-3 text-center label-warning" id="downloads">
-            <div style={{marginBottom: '2rem'}} className="row">
+            <div className="container-fluid bg-2 text-center" id="downloads">
+                <div style={{marginBottom: '2rem'}} className="row">
                     <div className="col-sm-12">
                         <h1>Downloads</h1>
+                        <hr className="section-divider" />
                     </div>
                 </div>
-            <div className="row">
-                <div style={{textAlign:'center'}} className="col-sm-12">
-                    <ul>
-                        <li><a href="download/satzung_2022.pdf">Satzung</a></li>
-                        <li><a href="download/beitragsordnung_v1.2.pdf">Beitragsordnung</a></li>
-                        <li><a href="download/beitrittserklaerung_v1.3.pdf">Beitrittserklärung</a></li>
-                        <li><a href="download/beitrittserklaerung_interactive_v1.3.pdf">Beitrittserklärung (interaktives pdf)</a></li>
-                    </ul>
+                <div className="row">
+                    <div style={{textAlign:'center'}} className="col-sm-12">
+                        <a className="download-item" href="download/satzung_2022.pdf">Satzung</a>
+                        <a className="download-item" href="download/beitragsordnung_v1.2.pdf">Beitragsordnung</a>
+                        <a className="download-item" href="download/beitrittserklaerung_v1.3.pdf">Beitrittserklärung</a>
+                        <a className="download-item" href="download/beitrittserklaerung_interactive_v1.3.pdf">Beitrittserklärung (interaktives pdf)</a>
+                    </div>
                 </div>
             </div>
-            </div>     
         );
     }
 }

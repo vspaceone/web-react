@@ -189,7 +189,7 @@ class HomeEvents extends Component {
         if (!this.state.events.events || this.state.events.events.length === 0){
             events = (
                 <div>
-                    <p>In nächster Zeit keine Events geplant.</p>
+                    <p>Aktuell keine Events geplant – schau bald wieder vorbei!</p>
                 </div>
             )
         }

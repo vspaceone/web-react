@@ -25,7 +25,7 @@ class Nav extends Component {
                         </ul>
                     </li>
 
-                    <li><a href="/mitgliedwerden">Mitglied werden</a></li>
+                    <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
                     
 
                     <li className="dropdown">
@@ -46,7 +46,7 @@ class Nav extends Component {
                         <li><a href="https://www.instagram.com/vspace.one/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i> Instagram</a></li>
                         <li><a href="https://chaos.social/@vspaceone" target="_blank" rel="noopener noreferrer"><i className="fab fa-mastodon"></i> Mastodon</a></li>
                         <li className="divider"></li>
-                        <li><a href="/freunde" target="_blank" rel="noopener noreferrer"><i className="fab fa-users"></i>Freunde, Partner, Kooperationen</a></li>
+                        <li><Link to="/freunde"><i className="fab fa-users"></i> Freunde, Partner, Kooperationen</Link></li>
                       </ul>
                     </li>
 
