@@ -89,7 +89,7 @@ class App extends Component {
                     )} 
                 />
 
-                <div className="site-content" style={{ marginTop: '-36px' }}>
+                <div className="site-content">
                     <Switch>
                         <Route 
                             path="/" exact 
