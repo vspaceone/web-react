@@ -2,9 +2,26 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 
 class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { atTop: true };
+  }
+
+  componentDidMount() {
+    this.handleScroll = () => {
+      this.setState({ atTop: window.scrollY < 50 });
+    };
+    window.addEventListener('scroll', this.handleScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   render() {
+    const navClass = "navbar navbar-default navbar-fixed-top" + (this.state.atTop ? " navbar-transparent" : "");
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className={navClass}>
         <div className="container">
             <div className="navbar-header">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
