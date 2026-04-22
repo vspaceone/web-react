@@ -97,7 +97,7 @@ a:hover {
     border-radius: 0;
     margin-bottom: 0;
     font-size: 13px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     background-color: rgba(10, 12, 18, 0.92) !important;
     backdrop-filter: blur(12px);
@@ -166,7 +166,7 @@ a:hover {
     color: #b8bcc5 !important;
     padding: 8px 20px !important;
     font-size: 13px !important;
-    letter-spacing: 2px !important;
+    letter-spacing: 1px !important;
     transition: all 0.2s ease !important;
 }
 
@@ -198,9 +198,10 @@ a:hover {
 
 /* --- Door State Badge --- */
 #doorstate {
-    margin-top: 8px;
-    margin-bottom: 5px;
-    padding: 6px 14px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    margin-left: 10px;
+    padding: 5px 14px;
     position: relative;
     display: inline-block;
     font: 11px 'Montserrat', sans-serif;

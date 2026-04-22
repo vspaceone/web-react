@@ -42,12 +42,10 @@ class Nav extends Component {
                         </ul>
                     </li>
 
-                    <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
-                    
-
                     <li className="dropdown">
-                        <a href="/spenden" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unterstützen<span className="caret"></span></a>
+                        <a href="/mitgliedwerden" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Unterstützen<span className="caret"></span></a>
                         <ul className="dropdown-menu">
+                            <li><Link to="/mitgliedwerden">Mitglied werden</Link></li>
                             <li><Link to="/spenden">Spenden</Link></li>
                             <li><Link to="/sponsoren">Sponsoren</Link></li>
                         </ul>
@@ -58,29 +56,17 @@ class Nav extends Component {
                     <li className="dropdown">
                       <a href="/freunde" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span className="caret"></span></a>
                       <ul className="dropdown-menu">
-                        <li><a href="https://twitter.com/vspaceone" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="https://www.facebook.com/vspace.one" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://matrix.to/#/#vspaceone-general:matrix.org" target="_blank" rel="noopener noreferrer"><img src="/pic/logos/Matrix.svg" style={{width: "16px", height: "16px", verticalAlign: "middle", marginRight: "6px"}} alt="Matrix" /> Matrix</a></li>
+                        <li className="divider"></li>
                         <li><a href="https://www.instagram.com/vspace.one/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i> Instagram</a></li>
                         <li><a href="https://chaos.social/@vspaceone" target="_blank" rel="noopener noreferrer"><i className="fab fa-mastodon"></i> Mastodon</a></li>
+                        <li><a href="https://www.facebook.com/vspace.one" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://twitter.com/vspaceone" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i> Twitter</a></li>
                         <li className="divider"></li>
-                        <li><Link to="/freunde"><i className="fab fa-users"></i> Freunde, Partner, Kooperationen</Link></li>
+                        <li><Link to="/freunde"><i className="fas fa-handshake"></i> Partner</Link></li>
+                        <li><a href="https://easyverein.com/public/vspaceone/?next=profile" target="_blank" rel="noopener noreferrer"><i className="fas fa-user-circle"></i> EasyVerein</a></li>
                       </ul>
-                    </li>
-
-                    <li>
-                      <a className="faw-link" href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank" rel="noopener noreferrer">
-                        <i className="fab fa-telegram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a className="faw-link" href="https://matrix.to/#/#vspaceone-general:matrix.org" target="_blank" rel="noopener noreferrer">
-                        <img className="fab" src="/pic/logos/Matrix.svg" style={{lineHeight:1, width: "30px", height: "30px"}} alt="Matrix"></img>
-                      </a>
-                    </li>
-                    <li>
-                      <a className="faw-link" href="https://easyverein.com/public/vspaceone/?next=profile" target="_blank" rel="noopener noreferrer">
-                        <img className="fab" src="/pic/logos/easyverein.png" style={{lineHeight:1, width: "30px", height: "30px"}} alt="EasyVerein"></img>
-                      </a>
                     </li>
                     <li>
                         <NavState state={ this.props.state } />
