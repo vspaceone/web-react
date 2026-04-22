@@ -313,6 +313,10 @@ a:hover {
     align-items: stretch;
 }
 
+.event .row > [class*="col-"] {
+    display: flex;
+}
+
 .event_titleline {
     display: block;
 }
@@ -355,7 +359,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 180px;
+    flex: 1;
 }
 
 .event_details {
@@ -364,10 +368,10 @@ a:hover {
     padding: 20px 24px;
     margin: 0;
     border-radius: 0 12px 12px 0;
-    min-height: 180px;
     overflow-y: auto;
     border: 1px solid rgba(0,0,0,0.06);
     border-left: none;
+    flex: 1;
 }
 
 .event_desc p {
