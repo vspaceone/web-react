@@ -5,6 +5,7 @@ import ReactPiwik from 'react-piwik';
 class Spenden extends Component {
 
     componentDidMount(){
+        document.title = "Spenden – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 

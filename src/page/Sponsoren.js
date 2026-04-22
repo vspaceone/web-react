@@ -5,6 +5,7 @@ import ReactPiwik from 'react-piwik';
 class Sponsoren extends Component {
 
     componentDidMount(){
+        document.title = "Sponsoren – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 

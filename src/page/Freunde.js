@@ -5,6 +5,7 @@ import ReactPiwik from 'react-piwik';
 class Freunde extends Component {
 
     componentDidMount(){
+        document.title = "Freunde und Partner – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 

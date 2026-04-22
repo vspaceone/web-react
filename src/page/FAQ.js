@@ -6,6 +6,7 @@ import Particles from 'react-particles-js';
 class FAQ extends Component {
 
     componentDidMount(){
+        document.title = "FAQ – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 

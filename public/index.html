@@ -1,33 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
-    <title>vspace.one - Makerspace, Hackerspace, Chaostreff und offene Werkstatt für Villingen-Schwenningen und Umgebung</title>
-    <meta name="description" content="Makerspace, Hackerspace, Chaostreff und offene Werkstatt für Villingen-Schwenningen und Umgebung. Basteln, tüfteln, hacken und Wissen austauschen.">
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="theme-color" content="#08A059" />
-    
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="128x128">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <title>vspace.one – Makerspace und Hackerspace in Villingen-Schwenningen</title>
+    <meta name="description" content="vspace.one ist ein gemeinnütziger Makerspace und Hackerspace in Villingen-Schwenningen. Offene Werkstatt mit 3D-Druck, Elektronik, Holz- und Metallbearbeitung. Jeden Dienstag ab 18 Uhr.">
+    <meta name="keywords" content="Makerspace, Hackerspace, Villingen-Schwenningen, offene Werkstatt, 3D-Druck, Elektronik, CNC, Chaostreff, vspace.one, FabLab, Schwarzwald-Baar">
+    <meta name="author" content="vspace.one e.V.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#08A059" />
+    <link rel="canonical" href="https://vspace.one/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vspace.one/" />
+    <meta property="og:title" content="vspace.one – Makerspace und Hackerspace in Villingen-Schwenningen" />
+    <meta property="og:description" content="Gemeinnütziger Makerspace und Hackerspace mit offener Werkstatt. 3D-Druck, Elektronik, Holz- und Metallbearbeitung. Jeden Dienstag ab 18 Uhr." />
+    <meta property="og:image" content="https://vspace.one/pic/vspaceone_gemeinschaft.jpg" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="vspace.one" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="vspace.one – Makerspace und Hackerspace" />
+    <meta name="twitter:description" content="Gemeinnütziger Makerspace und Hackerspace in Villingen-Schwenningen. Offene Werkstatt für alle." />
+    <meta name="twitter:image" content="https://vspace.one/pic/vspaceone_gemeinschaft.jpg" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="DE-BW" />
+    <meta name="geo.placename" content="Villingen-Schwenningen" />
+
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="128x128" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Structured Data: Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "vspace.one e.V.",
+      "url": "https://vspace.one",
+      "logo": "https://vspace.one/pic/logo_vspaceone.svg",
+      "description": "Gemeinnütziger Makerspace und Hackerspace in Villingen-Schwenningen",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Am Krebsgraben 15",
+        "addressLocality": "Villingen-Schwenningen",
+        "postalCode": "78048",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49 7721 2968141",
+      "email": "info@vspace.one",
+      "sameAs": [
+        "https://www.instagram.com/vspace.one/",
+        "https://chaos.social/@vspaceone",
+        "https://www.facebook.com/vspace.one"
+      ]
+    }
+    </script>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="scripts/bootstrap-3.3.5-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
-
-    <script type="module" src="https://unpkg.com/mastodon-widget"></script>
-
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>Bitte aktiviere JavaScript, um diese Seite nutzen zu können.</noscript>
     <div id="root"></div>
 
     <script type="text/javascript" src="scripts/jquery/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="scripts/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="scripts/particle-network.min.js"></script>
-    <!--script type="text/javascript" src="scripts/app.js"></script-->
   </body>
 </html>

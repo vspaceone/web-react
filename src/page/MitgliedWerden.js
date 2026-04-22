@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 class MitgliedWerden extends Component {
 
     componentDidMount(){
+        document.title = "Mitglied werden – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 

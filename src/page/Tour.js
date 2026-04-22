@@ -7,6 +7,7 @@ import { VirtualTourPlugin } from "photo-sphere-viewer/dist/plugins/virtual-tour
 class Tour extends Component {
 
     componentDidMount() {
+        document.title = "Virtuelle Space-Tour – vspace.one"
         ReactPiwik.push(['trackPageView'])
 
         window.addEventListener("resize", this.handleResize);

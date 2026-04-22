@@ -13,6 +13,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 class Home extends Component {
 
     componentDidMount(){
+        document.title = "vspace.one – Makerspace und Hackerspace in Villingen-Schwenningen"
         ReactPiwik.push(['trackPageView'])
     }
 

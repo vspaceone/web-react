@@ -4,6 +4,7 @@ import ReactPiwik from 'react-piwik';
 class Downloads extends Component {
 
     componentDidMount(){
+        document.title = "Downloads – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 

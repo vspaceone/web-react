@@ -4,6 +4,7 @@ import ReactPiwik from 'react-piwik';
 class Page404 extends Component {
 
     componentDidMount(){
+        document.title = "Seite nicht gefunden – vspace.one"
         ReactPiwik.push(['trackPageView'])
     }
 
