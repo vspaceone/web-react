@@ -9,8 +9,9 @@ class Impressum extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-center">
-                <h1>Impressum</h1>
+            <div className="container-fluid bg-2 text-center content-page">
+                <h1 className="content-page-title">Impressum</h1>
+                <hr className="section-divider" />
                 <h2>Angaben gemäß § 5 TMG:</h2>
                 <p>vspace.one e.V.<br /> Am Krebsgraben 15 (Gebäude 8)<br /> 78048 Villingen
                 </p>

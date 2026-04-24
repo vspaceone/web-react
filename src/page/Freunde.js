@@ -27,10 +27,11 @@ class Freunde extends Component {
         let lugText = <p>Mit der Linux User Group sind wir regelmäßig in Kontakt – gemeinsame Events wie der Linux-Day oder Installationsparties gehören dazu.</p>
 
         return (
-            <div className="container-fluid bg-2 text-center" id="getamember">
+            <div className="container-fluid bg-2 text-center content-page" id="getamember">
                 <div style={{marginBottom: '3rem'}} className="row">
-                    <div className="col-sm-offset-2 col-sm-8">
-                        <h1>Freunde, Partner und Kooperationen</h1>
+                    <div className="col-sm-12">
+                        <h1 className="content-page-title">Freunde, Partner und Kooperationen</h1>
+                        <hr className="section-divider" />
                     </div>
                 </div>
                 <Freund num={0} logo={vowLogo} text={vowText} />

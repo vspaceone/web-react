@@ -4,9 +4,10 @@ class Datenschutz extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-left h-text-left no-side-padding">
+            <div className="container-fluid bg-2 text-left h-text-left no-side-padding content-page">
                 <div className="col-md-offset-1 col-md-10">
-                <h2>Datenschutzerklärung</h2>
+                <h1 className="content-page-title">Datenschutzerklärung</h1>
+                <hr className="section-divider" />
 
                 <p>Wir freuen uns sehr über Ihr Interesse an unserem Unternehmen. Datenschutz hat einen besonders hohen Stellenwert für die Geschäftsleitung der vspace.one e.V.. Eine Nutzung der Internetseiten der vspace.one e.V. ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services unseres Unternehmens über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung keine gesetzliche Grundlage, holen wir generell eine Einwilligung der betroffenen Person ein.</p>
 

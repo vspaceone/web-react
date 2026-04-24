@@ -11,10 +11,10 @@ class Spenden extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-center" id="getamember">
+            <div className="container-fluid bg-2 text-center content-page" id="getamember">
                 <div style={{marginBottom: '2rem'}} className="row">
                     <div className="col-sm-12">
-                        <h1>Spenden</h1>
+                        <h1 className="content-page-title">Spenden</h1>
                         <hr className="section-divider" />
                     </div>
                 </div>

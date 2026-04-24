@@ -10,10 +10,10 @@ class Downloads extends Component {
 
     render() {
         return (
-            <div className="container-fluid bg-2 text-center" id="downloads">
+            <div className="container-fluid bg-2 text-center content-page" id="downloads">
                 <div style={{marginBottom: '2rem'}} className="row">
                     <div className="col-sm-12">
-                        <h1>Downloads</h1>
+                        <h1 className="content-page-title">Downloads</h1>
                         <hr className="section-divider" />
                     </div>
                 </div>

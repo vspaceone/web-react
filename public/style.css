@@ -540,6 +540,16 @@ footer > p > a:hover {
     color: #fff !important;
 }
 
+/* --- Content Page Header --- */
+.content-page {
+    padding-top: 100px;
+}
+
+.content-page-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
 /* --- Section Divider --- */
 .section-divider {
     width: 60px;
@@ -708,6 +718,9 @@ footer > p > a:hover {
         padding-bottom: 50px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .container-fluid.content-page {
+        padding-top: 80px;
     }
     .event .row {
         flex-direction: column;

@@ -24,10 +24,11 @@ class Sponsoren extends Component {
         let infoText = <p>Interesse an einer Kooperation?<br></br>Schreib uns an <a href="mailto:vorstand@vspace.one">vorstand [at] vspace.one</a></p>
 
         return (
-            <div className="container-fluid bg-2 text-center" id="getamember">
+            <div className="container-fluid bg-2 text-center content-page" id="getamember">
                 <div style={{marginBottom: '3rem'}} className="row">
-                    <div className="col-sm-offset-2 col-sm-8">
-                        <h1>Unsere Sponsoren</h1>
+                    <div className="col-sm-12">
+                        <h1 className="content-page-title">Unsere Sponsoren</h1>
+                        <hr className="section-divider" />
                     </div>
                 </div>
                 <Sponsor num={0} logo={netcupLogo} text={netcupText} />
