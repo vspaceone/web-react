@@ -11,7 +11,7 @@
     "photo-sphere-viewer": "^4.5.3",
     "pure-react-carousel": "^1.27.6",
     "react": "^16.13.1",
-    "react-cookie-consent": "^2.5.0",
+    "react-cookie-consent": "^10.0.1",
     "react-dom": "^16.13.1",
     "react-image": "^4.0.3",
     "react-leaflet": "^2.7.0",
