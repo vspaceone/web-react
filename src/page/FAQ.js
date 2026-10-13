@@ -103,7 +103,7 @@ class FAQ extends Component {
                     <div className="faq-item">
                         <h2 className="margin">Wie kontaktiere ich euch?</h2>
                         <p>
-                            Tritt unserer <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegram-Gruppe</a> oder dem <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrix-Raum</a> bei – beide Chats sind miteinander verbunden. Nutze einfach, was dir lieber ist.
+                            Tritt unserer <a href="https://t.me/+Ta3Rhwf_jVffUTeq">Telegram-Gruppe</a> oder dem <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrix-Raum</a> bei – beide Chats sind miteinander verbunden. Nutze einfach, was dir lieber ist.
                         </p>
                     </div>
 

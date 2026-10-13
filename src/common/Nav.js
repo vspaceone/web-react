@@ -56,7 +56,7 @@ class Nav extends Component {
                     <li className="dropdown">
                       <a href="/freunde" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Social<span className="caret"></span></a>
                       <ul className="dropdown-menu">
-                        <li><a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://t.me/+Ta3Rhwf_jVffUTeq" target="_blank" rel="noopener noreferrer"><i className="fab fa-telegram"></i> Telegram</a></li>
                         <li><a href="https://matrix.to/#/#vspaceone-general:matrix.org" target="_blank" rel="noopener noreferrer"><img src="/pic/logos/Matrix.svg" style={{width: "16px", height: "16px", verticalAlign: "middle", marginRight: "6px"}} alt="Matrix" /> Matrix</a></li>
                         <li className="divider"></li>
                         <li><a href="https://www.instagram.com/vspace.one/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i> Instagram</a></li>

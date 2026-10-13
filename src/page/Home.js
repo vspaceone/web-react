@@ -81,7 +81,7 @@ function HomeInfoBoxMitmachen() {
                     <div className="col-sm-6">
                         <div className="mitmachen-card">
                             <h3>Community-Chat</h3>
-                            <p>Wir kommunizieren über unsere <a href="https://t.me/joinchat/DmNdswpnKgox_zzqENYXiA">Telegram-Gruppe</a> und unseren <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrix-Raum</a>. Beide Chats sind miteinander verbunden – nutze einfach, was dir lieber ist! Tritt gerne bei oder schreib uns eine E-Mail an info[at]vspace.one.</p>
+                            <p>Wir kommunizieren über unsere <a href="https://t.me/+Ta3Rhwf_jVffUTeq">Telegram-Gruppe</a> und unseren <a href="https://matrix.to/#/#vspaceone-general:matrix.org">Matrix-Raum</a>. Beide Chats sind miteinander verbunden – nutze einfach, was dir lieber ist! Tritt gerne bei oder schreib uns eine E-Mail an info[at]vspace.one.</p>
                         </div>
                     </div>
                     <div className="col-sm-6">
